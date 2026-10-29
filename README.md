@@ -19,7 +19,8 @@ Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **�
 | Descendente | U |
 | Ataque aéreo | W y luego J / K |
 | Esquive (dash) | A A / D D (doble toque) |
-| Saltar sobre el rival | W W (segundo toque antes de 0,35 s) |
+| Rodada (Lancha) / aspa de molino (El Fiel) | S + A A / D D (doble toque hacia el rival) |
+| Doble salto | W W (segundo toque en el aire) |
 | Especial / super | L / I |
 | Pausa / menú | Esc / R |
 
@@ -36,7 +37,8 @@ Funciona con cualquier mando de mapeo estándar del navegador (Xbox, DualShock 4
 | Puño alto | X | □ |
 | Patada media | B | ○ |
 | Esquive (dash) | Doble toque ← / → | Igual |
-| Saltar sobre el rival | A / ↑ dos veces | ✕ / ↑ dos veces |
+| Rodada / aspa de molino | ↓ + doble toque ← / → | Igual |
+| Doble salto | A / ↑ dos veces | ✕ / ↑ dos veces |
 | Especial | Y | △ |
 | Super | RB | R1 |
 | Defensa | LB o LT | L1 o L2 |
@@ -56,6 +58,14 @@ Ataques bajos: mantén abajo + puño o patada. En el menú: ← → personaje, �
 - Presentaciones de personajes y supers con cámara, aura, oscuridad y rayos.
 - Cámara que sigue la pelea y botón para suavizar los efectos.
 - Entrenamiento configurable y visualización de zonas de impacto.
+- Pantalla VS animada antes del combate y pantalla de victoria con frase, confeti y estadísticas.
+- KO cinemático: cámara lenta, zoom, destello y el perdedor sale despedido rebotando. Aviso de PERFECT y ¡TIEMPO!
+- El descendente, el barrigazo y el último golpe del super derriban.
+- Chispas según el golpe (puño, patada, bloqueo, especial), partículas con gravedad, polvo al caminar, esquivar y caer, y deformación al saltar y aterrizar.
+- Contador de combos lateral, barras de vida que tiemblan y parpadean con poca vida, aviso de ¡PRIMER GOLPE! y cortinillas entre rondas.
+- Público que salta con la emoción del combate y focos de color durante los supers.
+- El barrigazo y el super de Lancha anulan la ráfaga de El Fiel.
+- Música chiptune generada en tiempo real (botón ♪ Música) y golpes con ruido filtrado.
 
 ## Ejecutar y editar localmente
 
