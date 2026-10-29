@@ -1,6 +1,6 @@
 # Manchester FISI Fighter
 
-Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.4**, con Lancha, El Fiel, Kent y Pingordy, poderes propios y personajes inspirados en fotografías de referencia.
+Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.4**, con Lancha, El Fiel, Kent, Pingordy e Ingestrella, poderes propios y personajes inspirados en fotografías de referencia.
 
 **[Jugar en el navegador](https://jhorka029.github.io/manchester_fighter_fisi/)**
 
@@ -52,7 +52,7 @@ Ataques bajos: mantén abajo + puño o patada. En el menú: ← → tu personaje
 
 ## Incluye
 
-- Cuatro personajes: Lancha, El Fiel, Kent (patadas de fuego) y Pingordy (medialuna y tornado). El menú tiene una fila para elegir tu personaje y otra para el rival, también en 2 jugadores.
+- Cinco personajes: Lancha, El Fiel, Kent (patadas de fuego), Pingordy (medialuna y tornado) e Ingestrella (código y laptop). El menú tiene una fila para elegir tu personaje y otra para el rival, también en 2 jugadores.
 - Combate por rondas, tres dificultades de CPU y modo local de dos jugadores.
 - Ataques altos, medios, bajos, descendentes y aéreos.
 - Salto y patada aérea con poses distintas; patada baja sin derribo.
