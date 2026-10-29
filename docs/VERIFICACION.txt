@@ -24,6 +24,9 @@ Esquives y defensa (simulación fotograma a fotograma, ráfaga de El Fiel):
 - Dash adelante a 0,91 s atraviesa el poder; el segundo dash seguido no sale
   (espera de 0,6 s).
 - Con defensa mantenida la guardia no se cae tras el bloqueo; daño 1,32.
+- Doble salto sobre el rival (simulación): desde 80 y 250 px cae unos 95 px
+  detrás de él; con el segundo toque pasados 0,6 s no hay cruce; también
+  funciona para el Jugador 2 y junto a la pared.
 - La CPU esquiva o bloquea 6, 17 y 22 de 30 ráfagas (fácil, normal, difícil).
 
 Prueba con mando físico: DualShock 4 ("Wireless Controller", Bluetooth,
