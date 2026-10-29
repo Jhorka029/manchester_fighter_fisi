@@ -18,4 +18,22 @@ Sin errores de JavaScript durante estas comprobaciones.
 Prueba real de teclado: movimiento, agacharse, defensa y pausa.
 Inspección visual: presentaciones, super, salto y patada aérea.
 
-No se ha probado con mando físico, en Android ni en R36S.
+Esquives y defensa (simulación fotograma a fotograma, ráfaga de El Fiel):
+- Salto a 0,75 s y 0,85 s del disparo esquiva el poder; a 0,60 s (pronto) y sin
+  acción reciben 11 de daño.
+- Dash adelante a 0,91 s atraviesa el poder; el segundo dash seguido no sale
+  (espera de 0,6 s).
+- Con defensa mantenida la guardia no se cae tras el bloqueo; daño 1,32.
+- Doble salto sobre el rival (simulación): desde 80 y 250 px cae unos 95 px
+  detrás de él; con el segundo toque pasados 0,6 s no hay cruce; también
+  funciona para el Jugador 2 y junto a la pared.
+- La CPU esquiva o bloquea 6, 17 y 22 de 30 ráfagas (fácil, normal, difícil).
+
+Prueba con mando físico: DualShock 4 ("Wireless Controller", Bluetooth,
+mapeo estándar) en Windows 11 con navegador Chromium. Verificado: detección,
+menú (personaje, dificultad, inicio), pausa/reanudar con OPTIONS, caminar,
+saltar, agacharse, defensa y ataques alto, medio, bajo, aéreo, descendente
+(R2), especial y super.
+Sin verificar: L2 como defensa, SHARE para volver al menú, dos mandos a la vez.
+
+No se ha probado en Android ni en R36S.
