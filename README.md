@@ -1,8 +1,18 @@
 # Manchester FISI Fighter
 
-Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.4**, con Lancha, El Fiel, Kent y Pingordy, poderes propios y personajes inspirados en fotografías de referencia.
+Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.5**, con Lancha, El Fiel, Kent y Pingordy, poderes propios y personajes inspirados en fotografías de referencia.
 
-**[Jugar en el navegador](https://jhorka029.github.io/manchester_fighter_fisi/)**
+**[Versión pública](https://jhorka029.github.io/manchester_fighter_fisi/)**
+
+## Presentación y menús 0.5
+
+La intro empieza automáticamente al abrir el juego y muestra los cuatro escenarios y los personajes. **Saltar intro** permanece visible para ir directamente al título con el escudo FISI en pixel art. La música intenta arrancar al cargar; si el navegador restringe el audio automático, se activa con la primera pulsación o clic sin detener la animación.
+
+El recorrido es: título → seleccionar modo **VS** → **VS CPU**, **2 jugadores** o **entrenamiento** → dificultad solo en VS CPU → escenario → personajes. La cuadrícula central permite elegir P1 y su rival; usa **Tab**, los botones P1/CPU o LB/RB del mando para cambiar de selector. Los espacios oscuros están reservados y no son personajes adicionales.
+
+Escenarios: Patio FISI, Entrada UNSM, La cafetería y Plaza de Rioja. Los tres últimos usan las imágenes proporcionadas para esta versión. Las reglas de combate se conservan.
+
+Los recursos están separados en `assets/escenarios/`, `assets/interfaz/` y `assets/personajes/{lancha,el-fiel}/movimientos/`. Cada pose es un PNG individual transparente; `asset-catalog.js` registra sus rutas y alturas originales. Consulta [docs/ASSETS.md](docs/ASSETS.md).
 
 ## Cómo jugar
 
@@ -90,7 +100,15 @@ python -m http.server 8000
 
 Abre `http://localhost:8000/`. Usa un servidor local para permitir el procesamiento de sprites en Canvas.
 
-El juego está en `index.html` y `game-v4.js`; los estilos, en `style.css`, `combat-v3.css` y `menu.css` (menú de inicio y diseño responsive). `assets/` contiene únicamente los recursos que usa la versión actual. Algunos recursos conservan nombres de su versión de creación y siguen siendo parte de la 0.4.
+`game-v4.js` conserva el motor de combate. `frontend.js` y `frontend.css` implementan la presentación y selección, `responsive.css` adapta la página a móvil y tablet, y `asset-catalog.js` registra los recursos. El nombre histórico del motor no altera la versión 0.5.
+
+Para generar un único HTML que funcione sin servidor ni conexión:
+
+```sh
+node build.cjs
+```
+
+El resultado se guarda en `dist/Manchester-FISI-Fighter-v0.5.html`. No requiere paquetes de Node adicionales.
 
 ## Publicación
 

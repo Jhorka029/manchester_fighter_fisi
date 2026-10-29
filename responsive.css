@@ -1,0 +1,12 @@
+/* Responsive page around the arena: header, touch controls and guide. The menu itself lives in frontend.css. */
+header .tools{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.screen.menu-open~.touch{display:none}
+@media (max-width:650px){
+ header .brand small{display:none}
+ header .tools button{padding:6px 9px;font-size:12px}
+ .touch{gap:10px}
+ .touch div{gap:6px}
+ .touch button{min-width:52px;min-height:48px;font-size:12px}
+ .guide{overflow-x:auto}
+ .guide table{min-width:520px}
+}

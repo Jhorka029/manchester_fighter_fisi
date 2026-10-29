@@ -29,7 +29,7 @@ const DASH={time:.22,fwd:860,back:780,invulnerable:.16,cooldown:.6,window:.26,pe
 // Crouch + double-tap: roll through the rival. Lancha curls into a ball, El Fiel does an athletic flip (drawn by transforming existing sprites).
 const ROLL=[{dur:.55,inv:.32,spins:2,scale:.85,arc:0,label:'¡RODADA!'},{dur:.65,inv:.42,spins:1,scale:.9,arc:95,label:'¡VOLTERETA!'},{dur:.65,inv:.42,spins:1,scale:.9,arc:95,label:'¡VOLTERETA!'},{dur:.65,inv:.42,spins:1,scale:.9,arc:95,label:'¡TORNADO!'}];
 let selected=0,mode='cpu',difficulty='normal',state='menu',paused=false,players=[],projectiles=[],particles=[],floaters=[];
-let round=1,clock=75,phaseTime=0,banner='',shake=0,freeze=0,acc=0,prev=0,tick=0,muted=false,audio,ready=false,bg,sprites=[],extraSprites=[],followSprites=[],showSprites=[],rollSprites=[],fielRoll=[],fielRollK=1,kentFrames={},pingFrames={},ljFrames={},fielSuper={},portrait=[];
+let round=1,clock=75,phaseTime=0,banner='',shake=0,freeze=0,acc=0,prev=0,tick=0,muted=false,audio,ready=false,bg,stageImages=[],crestImage,sprites=[],extraSprites=[],followSprites=[],showSprites=[],rollSprites=[],fielRoll=[],fielRollK=1,kentFrames={},pingFrames={},ljFrames={},fielSuper={},portrait=[];
 const INTRO_DURATION=4.4,camera={x:WORLD/2,y:300,zoom:1.02};
 let superFX=null,reducedFX=false,ghosts=[],rings=[],introElapsed=0,fxClock=0;
 // KO slow motion, screen flash, dust puffs, announcer callouts, round wipe, crowd hype and match stats.
@@ -73,41 +73,34 @@ const SETS=[null,null,{frames:kentFrames,scale:.85,extra:{introA:1.15,introB:1.1
 const FALLBACK={airKick:'flipSpin',flipTuck:'flipSpin',overheadHit:'punch',overheadPrep:'idle',crouchHurt:'hurt',landing:'crouch',special:'mid',superB:'superA',introB:'introA'};
 function resolvePose(id,name){const f=SETS[id].frames;while(!f[name]&&FALLBACK[name])name=FALLBACK[name];return name}
 function buildFielSuper(atlas){for(const [name,m] of Object.entries(FIEL_SUPER_ATLAS)){const c=document.createElement('canvas');c.width=m[2];c.height=m[3];c.getContext('2d').drawImage(atlas,m[0],m[1],m[2],m[3],0,0,m[2],m[3]);fielSuper[name]={image:c,height:m[3],anchor:m[4]}}}
-async function load(){try{const [arena,atlas,poses,follow,show,lancha,fiel,roll,flipPrep,flip,kentAtlas,superAtlas,pingAtlas,ljAtlas]=await Promise.all([image('assets/arena.png'),image('assets/fighters.png'),image('assets/moves-v3.png'),image('assets/follow-v3.png'),image('assets/show-v4.png'),image('assets/lancha-face.png'),image('assets/fiel-face.png'),image('assets/roll-lancha.webp'),image('assets/flip-fiel-prep.png'),image('assets/flip-fiel.png'),image('assets/kent.png'),image('assets/fiel-super.png'),image('assets/pingordy.png'),image('assets/lancha-jump.png')]);bg=arena;portrait=[lancha,fiel];const a=keyedCanvas(atlas),cuts=[[0,0,238,468],[240,0,240,468],[482,0,309,468],[785,0,290,468],[1062,0,225,468],[1280,0,256,468],[0,490,238,480],[240,490,235,480],[470,490,311,480],[780,490,294,480],[1028,490,276,480],[1295,490,241,480]];sprites=cuts.map(c=>crop(a,...c));extraSprites=extractPoses(poses);followSprites=extractPoses(follow,4);showSprites=extractPoses(show,4);rollSprites=extractPoses(roll,5);fielRoll=[...extractRow(flipPrep,1),...extractRow(flip,4)];fielRollK=258*.95/fielRoll[4].height;buildKent(kentAtlas);buildFielSuper(superAtlas);cutAtlas(pingAtlas,PING_ATLAS,pingFrames);cutAtlas(ljAtlas,LJ_ATLAS,ljFrames);ready=true;$('#status').textContent='v0.4 · Salto y patada aérea con poses distintas · Patada baja sin derribo · Cámara dinámica · Super cinematográfico.';}catch(e){$('#status').textContent=e.message+' · Usa el HTML autónomo o un servidor local.';console.error(e)}}
+
+async function load(){try{
+ const group=arr=>Promise.all(arr.map(async f=>({image:await image(f.src),height:f.height})));
+ const [stages,characters,crest,extras]=await Promise.all([
+  Promise.all(GAME_ASSETS.stages.map(s=>image(s.image))),
+  Promise.all(GAME_ASSETS.characters.map(async c=>{const [base,moves,follow,show,roll,face]=await Promise.all([Promise.all(c.base.map(image)),group(c.moves),group(c.follow),group(c.show),group(c.roll),image(c.portrait)]);return{base,moves,follow,show,roll,face}})),
+  image(GAME_ASSETS.crest),
+  // Atlases not yet in the catalog: El Fiel's flip and super, Kent, Pingordy and Lancha's jump.
+  Promise.all(['assets/flip-fiel-prep.png','assets/flip-fiel.png','assets/kent.png','assets/fiel-super.png','assets/pingordy.png','assets/lancha-jump.png','assets/kent-face.png','assets/pingordy-face.png'].map(image))
+ ]);
+ const [flipPrep,flip,kentAtlas,superAtlas,pingAtlas,ljAtlas,kentFace,pingFace]=extras;
+ stageImages=stages;bg=stages[0];crestImage=crest;sprites=characters.flatMap(c=>c.base);extraSprites=characters.flatMap(c=>c.moves);followSprites=characters.flatMap(c=>c.follow);showSprites=characters.flatMap(c=>c.show);portrait=[...characters.map(c=>c.face),kentFace,pingFace];rollSprites=characters[0].roll;
+ fielRoll=[...extractRow(flipPrep,1),...extractRow(flip,4)];fielRollK=258*.95/fielRoll[4].height;buildKent(kentAtlas);buildFielSuper(superAtlas);cutAtlas(pingAtlas,PING_ATLAS,pingFrames);cutAtlas(ljAtlas,LJ_ATLAS,ljFrames);
+ ready=true;$('#status').textContent='v0.5 · Intro y menús renovados · 4 escenarios · 4 luchadores · Recursos organizados por personaje.';
+ }catch(e){$('#status').textContent=e.message+' · Usa el HTML autónomo o un servidor local.';console.error(e)}}
 function fighter(id,x){return{id,x,y:0,vy:0,vx:0,hp:100,hpTrail:100,energy:50,wins:0,face:x<WORLD/2?1:-1,action:'idle',age:0,move:null,hit:false,stun:0,guard:false,crouched:false,stance:0,walk:false,cooldown:0,combo:0,comboTime:0,ai:0,aiInput:{},seq:0,flash:0,downTime:0,invulnerable:0,buffer:null,bufferTime:0,lastLevel:'',levelTime:0,landTime:0,ghostTime:0,dashCool:0,dashDir:0,prevDir:{},tapAt:{left:-9,right:-9},jumpAt:-9,leap:false,dustT:0,hpShake:0,comboPop:0,stats:{hits:0,damage:0,maxCombo:0,blocks:0,supers:0}}}
-function pickRival(){if(rivalSel!=='auto')return rivalSel;const o=[...NAMES.keys()].filter(i=>i!==selected);return o[Math.floor(Math.random()*o.length)]}
-function start(){if(!ready)return;mode=$('#mode').value;difficulty=$('#difficulty').value;players=[fighter(selected,420),fighter(pickRival(),860)];round=1;paused=false;setMenu(false);canvas.focus();audio?.resume();sound(440,.15);state='vs';phaseTime=2.6;vsSlam=false;matchTime=0;Object.assign(camera,{x:WORLD/2,y:304,zoom:1.04})}
+function start(){if(!ready)return;mode=$('#mode').value;difficulty=$('#difficulty').value;players=[fighter(selected,420),fighter(selected?0:1,860)];round=1;paused=false;setMenu(false);canvas.focus();audio?.resume();sound(440,.15);state='vs';phaseTime=2.6;vsSlam=false;matchTime=0;Object.assign(camera,{x:WORLD/2,y:304,zoom:1.04})}
 function beginRound(){players.forEach((p,i)=>{Object.assign(p,{x:i?860:420,y:0,vy:0,vx:0,hp:100,hpTrail:100,action:'idle',age:0,move:null,stun:0,guard:false,crouched:false,stance:0,combo:0,cooldown:0,downTime:0,invulnerable:0,buffer:null,bufferTime:0,levelTime:0,landTime:0,dashCool:0,dashDir:0,leap:false,ai:0,aiInput:{},hpShake:0,comboPop:0,dizzy:0,dizzyCalm:0,wallUsed:false,juggle:0,airDashed:false,airDashT:0,charge:0});p.energy=Math.max(40,p.energy)});projectiles=[];particles=[];floaters=[];ghosts=[];rings=[];puffs=[];cracks=[];bolts=[];superFX=null;slow=0;koFX=null;callout=null;firstHit=false;perfect=false;wipeOut=.45;introElapsed=0;lastContact=null;clock=75;state='intro';phaseTime=INTRO_DURATION;banner='RONDA '+round;Object.assign(camera,{x:WORLD/2,y:304,zoom:1.04});clearInput()}
 function clearInput(){held.clear();pressed.clear();lastPad[0]={};lastPad[1]={};players.forEach(p=>{p.buffer=null;p.bufferTime=0})}
 function menu(){state='menu';paused=false;superFX=null;ghosts=[];rings=[];clearInput();setMenu(true)}
-// Character select: rich cards for player 1, a compact row for the rival / player 2 ('auto' = random).
-const CARDS=[['assets/lancha-face.png','PODER · PRESIÓN CERCANA',[92,45,55],['Barrigazo con armadura','Barriga de la risa','Barriga bomba']],
- ['assets/fiel-face.png','VELOCIDAD · DISTANCIA',[60,92,85],['Ráfaga alta y baja · dash aéreo','Ráfaga del polo','Suplex fiel']],
- ['assets/kent-face.png','EQUILIBRIO · PATADAS DE FUEGO',[75,72,72],['Onda de fuego alta y baja','Patada de fuego','Suplex fiel']],
- ['assets/pingordy-face.png','COMBOS · MEDIALUNA Y TORNADO',[66,82,70],['Ráfaga alta y baja','Tornado espiral','Suplex fiel']]];
-const portraitImg=CARDS.map(c=>{const im=new Image();im.src=c[0];return im});
-let rivalSel='auto';
-function renderCards(){const m=$('#mode').value,tag={cpu:'CPU',local:'J2',training:'SPARRING'}[m];
- $('#p1cards').innerHTML=CARDS.map((c,i)=>`<button type="button" class="card${i===selected?' selected':''}" data-id="${i}" style="--c:${THEMES[i].color}" aria-pressed="${i===selected}">${i===selected?'<span class="badge">J1</span>':''}<img class="portrait" src="${c[0]}" alt=""><span class="name">${NAMES[i]}</span><span class="role">${c[1]}</span><ul class="stats">${['Fuerza','Velocidad','Alcance'].map((k,j)=>`<li><span>${k}</span><i style="--v:${c[2][j]}%"></i></li>`).join('')}</ul></button>`).join('');
- const sc=CARDS[selected];$('#p1detail').innerHTML=['ESP','SUPER','AGARRE'].map((k,j)=>`<span><b>${k}</b>${sc[3][j]}</span>`).join('');$('#p1detail').style.setProperty('--c',THEMES[selected].color);
- $('#rivalcards').innerHTML=`<button type="button" class="card${rivalSel==='auto'?' rsel':''}" data-id="auto" aria-pressed="${rivalSel==='auto'}">${rivalSel==='auto'?`<span class="badge">${tag}</span>`:''}<span class="portrait rnd">?</span><span class="name">AL AZAR</span></button>`+CARDS.map((c,i)=>`<button type="button" class="card${rivalSel===i?' rsel':''}" data-id="${i}" style="--c:${THEMES[i].color}" aria-pressed="${rivalSel===i}">${rivalSel===i?`<span class="badge">${tag}</span>`:''}<img class="portrait" src="${c[0]}" alt=""><span class="name">${NAMES[i]}</span></button>`).join('');
- $('#rivalLabel').textContent=m==='local'?'JUGADOR 2':m==='training'?'SPARRING':'RIVAL';
- document.querySelectorAll('#p1cards .card').forEach(c=>c.onclick=()=>selectCard(+c.dataset.id));
- document.querySelectorAll('#rivalcards .card').forEach(c=>c.onclick=()=>selectRival(c.dataset.id==='auto'?'auto':+c.dataset.id))}
-function selectCard(id){selected=id;renderCards();sound(480,.05)}
-function selectRival(id){rivalSel=id;renderCards();sound(520,.05)}
-function cardStep(d){selectCard((selected+d+NAMES.length)%NAMES.length)}
-function rivalStep(d){const o=['auto',...NAMES.keys()],i=o.indexOf(rivalSel);selectRival(o[(i+d+o.length)%o.length])}
-// The menu's segmented buttons mirror the hidden selects that start() and the gamepad cycle() read.
-function syncMenu(){const m=$('#mode').value;document.querySelectorAll('.seg').forEach(g=>{const v=$('#'+g.dataset.for).value;g.querySelectorAll('button').forEach(b=>{b.classList.toggle('on',b.dataset.value===v);b.setAttribute('aria-pressed',b.dataset.value===v)})});$('.seg[data-for="difficulty"]').classList.toggle('off',m!=='cpu');renderCards()}
+// Face images for the VS and victory screens (filled by load()).
 function setMenu(open){$('#menu').classList.toggle('hidden',!open);$('.screen').classList.toggle('menu-open',open)}
-document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{$('#'+b.parentNode.dataset.for).value=b.dataset.value;syncMenu();sound(480,.05)});
-function cycle(sel,d){const s=$(sel);s.selectedIndex=(s.selectedIndex+d+s.options.length)%s.options.length;syncMenu();sound(480,.05)}
+function cycle(sel,d){const s=$(sel);s.selectedIndex=(s.selectedIndex+d+s.options.length)%s.options.length;sound(480,.05)}
 function togglePause(){paused=!paused;clearInput()}
 $('#start').onclick=start;$('#sound').onclick=()=>{muted=!muted;$('#sound').textContent='♫ Sonido: '+(muted?'OFF':'ON')};$('#full').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen();else $('.screen').requestFullscreen?.()};
 $('#music').onclick=()=>{musicOn=!musicOn;$('#music').textContent='♪ Música: '+(musicOn?'ON':'OFF')};
 $('#effects').onclick=()=>{reducedFX=!reducedFX;$('#effects').textContent=reducedFX?'FX: suaves':'FX: intensos'};
-addEventListener('keydown',e=>{if(['SELECT','INPUT','TEXTAREA'].includes(e.target.tagName))return;const mapped=Object.values(MAPS[0]).includes(e.code)||Object.values(MAPS[1]).includes(e.code);if(mapped||e.code==='Space')e.preventDefault();if(!held.has(e.code))pressed.add(e.code);held.add(e.code);if(e.repeat)return;if(state==='menu'){if(e.code==='ArrowLeft')cardStep(-1);if(e.code==='ArrowRight')cardStep(1);if(e.code==='KeyQ')rivalStep(-1);if(e.code==='KeyE')rivalStep(1)}if(e.code==='Escape'&&state!=='menu')togglePause();if(e.code==='KeyR')menu();if(e.code==='Enter'){if(state==='menu')start();else if(state==='match')menu()}});
+addEventListener('keydown',e=>{if(['SELECT','INPUT','TEXTAREA'].includes(e.target.tagName))return;const mapped=Object.values(MAPS[0]).includes(e.code)||Object.values(MAPS[1]).includes(e.code);if(mapped||e.code==='Space')e.preventDefault();if(!held.has(e.code))pressed.add(e.code);held.add(e.code);if(e.repeat)return;if(e.code==='Escape'&&state!=='menu')togglePause();if(e.code==='KeyR')menu();if(e.code==='Enter'&&state==='match')menu()});
 addEventListener('keyup',e=>held.delete(e.code));addEventListener('blur',()=>{clearInput();if(state==='fight')paused=true});canvas.onpointerdown=()=>{canvas.focus();audio?.resume()};
 // A touch button may press several keys at once (AGARRE = J + K).
 document.querySelectorAll('[data-key]').forEach(b=>{const keys=b.dataset.key.split(' ');b.onpointerdown=e=>{e.preventDefault();b.setPointerCapture(e.pointerId);keys.forEach(k=>{held.add(k);pressed.add(k)});audio?.resume()};b.onpointerup=b.onpointercancel=()=>keys.forEach(k=>held.delete(k))});
@@ -118,7 +111,7 @@ function input(i){const out={},pad=pads()[i],b=n=>!!pad?.buttons[n]?.pressed,ax=
 // Menu, pause and navigation with any connected pad (edge-triggered; Options = start/pause, Share = back to menu).
 function padMenu(){const list=pads(),btn=n=>list.some(g=>g.buttons[n]?.pressed),axis=n=>list.reduce((m,g)=>Math.abs(g.axes[n]??0)>Math.abs(m)?g.axes[n]:m,0),
  now={left:btn(14)||axis(0)<-.5,right:btn(15)||axis(0)>.5,up:btn(12)||axis(1)<-.5,down:btn(13)||axis(1)>.5,prev:btn(4),next:btn(5),l2:btn(6),r2:btn(7),ok:btn(0),start:btn(9),back:btn(8)},hit=k=>now[k]&&!sys[k];
- if(state==='menu'){if(hit('left'))cardStep(-1);if(hit('right'))cardStep(1);if(hit('l2'))rivalStep(-1);if(hit('r2')||hit('back'))rivalStep(1);if(hit('up')||hit('down'))cycle('#mode',hit('down')?1:-1);if(hit('prev')||hit('next'))cycle('#difficulty',hit('next')?1:-1);if(hit('ok')||hit('start'))start()}
+ if(state==='menu'){if(hit('ok')||hit('start'))start()}
  else if(state==='match'){if(hit('start')||hit('back'))menu()}
  else if(paused){if(hit('ok')||hit('start'))togglePause();else if(hit('back'))menu()}
  else if(hit('start'))togglePause();
@@ -328,12 +321,12 @@ function drawVS(){const t=2.6-phaseTime,[a,b]=players,ease=k=>1-Math.pow(1-Math.
  ctx.save();ctx.fillStyle=THEMES[a.id].dark;ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(540,0);ctx.lineTo(420,H);ctx.lineTo(0,H);ctx.fill();ctx.fillStyle=THEMES[b.id].dark;ctx.beginPath();ctx.moveTo(540,0);ctx.lineTo(W,0);ctx.lineTo(W,H);ctx.lineTo(420,H);ctx.fill();
  ctx.globalAlpha=.25;for(let i=0;i<26;i++){const y=(i*41)%H,x=((t*900+i*137)%(W+300))-150;rect(i%2?x:W-x,y,120+i%4*40,2,i%2?THEMES[a.id].color:THEMES[b.id].color)}ctx.restore();
  rect(415,0,10,H,'#fff');
- for(const [p,i] of [[a,0],[b,1]]){const s=SETS[p.id]?.frames.introA||showSprites[p.id*4+2],h=380,w=s.image.width/s.image.height*h,k=ease((t-.1-i*.12)/.4),x=i?W-230+(1-k)*400:230-(1-k)*400;ctx.save();ctx.translate(x,500);ctx.scale(i?-1:1,1);ctx.drawImage(s.image,-w*(s.anchor??.5),-h,w,h);ctx.restore();text(NAMES[p.id],x,530,30,THEMES[p.id].color,'center');if(portraitImg[p.id].complete)drawPortrait(portraitImg[p.id],i?W-110:30,30,80,THEMES[p.id].color)}
+ for(const [p,i] of [[a,0],[b,1]]){const s=SETS[p.id]?.frames.introA||showSprites[p.id*4+2],h=380,w=s.image.width/s.image.height*h,k=ease((t-.1-i*.12)/.4),x=i?W-230+(1-k)*400:230-(1-k)*400;ctx.save();ctx.translate(x,500);ctx.scale(i?-1:1,1);ctx.drawImage(s.image,-w*(s.anchor??.5),-h,w,h);ctx.restore();text(NAMES[p.id],x,530,30,THEMES[p.id].color,'center');if(portrait[p.id])drawPortrait(portrait[p.id],i?W-110:30,30,80,THEMES[p.id].color)}
  const sk=t<.55?0:Math.max(1,3.2-(t-.55)*14);if(t>=.55&&!vsSlam){vsSlam=true;shake=10;flash=.7;sound(70,.4,'sawtooth',.06);noise(.3,.1,800)}
  if(sk){ctx.save();ctx.translate(480+(Math.random()-.5)*shake,250);ctx.scale(sk,sk);text('VS',0,30,90,'#ffe0a0','center');ctx.restore()}
  text('TORNEO DEL CAMPUS · FISI',480,90,16,'#f1d9aa','center')}
 function drawVictory(){const w=players.find(p=>p.wins>=2);if(!w)return;const k=Math.min(1,matchTime/.5),ease=1-Math.pow(1-k,3),theme=THEMES[w.id];ctx.save();ctx.globalAlpha=k;rect(0,0,W,H,'#0b0820a8');ctx.translate((1-ease)*-120,0);
- if(portraitImg[w.id].complete)drawPortrait(portraitImg[w.id],60,110,180,theme.color);text('¡CAMPEÓN!',270,140,22,theme.color);text(NAMES[w.id],270,190,46,'#fff1d0');text('“'+QUOTES[w.id]+'”',270,226,15,'#e9dbff');ctx.restore();
+ if(portrait[w.id])drawPortrait(portrait[w.id],60,110,180,theme.color);text('¡CAMPEÓN!',270,140,22,theme.color);text(NAMES[w.id],270,190,46,'#fff1d0');text('“'+QUOTES[w.id]+'”',270,226,15,'#e9dbff');ctx.restore();
  ctx.save();ctx.globalAlpha=Math.min(1,Math.max(0,(matchTime-.4)/.4));const rows=[['GOLPES CONECTADOS','hits'],['DAÑO TOTAL','damage'],['MEJOR COMBO','maxCombo'],['BLOQUEOS','blocks'],['SUPERS','supers']];rect(60,310,840,150,'#120c26d0');rect(60,310,840,3,theme.color);
  players.forEach((p,i)=>text(NAMES[p.id],i?860:440,338,14,THEMES[p.id].color,i?'right':'right'));rows.forEach(([label,key],j)=>{const y=362+j*20;text(label,80,y,13,'#c9b5ce');players.forEach((p,i)=>text(String(Math.round(p.stats[key])),i?860:440,y,14,'#fff','right'))});
  if(Math.floor(matchTime*2)%2===0)text('ENTER o R'+(pads().length?' · OPTIONS':'')+' para volver a seleccionar',480,500,15,'#ffe0a0','center');ctx.restore()}
@@ -372,5 +365,5 @@ function render(dt){ctx.imageSmoothingEnabled=false;rect(0,0,W,H,'#151124');if(s
  if(paused){rect(0,0,W,H,'#0a081bbd');text('PAUSA',480,255,46,'#ffe0a0','center');text('Pulsa ESC para continuar',480,292,18,'#fff','center')}
 }
 function loop(t){const dt=Math.min((t-prev)/1000||0,1/15);prev=t;acc+=dt;while(acc>=STEP){const hitstop=freeze>0;step(STEP);if(!hitstop)pressed.clear();acc-=STEP}padMenu();music();render(dt);requestAnimationFrame(loop)}
-window.fisiDebug=()=>({version:'0.4',pads:pads().map(g=>g.id),state,paused,clock,round,ready,extraPoses:extraSprites.length+followSprites.length+showSprites.length,camera:{...camera},superFX:superFX?{owner:superFX.owner.id,elapsed:superFX.elapsed,fade:superFX.fade,cinematic:cinematic()}:null,reducedFX,lastContact,players:players.map(p=>({id:p.id,x:p.x,y:p.y,hp:p.hp,energy:p.energy,action:p.action,move:p.moveId,age:p.age,crouched:p.crouched,guard:p.guard,wins:p.wins,pose:pose(p)})),projectiles:projectiles.length});
-padBadge();syncMenu();$('#mode').addEventListener('change',syncMenu);load();requestAnimationFrame(loop);
+window.fisiDebug=()=>({version:'0.5',pads:pads().map(g=>g.id),state,paused,clock,round,ready,extraPoses:extraSprites.length+followSprites.length+showSprites.length,camera:{...camera},superFX:superFX?{owner:superFX.owner.id,elapsed:superFX.elapsed,fade:superFX.fade,cinematic:cinematic()}:null,reducedFX,lastContact,players:players.map(p=>({id:p.id,x:p.x,y:p.y,hp:p.hp,energy:p.energy,action:p.action,move:p.moveId,age:p.age,crouched:p.crouched,guard:p.guard,wins:p.wins,pose:pose(p)})),projectiles:projectiles.length});
+padBadge();load();requestAnimationFrame(loop);
