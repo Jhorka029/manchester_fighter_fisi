@@ -1,0 +1,21 @@
+Manchester FISI Fighter 0.4 — Edge de escritorio
+
+76 comprobaciones automáticas correctas y una prueba de teclado.
+Sin errores de JavaScript durante estas comprobaciones.
+
+- 40 combinaciones de ataques y defensas para ambos personajes.
+- La patada baja hace 13 de daño, no derriba y permite recuperar de pie.
+- Salto neutro y caída usan poses diferentes de la patada aérea activa.
+- Presentaciones propias y ausencia de daño durante la cuenta regresiva.
+- Super de ambos personajes, daño esperado y finalización de sus efectos.
+- Cinemática: congela reloj y ataques, acerca cámara y respeta la pausa.
+- Después de la cinemática, ambos jugadores vuelven al plano visible.
+- Seguimiento lateral y plano abierto al separarse los luchadores.
+- Opción FX suaves reduce el acercamiento.
+- Alcance, izquierda/derecha, salto diagonal, defensa aérea, aterrizaje,
+  energía, entrenamiento tras KO, victoria por tiempo y siguiente ronda.
+
+Prueba real de teclado: movimiento, agacharse, defensa y pausa.
+Inspección visual: presentaciones, super, salto y patada aérea.
+
+No se ha probado con mando físico, en Android ni en R36S.

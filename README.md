@@ -1,0 +1,53 @@
+# Manchester FISI Fighter
+
+Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.4**, con Lancha y El Fiel, poderes propios y personajes inspirados en fotografías de referencia.
+
+**[Jugar en el navegador](https://jhorka029.github.io/manchester_fighter_fisi/)**
+
+## Cómo jugar
+
+Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **¡A PELEAR!**. En entrenamiento la energía se mantiene llena para probar los supers.
+
+| Acción | Jugador 1 |
+| --- | --- |
+| Mover | A / D |
+| Saltar | W |
+| Agacharse | S |
+| Defender de pie / agachado | H / S + H |
+| Puño alto / patada media | J / K |
+| Puño bajo / patada baja | S + J / S + K |
+| Descendente | U |
+| Ataque aéreo | W y luego J / K |
+| Especial / super | L / I |
+| Pausa / menú | Esc / R |
+
+Jugador 2: flechas y teclado numérico (1 alto, 2 medio, 3 especial, 0 super, 4 defensa, 5 descendente). La guía bajo la arena explica las defensas y los controles de mando.
+
+## Incluye
+
+- Combate por rondas, tres dificultades de CPU y modo local de dos jugadores.
+- Ataques altos, medios, bajos, descendentes y aéreos.
+- Salto y patada aérea con poses distintas; patada baja sin derribo.
+- Presentaciones de personajes y supers con cámara, aura, oscuridad y rayos.
+- Cámara que sigue la pelea y botón para suavizar los efectos.
+- Entrenamiento configurable y visualización de zonas de impacto.
+
+## Ejecutar y editar localmente
+
+Es un sitio estático, sin dependencias de compilación. Sirve la carpeta con un servidor local, por ejemplo:
+
+```sh
+python -m http.server 8000
+```
+
+Abre `http://localhost:8000/`. Usa un servidor local para permitir el procesamiento de sprites en Canvas.
+
+El juego está en `index.html` y `game-v4.js`; los estilos, en `style.css` y `combat-v3.css`. `assets/` contiene únicamente los recursos que usa la versión actual. Algunos recursos conservan nombres de su versión de creación y siguen siendo parte de la 0.4.
+
+## Publicación
+
+GitHub Pages sirve la raíz de la rama `main`. `.nojekyll` indica que los archivos deben publicarse directamente. Los cambios enviados a `main` actualizan el sitio.
+
+La verificación de la versión está en [docs/VERIFICACION.txt](docs/VERIFICACION.txt) y las notas de creación de recursos en [docs/ARTE.md](docs/ARTE.md).
+
+Demo para navegador de ordenador; la adaptación a Android y R36S queda pendiente.
