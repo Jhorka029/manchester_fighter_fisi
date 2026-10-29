@@ -1,0 +1,24 @@
+Manchester FISI Fighter 0.5 — verificación local en Edge
+
+125 comprobaciones correctas, más prueba real de teclado:
+- 76 comprobaciones de regresión del motor.
+- 26 de las mejoras existentes: dash, rodada, aspa, doble salto,
+  defensa, KO, victoria, música y controles de mando simulados.
+- 23 del nuevo flujo: intro, audio, salto al título, VS, tres modos,
+  dificultad exclusiva de CPU, cuatro escenarios, selección P1/rival,
+  partida tras el menú, transparencia del escudo y arranque con mando.
+
+Cargan las 30 poses de Lancha y las 23 de El Fiel como imágenes separadas.
+Inspección visual de bienvenida, título, selección de escenario y personajes.
+El HTML autónomo carga todos los recursos incrustados y no requiere Internet.
+Sin errores de JavaScript en las pruebas.
+
+Se conservaron las reglas y valores de combate. No se ha probado otra vez
+con un mando físico ni en Android o R36S en esta entrega.
+
+Actualización de inicio automático:
+12 comprobaciones específicas: intro sin interacción, progreso automático,
+botón de salto visible, ausencia del botón de inicio previo, final natural
+en título, navegación posterior, salto con clic y Escape, audio tras gesto,
+salto durante carga y ausencia de errores. Probado también bajo política
+de audio que exige interacción del usuario; la animación no se bloquea.
