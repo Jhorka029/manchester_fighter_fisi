@@ -58,6 +58,21 @@ Pingordy (cuarto personaje): 21 de sus 23 poses se mostraron en una pasada de
 todos los movimientos, sin errores. Lancha: los 5 cuadros de salto (agacharse,
 subida, picada del doble salto, aterrizaje de panza y caída) se mostraron.
 
+Paso lunar de Pingordy (simulación y captura): su dash dura 0,35 s y recorre
+unos 180-190 px (el normal dura 0,22 s). Hacia atrás reproduce los 3 pasos de
+caminar hacia delante; hacia delante los reproduce al revés. Un golpe recibido
+durante el deslizamiento no quita vida (invulnerable 0,2 s). El dash de Lancha
+sigue igual (0,22 s).
+
+Recarga de energía (simulación): tras 0,3 s de preparación sube 20 por segundo
+(de 20 a 54 en 2 s) en los cuatro personajes; se corta al moverse, y un golpe
+la interrumpe (el personaje queda golpeado). Con la barra llena la animación sigue mientras se mantiene el botón (la energía se queda en 100). La CPU
+(normal y difícil) se recarga cuando le queda poca energía y el rival está
+lejos. Animación: Lancha usa 4 cuadros propios (hamburguesa), Kent sus 2 cuadros de
+puños con grito, Pingordy sus 2 cuadros de llamas y aura, y El Fiel alterna sus
+poses de presentación; todos con aura y partículas por código. Pendiente:
+cuadros propios de El Fiel. L2 del mando pasa a recargar (ya no defiende; la defensa es L1).
+
 Prueba con mando físico: DualShock 4 ("Wireless Controller", Bluetooth,
 mapeo estándar) en Windows 11 con navegador Chromium. Verificado: detección,
 menú (personaje, dificultad, inicio), pausa/reanudar con OPTIONS, caminar,

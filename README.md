@@ -38,9 +38,10 @@ Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **�
 | Ráfaga baja (El Fiel) | S + L |
 | Dash aéreo (El Fiel) | Doble toque ← / → en el aire |
 | Especial / super | L / I |
+| Recargar energía (mantener) | O |
 | Pausa / menú | Esc / R |
 
-Jugador 2: flechas y teclado numérico (1 alto, 2 medio, 1 + 2 agarre, 3 especial, 0 super, 4 defensa, 5 descendente). La guía bajo la arena explica las defensas y los controles de mando.
+Jugador 2: flechas y teclado numérico (1 alto, 2 medio, 1 + 2 agarre, 3 especial, 0 super, 4 defensa, 5 descendente, 6 recargar). La guía bajo la arena explica las defensas y los controles de mando.
 
 ### Mando (Xbox / PlayStation)
 
@@ -58,7 +59,8 @@ Funciona con cualquier mando de mapeo estándar del navegador (Xbox, DualShock 4
 | Agarre | X + B a la vez | □ + ○ a la vez |
 | Especial | Y | △ |
 | Super | RB | R1 |
-| Defensa | LB o LT | L1 o L2 |
+| Defensa | LB | L1 |
+| Recargar energía (mantener) | LT | L2 |
 | Descendente | RT | R2 |
 | Pausa / reanudar | Start | OPTIONS |
 | Menú (desde la pausa) | Back | SHARE |
@@ -72,7 +74,8 @@ Ataques bajos: mantén abajo + puño o patada. En el menú: ← → tu personaje
 - Ataques altos, medios, bajos, descendentes y aéreos.
 - Salto y patada aérea con poses distintas; patada baja sin derribo.
 - Los poderes a distancia se esquivan saltando en el momento justo; la guardia se mantiene mientras sostienes defensa.
-- Esquive con dash (doble toque): invulnerable 0,16 s y 0,6 s de espera.
+- Recarga de energía para todos los personajes: mantén el botón quieto en el suelo; se corta con un golpe o al moverte; con la barra llena la animación sigue mientras mantengas el botón.
+- Esquive con dash (doble toque): invulnerable 0,16 s y 0,6 s de espera. El de Pingordy es un paso lunar (moonwalk), más lento: 0,36 s y 0,2 s de invulnerabilidad.
 - Presentaciones de personajes y supers con cámara, aura, oscuridad y rayos.
 - Cámara que sigue la pelea y botón para suavizar los efectos.
 - Entrenamiento configurable y visualización de zonas de impacto.
