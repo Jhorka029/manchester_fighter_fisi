@@ -100,4 +100,14 @@ El archivo `D:\imagenes videojuego\Movimimientos standar.txt` define el conjunto
 
 `assets/lancha-charge.png` trae cuatro cuadros recortados de una hoja con fondo magenta: agarra la hamburguesa, muerde, mastica con la mano en la barriga y sube los brazos con destellos. Durante la recarga se muestra primero el primero y luego se repiten morder, masticar y subir los brazos. Posiciones en `LC_ATLAS` de `game-v4.js`.
 
-Kent usa sus dos cuadros de puños con grito (los mismos del golpe descendente) y Pingordy sus dos cuadros de carga con llamas y aura (los mismos de la presentación). El Fiel todavía no tiene cuadros propios de recarga y alterna sus poses de presentación. Con la barra llena la animación continúa mientras se mantiene el botón. El aura y las partículas se dibujan por código con el color de cada personaje.
+Kent usa sus dos cuadros de puños con grito (los mismos del golpe descendente) y Pingordy sus dos cuadros de carga con llamas y aura (los mismos de la presentación). El Fiel usa tres cuadros propios (`assets/fiel-charge.png`): temblando en cuclillas con los puños, con la lengua afuera y de lado; se repiten en bucle (1, 2, 3, 2). Los dos primeros se tocaban en la imagen original y se cortaron por columnas, así que los zapatos que se juntan quedan un poco recortados. Con la barra llena la animación continúa mientras se mantiene el botón. El aura y las partículas se dibujan por código con el color de cada personaje.
+
+---
+
+# Ingestrella
+
+Quinto personaje, a partir de 15 imágenes de la carpeta `inge.estrella` (cuerpo completo, agachado, dos especiales, caída del salto, victoria, derribo, golpes alto y bajo, golpeado, reposo, recarga de energía, salto, ulti y caminar). Dos hojas (cuerpo completo y especial 2) venían con fondo verde y el resto con magenta. Se recortaron fuera del juego con un script de Python, se limpió el borde verde del recorte, se separaron los cuadros (la ulti, cuatro, por columnas fijas) y se igualó el tamaño entre hojas a ojo comparando cabezas. Quedan 23 cuadros en `assets/ingestrella.png`, con posiciones en `IE_ATLAS` de `game-v4.js`; `assets/ingestrella-face.png` es el retrato.
+
+Asignación por el nombre de cada archivo: reposo y caminar, golpe alto (puño), golpe bajo (golpe bajo y patada baja), agachado, salto y caída, golpeado, derribo, victoria y presentación, especial 2 (lanza código con el teclado, es su proyectil), ulti (teclado, tornado de código, manos arriba con haz de código y laptop con explosión), recarga de energía (llamas y aura) y el haz de código del especial 1 como golpe descendente. La rodada usa el tornado de código.
+
+Faltan en su carpeta una pose de bloqueo y una patada media: la defensa usa el reposo y la patada media el puño. El primer cuadro del especial 1 (orbe de código) y el último (de pie) quedaron sin usar.
