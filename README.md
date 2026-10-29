@@ -1,6 +1,6 @@
 # Manchester FISI Fighter
 
-Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.4**, con Lancha y El Fiel, poderes propios y personajes inspirados en fotografías de referencia.
+Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.4**, con Lancha, El Fiel, Kent y Pingordy, poderes propios y personajes inspirados en fotografías de referencia.
 
 **[Jugar en el navegador](https://jhorka029.github.io/manchester_fighter_fisi/)**
 
@@ -19,7 +19,7 @@ Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **�
 | Descendente | U |
 | Ataque aéreo | W y luego J / K |
 | Esquive (dash) | A A / D D (doble toque) |
-| Rodada (Lancha) / aspa de molino (El Fiel) | S + A A / D D (doble toque hacia el rival) |
+| Rodada (Lancha) / voltereta (El Fiel) | S + A A / D D (doble toque hacia el rival) |
 | Doble salto | W W (segundo toque en el aire) |
 | Especial / super | L / I |
 | Pausa / menú | Esc / R |
@@ -37,7 +37,7 @@ Funciona con cualquier mando de mapeo estándar del navegador (Xbox, DualShock 4
 | Puño alto | X | □ |
 | Patada media | B | ○ |
 | Esquive (dash) | Doble toque ← / → | Igual |
-| Rodada / aspa de molino | ↓ + doble toque ← / → | Igual |
+| Rodada / voltereta | ↓ + doble toque ← / → | Igual |
 | Doble salto | A / ↑ dos veces | ✕ / ↑ dos veces |
 | Especial | Y | △ |
 | Super | RB | R1 |
@@ -46,10 +46,11 @@ Funciona con cualquier mando de mapeo estándar del navegador (Xbox, DualShock 4
 | Pausa / reanudar | Start | OPTIONS |
 | Menú (desde la pausa) | Back | SHARE |
 
-Ataques bajos: mantén abajo + puño o patada. En el menú: ← → personaje, ↑ ↓ modo, LB/RB (L1/R1) dificultad, A/✕ o Start/OPTIONS para pelear.
+Ataques bajos: mantén abajo + puño o patada. En el menú: ← → tu personaje, LT/RT (L2/R2) o Back/SHARE el rival, ↑ ↓ modo, LB/RB (L1/R1) dificultad, A/✕ o Start/OPTIONS para pelear. Con teclado, ← → eliges tú y Q E el rival; con ratón, clic en las tarjetas.
 
 ## Incluye
 
+- Cuatro personajes: Lancha, El Fiel, Kent (patadas de fuego) y Pingordy (medialuna y tornado). El menú tiene una fila para elegir tu personaje y otra para el rival, también en 2 jugadores.
 - Combate por rondas, tres dificultades de CPU y modo local de dos jugadores.
 - Ataques altos, medios, bajos, descendentes y aéreos.
 - Salto y patada aérea con poses distintas; patada baja sin derribo.
