@@ -22,6 +22,11 @@ Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **�
 | Rodada (Lancha) / aspa de molino (El Fiel) | S + A A / D D (doble toque hacia el rival) |
 | Doble salto | W W (segundo toque en el aire) |
 | Agarre (no se bloquea) | J + K a la vez, de cerca |
+| Golpe cargado (rompe la guardia) | Mantén U |
+| Contraataque desde el bloqueo (25 energía) | J o K mientras bloqueas un golpe |
+| Levantarse tras un derribo | ← / → rodar · J / K golpe · nada: en el sitio |
+| Ráfaga baja (El Fiel) | S + L |
+| Dash aéreo (El Fiel) | Doble toque ← / → en el aire |
 | Especial / super | L / I |
 | Pausa / menú | Esc / R |
 
@@ -67,6 +72,10 @@ Ataques bajos: mantén abajo + puño o patada. En el menú: ← → personaje, �
 - Contador de combos lateral, barras de vida que tiemblan y parpadean con poca vida, aviso de ¡PRIMER GOLPE! y cortinillas entre rondas.
 - Público que salta con la emoción del combate y focos de color durante los supers.
 - Agarres de cerca que atraviesan el bloqueo, con llave propia: Lancha rebota al rival con la barriga y lo revienta delante (¡BARRIGA BOMBA!); El Fiel hace un suplex en puente y lo clava detrás con un rayo (¡SUPLEX FIEL!). Se escapan pulsando J + K justo al ser agarrado; fallar el agarre deja expuesto.
+- ¡COUNTER! al golpear a un rival que está atacando: más daño y aturdimiento.
+- Barra de mareo bajo la vida: muchos golpes seguidos sin defenderte te dejan mareado 2 s.
+- Rebote en la pared: un golpe fuerte cerca del borde hace rebotar al rival y permite seguir golpeándolo en el aire.
+- El barrigazo de Lancha tiene armadura: aguanta un golpe sin interrumpirse.
 - El barrigazo y el super de Lancha anulan la ráfaga de El Fiel.
 - Música chiptune generada en tiempo real (botón ♪ Música) y golpes con ruido filtrado.
 
@@ -80,7 +89,7 @@ python -m http.server 8000
 
 Abre `http://localhost:8000/`. Usa un servidor local para permitir el procesamiento de sprites en Canvas.
 
-El juego está en `index.html` y `game-v4.js`; los estilos, en `style.css` y `combat-v3.css`. `assets/` contiene únicamente los recursos que usa la versión actual. Algunos recursos conservan nombres de su versión de creación y siguen siendo parte de la 0.4.
+El juego está en `index.html` y `game-v4.js`; los estilos, en `style.css`, `combat-v3.css` y `menu.css` (menú de inicio y diseño responsive). `assets/` contiene únicamente los recursos que usa la versión actual. Algunos recursos conservan nombres de su versión de creación y siguen siendo parte de la 0.4.
 
 ## Publicación
 
