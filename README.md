@@ -18,6 +18,7 @@ Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **�
 | Puño bajo / patada baja | S + J / S + K |
 | Descendente | U |
 | Ataque aéreo | W y luego J / K |
+| Esquive (dash) | A A / D D (doble toque) |
 | Especial / super | L / I |
 | Pausa / menú | Esc / R |
 
@@ -33,6 +34,7 @@ Funciona con cualquier mando de mapeo estándar del navegador (Xbox, DualShock 4
 | Saltar | A (o ↑) | ✕ (o ↑) |
 | Puño alto | X | □ |
 | Patada media | B | ○ |
+| Esquive (dash) | Doble toque ← / → | Igual |
 | Especial | Y | △ |
 | Super | RB | R1 |
 | Defensa | LB o LT | L1 o L2 |
@@ -47,6 +49,8 @@ Ataques bajos: mantén abajo + puño o patada. En el menú: ← → personaje, �
 - Combate por rondas, tres dificultades de CPU y modo local de dos jugadores.
 - Ataques altos, medios, bajos, descendentes y aéreos.
 - Salto y patada aérea con poses distintas; patada baja sin derribo.
+- Los poderes a distancia se esquivan saltando en el momento justo; la guardia se mantiene mientras sostienes defensa.
+- Esquive con dash (doble toque): invulnerable 0,16 s y 0,6 s de espera.
 - Presentaciones de personajes y supers con cámara, aura, oscuridad y rayos.
 - Cámara que sigue la pelea y botón para suavizar los efectos.
 - Entrenamiento configurable y visualización de zonas de impacto.
