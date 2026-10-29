@@ -6,7 +6,7 @@ Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.5**, co
 
 ## Presentación y menús 0.5
 
-La intro muestra los cuatro escenarios y los personajes con música chiptune. Pulsa **Ver intro con música** para activar el audio del navegador, o **Saltar intro** para ir directamente al título con el escudo FISI en pixel art.
+La intro empieza automáticamente al abrir el juego y muestra los cuatro escenarios y los personajes. **Saltar intro** permanece visible para ir directamente al título con el escudo FISI en pixel art. La música intenta arrancar al cargar; si el navegador restringe el audio automático, se activa con la primera pulsación o clic sin detener la animación.
 
 El recorrido es: título → seleccionar modo **VS** → **VS CPU**, **2 jugadores** o **entrenamiento** → dificultad solo en VS CPU → escenario → personajes. La cuadrícula central permite elegir P1 y su rival; usa **Tab**, los botones P1/CPU o LB/RB del mando para cambiar de selector. Los espacios oscuros están reservados y no son personajes adicionales.
 

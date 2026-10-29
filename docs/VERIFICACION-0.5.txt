@@ -15,3 +15,10 @@ Sin errores de JavaScript en las pruebas.
 
 Se conservaron las reglas y valores de combate. No se ha probado otra vez
 con un mando físico ni en Android o R36S en esta entrega.
+
+Actualización de inicio automático:
+12 comprobaciones específicas: intro sin interacción, progreso automático,
+botón de salto visible, ausencia del botón de inicio previo, final natural
+en título, navegación posterior, salto con clic y Escape, audio tras gesto,
+salto durante carga y ausencia de errores. Probado también bajo política
+de audio que exige interacción del usuario; la animación no se bloquea.
