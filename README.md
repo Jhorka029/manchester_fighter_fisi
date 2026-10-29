@@ -21,10 +21,11 @@ Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **�
 | Esquive (dash) | A A / D D (doble toque) |
 | Rodada (Lancha) / aspa de molino (El Fiel) | S + A A / D D (doble toque hacia el rival) |
 | Doble salto | W W (segundo toque en el aire) |
+| Agarre (no se bloquea) | J + K a la vez, de cerca |
 | Especial / super | L / I |
 | Pausa / menú | Esc / R |
 
-Jugador 2: flechas y teclado numérico (1 alto, 2 medio, 3 especial, 0 super, 4 defensa, 5 descendente). La guía bajo la arena explica las defensas y los controles de mando.
+Jugador 2: flechas y teclado numérico (1 alto, 2 medio, 1 + 2 agarre, 3 especial, 0 super, 4 defensa, 5 descendente). La guía bajo la arena explica las defensas y los controles de mando.
 
 ### Mando (Xbox / PlayStation)
 
@@ -39,6 +40,7 @@ Funciona con cualquier mando de mapeo estándar del navegador (Xbox, DualShock 4
 | Esquive (dash) | Doble toque ← / → | Igual |
 | Rodada / aspa de molino | ↓ + doble toque ← / → | Igual |
 | Doble salto | A / ↑ dos veces | ✕ / ↑ dos veces |
+| Agarre | X + B a la vez | □ + ○ a la vez |
 | Especial | Y | △ |
 | Super | RB | R1 |
 | Defensa | LB o LT | L1 o L2 |
@@ -64,6 +66,7 @@ Ataques bajos: mantén abajo + puño o patada. En el menú: ← → personaje, �
 - Chispas según el golpe (puño, patada, bloqueo, especial), partículas con gravedad, polvo al caminar, esquivar y caer, y deformación al saltar y aterrizar.
 - Contador de combos lateral, barras de vida que tiemblan y parpadean con poca vida, aviso de ¡PRIMER GOLPE! y cortinillas entre rondas.
 - Público que salta con la emoción del combate y focos de color durante los supers.
+- Agarres de cerca que atraviesan el bloqueo, con llave propia: Lancha rebota al rival con la barriga y lo revienta delante (¡BARRIGA BOMBA!); El Fiel hace un suplex en puente y lo clava detrás con un rayo (¡SUPLEX FIEL!). Se escapan pulsando J + K justo al ser agarrado; fallar el agarre deja expuesto.
 - El barrigazo y el super de Lancha anulan la ráfaga de El Fiel.
 - Música chiptune generada en tiempo real (botón ♪ Música) y golpes con ruido filtrado.
 
