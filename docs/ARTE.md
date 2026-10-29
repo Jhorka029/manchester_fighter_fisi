@@ -42,3 +42,12 @@ Use case: stylized-concept. Production fighting-game animation atlas MATCHING re
 
 Los rayos, auras, cámara, estelas, sombras y ondas de impacto se dibujan por código en tiempo real.
 
+
+---
+
+# Rodada de Lancha
+
+`assets/roll-lancha.webp` (1376x768, fondo magenta) contiene diez cuadros de Lancha, dos filas de cinco, mirando a la derecha: agachado, encogido, bola, cinco cuadros rodando y dos de levantarse. El motor los recorta con la misma rutina que los demás atlas (`extractPoses(im,5)`) y reproduce encoger, rodar en bucle y levantarse durante los 0,55 s de la rodada. 
+# Aspa de molino de El Fiel
+
+`assets/roll-fiel.png` (297x246, fondo magenta) tiene tres cuadros: agachado, apoyando las manos y parada de manos. El motor los recorta con `extractRow` y los escala para que el agachado coincida con la pose agachada del atlas principal. Solo hay tres cuadros dibujados: el giro de la parada de manos se simula por código aplanando y volteando el sprite sobre su eje vertical (dos vueltas), con una leve oscilación. Para una animación más fluida faltarían cuadros dibujados de las piernas barriendo en círculo.

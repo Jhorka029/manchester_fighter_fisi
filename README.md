@@ -19,7 +19,8 @@ Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **�
 | Descendente | U |
 | Ataque aéreo | W y luego J / K |
 | Esquive (dash) | A A / D D (doble toque) |
-| Saltar sobre el rival | W W (segundo toque antes de 0,35 s) |
+| Rodada (Lancha) / aspa de molino (El Fiel) | S + A A / D D (doble toque hacia el rival) |
+| Doble salto | W W (segundo toque en el aire) |
 | Especial / super | L / I |
 | Pausa / menú | Esc / R |
 
@@ -36,7 +37,8 @@ Funciona con cualquier mando de mapeo estándar del navegador (Xbox, DualShock 4
 | Puño alto | X | □ |
 | Patada media | B | ○ |
 | Esquive (dash) | Doble toque ← / → | Igual |
-| Saltar sobre el rival | A / ↑ dos veces | ✕ / ↑ dos veces |
+| Rodada / aspa de molino | ↓ + doble toque ← / → | Igual |
+| Doble salto | A / ↑ dos veces | ✕ / ↑ dos veces |
 | Especial | Y | △ |
 | Super | RB | R1 |
 | Defensa | LB o LT | L1 o L2 |

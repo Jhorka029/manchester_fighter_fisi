@@ -24,9 +24,19 @@ Esquives y defensa (simulación fotograma a fotograma, ráfaga de El Fiel):
 - Dash adelante a 0,91 s atraviesa el poder; el segundo dash seguido no sale
   (espera de 0,6 s).
 - Con defensa mantenida la guardia no se cae tras el bloqueo; daño 1,32.
-- Doble salto sobre el rival (simulación): desde 80 y 250 px cae unos 95 px
-  detrás de él; con el segundo toque pasados 0,6 s no hay cruce; también
-  funciona para el Jugador 2 y junto a la pared.
+- Doble salto (simulación): sube a 220 px frente a 117 del salto normal; sale
+  con el segundo toque en cualquier momento del aire (también cayendo o tras
+  una patada aérea); sin dirección sube recto; con la dirección hacia el rival
+  cercano cae unos 95 px detrás de él; con la dirección contraria se aleja;
+  un tercer toque no repite.
+- Rodada (Lancha, 0,55 s) y aspa de molino (El Fiel, 0,6 s), agachado + doble toque
+  (simulación y captura de pantalla): cruzan al rival y caen unos 95 px detrás;
+  sin daño de un golpe recibido durante la animación (control: 7); en dirección
+  contraria avanzan unos 230 px; sin agacharse el doble toque sigue siendo dash.
+  Lancha usa el atlas assets/roll-lancha.webp (10 cuadros: encoger, bola,
+  rodar, levantarse). El Fiel hace el aspa de molino (0,6 s) con los 3 cuadros
+  de assets/roll-fiel.png: agacharse, apoyar manos y parada de manos que gira
+  sobre su eje vertical (el sprite se aplana y se voltea por código).
 - La CPU esquiva o bloquea 6, 17 y 22 de 30 ráfagas (fácil, normal, difícil).
 
 Prueba con mando físico: DualShock 4 ("Wireless Controller", Bluetooth,
