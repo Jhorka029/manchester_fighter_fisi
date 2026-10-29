@@ -1,6 +1,6 @@
 # Manchester FISI Fighter
 
-Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.5**, con Lancha y El Fiel, poderes propios y personajes inspirados en fotografías de referencia.
+Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.5**, con Lancha, El Fiel, Kent, Pingordy e Ingestrella, poderes propios y personajes inspirados en fotografías de referencia.
 
 **[Versión pública](https://jhorka029.github.io/manchester_fighter_fisi/)**
 
@@ -29,12 +29,19 @@ Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **�
 | Descendente | U |
 | Ataque aéreo | W y luego J / K |
 | Esquive (dash) | A A / D D (doble toque) |
-| Rodada (Lancha) / aspa de molino (El Fiel) | S + A A / D D (doble toque hacia el rival) |
+| Rodada (Lancha) / voltereta (El Fiel) | S + A A / D D (doble toque hacia el rival) |
 | Doble salto | W W (segundo toque en el aire) |
+| Agarre (no se bloquea) | J + K a la vez, de cerca |
+| Golpe cargado (rompe la guardia) | Mantén U |
+| Contraataque desde el bloqueo (25 energía) | J o K mientras bloqueas un golpe |
+| Levantarse tras un derribo | ← / → rodar · J / K golpe · nada: en el sitio |
+| Ráfaga baja (El Fiel) | S + L |
+| Dash aéreo (El Fiel) | Doble toque ← / → en el aire |
 | Especial / super | L / I |
+| Recargar energía (mantener) | O |
 | Pausa / menú | Esc / R |
 
-Jugador 2: flechas y teclado numérico (1 alto, 2 medio, 3 especial, 0 super, 4 defensa, 5 descendente). La guía bajo la arena explica las defensas y los controles de mando.
+Jugador 2: flechas y teclado numérico (1 alto, 2 medio, 1 + 2 agarre, 3 especial, 0 super, 4 defensa, 5 descendente, 6 recargar). La guía bajo la arena explica las defensas y los controles de mando.
 
 ### Mando (Xbox / PlayStation)
 
@@ -47,24 +54,28 @@ Funciona con cualquier mando de mapeo estándar del navegador (Xbox, DualShock 4
 | Puño alto | X | □ |
 | Patada media | B | ○ |
 | Esquive (dash) | Doble toque ← / → | Igual |
-| Rodada / aspa de molino | ↓ + doble toque ← / → | Igual |
+| Rodada / voltereta | ↓ + doble toque ← / → | Igual |
 | Doble salto | A / ↑ dos veces | ✕ / ↑ dos veces |
+| Agarre | X + B a la vez | □ + ○ a la vez |
 | Especial | Y | △ |
 | Super | RB | R1 |
-| Defensa | LB o LT | L1 o L2 |
+| Defensa | LB | L1 |
+| Recargar energía (mantener) | LT | L2 |
 | Descendente | RT | R2 |
 | Pausa / reanudar | Start | OPTIONS |
 | Menú (desde la pausa) | Back | SHARE |
 
-Ataques bajos: mantén abajo + puño o patada. En el menú: ← → personaje, ↑ ↓ modo, LB/RB (L1/R1) dificultad, A/✕ o Start/OPTIONS para pelear.
+Ataques bajos: mantén abajo + puño o patada. En el menú: ← → tu personaje, LT/RT (L2/R2) o Back/SHARE el rival, ↑ ↓ modo, LB/RB (L1/R1) dificultad, A/✕ o Start/OPTIONS para pelear. Con teclado, ← → eliges tú y Q E el rival; con ratón, clic en las tarjetas.
 
 ## Incluye
 
+- Cinco personajes: Lancha, El Fiel, Kent (patadas de fuego), Pingordy (medialuna y tornado) e Ingestrella (código y laptop). El menú tiene una fila para elegir tu personaje y otra para el rival, también en 2 jugadores.
 - Combate por rondas, tres dificultades de CPU y modo local de dos jugadores.
 - Ataques altos, medios, bajos, descendentes y aéreos.
 - Salto y patada aérea con poses distintas; patada baja sin derribo.
 - Los poderes a distancia se esquivan saltando en el momento justo; la guardia se mantiene mientras sostienes defensa.
-- Esquive con dash (doble toque): invulnerable 0,16 s y 0,6 s de espera.
+- Recarga de energía para todos los personajes: mantén el botón quieto en el suelo; se corta con un golpe o al moverte; con la barra llena la animación sigue mientras mantengas el botón.
+- Esquive con dash (doble toque): invulnerable 0,16 s y 0,6 s de espera. El de Pingordy es un paso lunar (moonwalk), más lento: 0,36 s y 0,2 s de invulnerabilidad.
 - Presentaciones de personajes y supers con cámara, aura, oscuridad y rayos.
 - Cámara que sigue la pelea y botón para suavizar los efectos.
 - Entrenamiento configurable y visualización de zonas de impacto.
@@ -74,6 +85,11 @@ Ataques bajos: mantén abajo + puño o patada. En el menú: ← → personaje, �
 - Chispas según el golpe (puño, patada, bloqueo, especial), partículas con gravedad, polvo al caminar, esquivar y caer, y deformación al saltar y aterrizar.
 - Contador de combos lateral, barras de vida que tiemblan y parpadean con poca vida, aviso de ¡PRIMER GOLPE! y cortinillas entre rondas.
 - Público que salta con la emoción del combate y focos de color durante los supers.
+- Agarres de cerca que atraviesan el bloqueo, con llave propia: Lancha rebota al rival con la barriga y lo revienta delante (¡BARRIGA BOMBA!); El Fiel hace un suplex en puente y lo clava detrás con un rayo (¡SUPLEX FIEL!). Se escapan pulsando J + K justo al ser agarrado; fallar el agarre deja expuesto.
+- ¡COUNTER! al golpear a un rival que está atacando: más daño y aturdimiento.
+- Barra de mareo bajo la vida: muchos golpes seguidos sin defenderte te dejan mareado 2 s.
+- Rebote en la pared: un golpe fuerte cerca del borde hace rebotar al rival y permite seguir golpeándolo en el aire.
+- El barrigazo de Lancha tiene armadura: aguanta un golpe sin interrumpirse.
 - El barrigazo y el super de Lancha anulan la ráfaga de El Fiel.
 - Música chiptune generada en tiempo real (botón ♪ Música) y golpes con ruido filtrado.
 
@@ -87,7 +103,7 @@ python -m http.server 8000
 
 Abre `http://localhost:8000/`. Usa un servidor local para permitir el procesamiento de sprites en Canvas.
 
-`game-v4.js` conserva el motor de combate. `frontend.js` y `frontend.css` implementan la presentación y selección, y `asset-catalog.js` registra los recursos. El nombre histórico del motor no altera la versión 0.5.
+`game-v4.js` conserva el motor de combate. `frontend.js` y `frontend.css` implementan la presentación y selección, `responsive.css` adapta la página a móvil y tablet, y `asset-catalog.js` registra los recursos. El nombre histórico del motor no altera la versión 0.5.
 
 Para generar un único HTML que funcione sin servidor ni conexión:
 

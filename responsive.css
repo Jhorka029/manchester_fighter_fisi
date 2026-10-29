@@ -1,0 +1,66 @@
+/* Responsive page around the arena: header, touch controls and guide. The menu itself lives in frontend.css. */
+header .tools{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.screen.menu-open~.touch{display:none}
+/* Narrow screens: the frontend menu leaves the 16:9 arena, flows in the page with readable pixel sizes,
+   and its animated canvas becomes a cropped background. The arena canvas returns when the fight starts. */
+@media (max-width:820px){
+ .screen.menu-open #game{display:none}
+ .screen.menu-open #menu{position:relative;inset:auto;min-height:560px}
+ #front-canvas{object-fit:cover}
+ #front-ui{position:relative;inset:auto;min-height:560px;padding:20px 14px 26px;font-size:14px}
+ .menu-step,.stage-select,.character-select{margin:-20px -14px -26px;padding:20px 14px 26px;background:linear-gradient(#0c071d55,#0c071d99 30%,#0c071dcc)}
+ #front-ui h2{font-size:28px!important;margin:8px 0 16px!important;text-shadow:2px 3px #3a163f}
+ #front-ui button{font-size:13px;padding:10px 14px;border-radius:8px}
+ #front-ui small{font-size:12px}
+ #front-ui .gold{box-shadow:0 0 16px #f4a84d35}
+ .front-kicker{font-size:11px;letter-spacing:.18em}
+ .front-loading{min-height:500px;font-size:18px}
+ .front-loading small{margin-top:10px}
+ .menu-step,.title-screen,.stage-select,.character-select,.front-welcome{position:relative;inset:auto;min-height:510px}
+ .front-actions{gap:10px;margin:18px 0 10px;flex-wrap:wrap}
+ .intro-top{position:relative;inset:auto;font-size:11px;letter-spacing:.1em;gap:10px}
+ .intro-top span{display:none}
+ .intro-top button{margin-left:auto}
+ .intro-progress{height:4px}
+ .crest{width:130px;height:130px;filter:drop-shadow(0 0 10px #af6cdd55)}
+ .title-screen h2{font-size:38px!important;margin:10px 0!important}
+ .title-screen .press-start{font-size:14px!important;padding:14px 6px!important}
+ .mode-options{flex-direction:column;gap:10px}
+ .mode-card,.mode-options.single .mode-card{width:100%;min-height:0;gap:6px;padding:14px 16px!important}
+ .mode-card b{font-size:18px}
+ .mode-number{font-size:12px}
+ .stage-select h2{font-size:24px!important;margin:8px 0!important}
+ .stage-current{gap:4px;margin:14px 0}
+ .stage-current b{font-size:20px}
+ .stage-current span{font-size:13px}
+ .stage-options{grid-template-columns:1fr 1fr;gap:10px}
+ .stage-card{padding:5px!important}
+ .stage-card img{border-radius:4px}
+ .stage-card b{font-size:12px;margin:6px 0 2px}
+ .character-select h2{font-size:22px!important;margin:6px 0 12px!important}
+ .picker-tabs{gap:8px;flex-wrap:wrap}
+ .picker-tabs button{padding:8px 12px!important;font-size:12px!important}
+ .fighter-grid{position:relative;inset:auto;width:100%;max-width:520px;margin:14px auto 0;grid-template-columns:repeat(4,1fr);gap:8px;padding:10px;border-radius:12px}
+ .fighter-slot{border-radius:8px!important;padding:3px!important}
+ .fighter-slot img{border-radius:5px}
+ .fighter-slot.locked{display:none}
+ .slot-tags{inset:3px 3px auto}
+ .slot-tags b{font-size:10px;padding:2px 4px;border-radius:3px}
+ .select-hint{position:relative;inset:auto;width:auto;margin:10px 0;font-size:12px;line-height:1.5}
+ .selection-bar{position:relative;inset:auto;width:auto;flex-wrap:wrap;gap:12px;padding-top:14px}
+ .selection-bar small{font-size:10px!important;margin-bottom:4px}
+ .selection-bar b{font-size:13px}
+ .selection-bar .gold{width:100%;padding:14px!important;font-size:16px!important}
+ .select-footer{position:relative;inset:auto;width:auto;margin-top:12px;flex-wrap:wrap;gap:10px}
+ .select-footer button{padding:8px 12px!important;font-size:12px!important}
+ .select-footer small{font-size:11px!important}
+}
+@media (max-width:650px){
+ header .brand small{display:none}
+ header .tools button{padding:6px 9px;font-size:12px}
+ .touch{gap:10px}
+ .touch div{gap:6px}
+ .touch button{min-width:52px;min-height:48px;font-size:12px}
+ .guide{overflow-x:auto}
+ .guide table{min-width:520px}
+}

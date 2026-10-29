@@ -29,15 +29,55 @@ Esquives y defensa (simulación fotograma a fotograma, ráfaga de El Fiel):
   una patada aérea); sin dirección sube recto; con la dirección hacia el rival
   cercano cae unos 95 px detrás de él; con la dirección contraria se aleja;
   un tercer toque no repite.
-- Rodada (Lancha, 0,55 s) y aspa de molino (El Fiel, 0,6 s), agachado + doble toque
+- Rodada (Lancha, 0,55 s) y voltereta (El Fiel, 0,65 s), agachado + doble toque
   (simulación y captura de pantalla): cruzan al rival y caen unos 95 px detrás;
   sin daño de un golpe recibido durante la animación (control: 7); en dirección
   contraria avanzan unos 230 px; sin agacharse el doble toque sigue siendo dash.
   Lancha usa el atlas assets/roll-lancha.webp (10 cuadros: encoger, bola,
-  rodar, levantarse). El Fiel hace el aspa de molino (0,6 s) con los 3 cuadros
-  de assets/roll-fiel.png: agacharse, apoyar manos y parada de manos que gira
-  sobre su eje vertical (el sprite se aplana y se voltea por código).
+  rodar, levantarse). El Fiel hace una voltereta con los 5 cuadros de
+  assets/flip-fiel-prep.png y assets/flip-fiel.png: preparación, salto
+  encogido, invertido, aterrizaje y de pie, con el arco dibujado por código.
 - La CPU esquiva o bloquea 6, 17 y 22 de 30 ráfagas (fácil, normal, difícil).
+
+Kent (tercer personaje, simulación y capturas): usa las 24 poses del atlas
+assets/kent.png; en una pasada se mostraron 22 (faltan caído y agachado
+golpeado, poco frecuentes). Sin errores en 70 s de combate aleatorio contra la
+CPU en cuatro emparejamientos (Lancha, El Fiel y Kent como rival, y Kent contra
+Kent).
+
+Super de El Fiel (simulación y captura): usa 4 cuadros de assets/fiel-super.png
+(levantar el polo y golpe, en dos variantes que se alternan). Cada una de las 6
+ráfagas muestra el golpe y luego vuelve a levantar el polo; sin errores.
+Tamaño de Kent: reducido un 15 % (de 256 a 217 px en reposo) para igualar a
+Lancha y El Fiel, que miden unos 217 px visibles en pantalla.
+
+Selección de personajes (simulación): clic en las tarjetas elige tu personaje y
+el rival por separado, ← → y Q E funcionan en el menú, la fila del rival pasa a
+llamarse Jugador 2 en el modo 2 jugadores y "Al azar" elige uno distinto al tuyo.
+Pingordy (cuarto personaje): 21 de sus 23 poses se mostraron en una pasada de
+todos los movimientos, sin errores. Lancha: los 5 cuadros de salto (agacharse,
+subida, picada del doble salto, aterrizaje de panza y caída) se mostraron.
+
+Paso lunar de Pingordy (simulación y captura): su dash dura 0,35 s y recorre
+unos 180-190 px (el normal dura 0,22 s). Hacia atrás reproduce los 3 pasos de
+caminar hacia delante; hacia delante los reproduce al revés. Un golpe recibido
+durante el deslizamiento no quita vida (invulnerable 0,2 s). El dash de Lancha
+sigue igual (0,22 s).
+
+Recarga de energía (simulación): tras 0,3 s de preparación sube 20 por segundo
+(de 20 a 54 en 2 s) en los cuatro personajes; se corta al moverse, y un golpe
+la interrumpe (el personaje queda golpeado). Con la barra llena la animación sigue mientras se mantiene el botón (la energía se queda en 100). La CPU
+(normal y difícil) se recarga cuando le queda poca energía y el rival está
+lejos. Animación: Lancha usa 4 cuadros propios (hamburguesa), Kent sus 2 cuadros de
+puños con grito, Pingordy sus 2 cuadros de llamas y aura, y El Fiel alterna sus
+poses de presentación; todos con aura y partículas por código. El Fiel usa ahora sus 3
+cuadros propios (temblando en cuclillas, lengua afuera). L2 del mando pasa a recargar (ya no defiende; la defensa es L1).
+
+Ingestrella (quinto personaje, simulación y captura): 21 de sus 23 cuadros se
+mostraron en una pasada de todos los movimientos, sin errores; el especial lanza
+un proyectil verde y su altura es parecida a la de Lancha. No trae pose de
+bloqueo ni de patada media: la defensa usa el reposo y la patada media usa el
+puño.
 
 Prueba con mando físico: DualShock 4 ("Wireless Controller", Bluetooth,
 mapeo estándar) en Windows 11 con navegador Chromium. Verificado: detección,
