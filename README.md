@@ -23,6 +23,25 @@ Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **�
 
 Jugador 2: flechas y teclado numérico (1 alto, 2 medio, 3 especial, 0 super, 4 defensa, 5 descendente). La guía bajo la arena explica las defensas y los controles de mando.
 
+### Mando (Xbox / PlayStation)
+
+Funciona con cualquier mando de mapeo estándar del navegador (Xbox, DualShock 4, DualSense). El primer mando conectado es el Jugador 1 y el segundo, el Jugador 2. Si no responde, pulsa un botón con la página enfocada; el indicador de la cabecera confirma que lo detectó.
+
+| Acción | Xbox | PlayStation |
+| --- | --- | --- |
+| Mover / agacharse / saltar | Stick o cruceta (← → ↓ ↑) | Igual |
+| Saltar | A (o ↑) | ✕ (o ↑) |
+| Puño alto | X | □ |
+| Patada media | B | ○ |
+| Especial | Y | △ |
+| Super | RB | R1 |
+| Defensa | LB o LT | L1 o L2 |
+| Descendente | RT | R2 |
+| Pausa / reanudar | Start | OPTIONS |
+| Menú (desde la pausa) | Back | SHARE |
+
+Ataques bajos: mantén abajo + puño o patada. En el menú: ← → personaje, ↑ ↓ modo, LB/RB (L1/R1) dificultad, A/✕ o Start/OPTIONS para pelear.
+
 ## Incluye
 
 - Combate por rondas, tres dificultades de CPU y modo local de dos jugadores.
@@ -50,4 +69,4 @@ GitHub Pages sirve la raíz de la rama `main`. `.nojekyll` indica que los archiv
 
 La verificación de la versión está en [docs/VERIFICACION.txt](docs/VERIFICACION.txt) y las notas de creación de recursos en [docs/ARTE.md](docs/ARTE.md).
 
-Demo para navegador de ordenador; la adaptación a Android y R36S queda pendiente.
+Demo para navegador de ordenador, con mando probado en DualShock 4; la adaptación a Android y R36S queda pendiente.
