@@ -70,14 +70,22 @@ la interrumpe (el personaje queda golpeado). Con la barra llena la animación si
 (normal y difícil) se recarga cuando le queda poca energía y el rival está
 lejos. Animación: Lancha usa 4 cuadros propios (hamburguesa), Kent sus 2 cuadros de
 puños con grito, Pingordy sus 2 cuadros de llamas y aura, y El Fiel alterna sus
-poses de presentación; todos con aura y partículas por código. El Fiel usa ahora sus 3
-cuadros propios (temblando en cuclillas, lengua afuera). L2 del mando pasa a recargar (ya no defiende; la defensa es L1).
+poses de presentación; todos con aura y partículas por código. El Fiel usa ahora sus 2
+cuadros propios (en cuclillas con la lengua afuera). L2 del mando pasa a recargar (ya no defiende; la defensa es L1).
 
 Ingestrella (quinto personaje, simulación y captura): 21 de sus 23 cuadros se
 mostraron en una pasada de todos los movimientos, sin errores; el especial lanza
 un proyectil verde y su altura es parecida a la de Lancha. No trae pose de
 bloqueo ni de patada media: la defensa usa el reposo y la patada media usa el
 puño.
+
+Puño agachado de Pingordy (simulación y captura): S + puño muestra su cuadro
+propio de puño en cuclillas, conecta contra el rival (6 de daño) y vuelve a la
+pose agachada.
+
+Paso lunar con los 5 cuadros propios (simulación y captura): hacia atrás los
+reproduce en orden (1 a 5) y hacia delante al revés; el dash sigue durando 0,35 s
+y recorre unos 180-190 px. Miden 217-219 px, igual que su reposo.
 
 Prueba con mando físico: DualShock 4 ("Wireless Controller", Bluetooth,
 mapeo estándar) en Windows 11 con navegador Chromium. Verificado: detección,

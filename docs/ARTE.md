@@ -74,9 +74,9 @@ Tamaños: los sprites de Lancha y El Fiel tienen margen vacío arriba, así que 
 
 Cuarto personaje, a partir de 16 imágenes con fondo magenta (carpeta de referencia con el cuerpo completo y 15 hojas de poses). Se recortaron fuera del juego, se separaron los cuadros (la hoja de la ulti se cortó en cuatro por columnas fijas) y se igualó el tamaño entre hojas ajustando por la cabeza y a ojo. Quedan 23 cuadros en `assets/pingordy.png`, con las posiciones en `PING_ATLAS` de `game-v4.js`. `assets/pingordy-face.png` es el retrato del menú.
 
-Asignación: reposo y caminar (idle, walk), puño (golpe alto), patada media y especial (medialuna y destello), golpe bajo y patada baja, agachado, defensa, golpeado, caído, salto y caída, presentación (carga de energía) y victoria, ulti (corrida y patada con explosión rosa) y rodada (tornado). Sin usar: dos cuadros de la ulti con notas musicales y estela, y el cuadro de la caída hacia atrás.
+Asignación: reposo y caminar (idle, walk), puño (golpe alto), patada media y especial (medialuna y destello), golpe bajo y patada baja, agachado, defensa, golpeado, caído, salto y caída, presentación (carga de energía) y victoria, ulti (corrida y patada con explosión rosa) y rodada (tornado). Sin usar: dos cuadros de la ulti con notas musicales y estela, y el cuadro de la caída hacia atrás. La patada aérea (tercer cuadro de la ulti) se volvió a recortar con la pierna completa: su zapato llegaba hasta la zona del cuadro siguiente y se había cortado; para separarlo de la explosión roja se conservó solo la parte oscura (pantalón y zapato) y la estela rosa.
 
-Faltan poses y usan la más cercana: el golpe descendente usa el puño, el agachado golpeado usa el golpeado, y el aterrizaje usa el agachado.
+El puño agachado de Pingordy (S + puño) usa su propio cuadro, en cuclillas con el puño extendido (`lowPunch` del atlas). Faltan poses y usan la más cercana: el golpe descendente usa el puño, el agachado golpeado usa el golpeado, y el aterrizaje usa el agachado.
 
 ---
 
@@ -88,7 +88,7 @@ Faltan poses y usan la más cercana: el golpe descendente usa el puño, el agach
 
 # Paso lunar de Pingordy
 
-El dash de Pingordy no usa cuadros nuevos: reutiliza los tres pasos de caminar (`walkA`, `walkC`, `walkB`, el segundo se añadió al atlas). Se desliza más lento que el dash normal, mirando al rival, con los pasos en orden normal al ir hacia atrás y al revés al ir hacia delante, una leve inclinación hacia atrás, un pequeño rebote y estela. Los valores propios están en `DASH_CHAR` de `game-v4.js`. Para un paso lunar más fiel haría falta una hoja con la punta del pie y el pie plano alternados.
+El dash de Pingordy usa cinco cuadros propios de paso lunar (`moon0` a `moon4`, de una hoja con las piernas cruzándose); si faltaran, cae a los tres pasos de caminar (`walkA`, `walkC`, `walkB`). Se desliza más lento que el dash normal, mirando al rival, con los pasos en orden normal al ir hacia atrás y al revés al ir hacia delante, una leve inclinación hacia atrás, un pequeño rebote y estela. Los valores propios están en `DASH_CHAR` de `game-v4.js`. Los dos primeros cuadros de la hoja se tocaban por los zapatos y se separaron con un corte vertical.
 
 # Estándar de poses
 
@@ -100,7 +100,7 @@ El archivo `D:\imagenes videojuego\Movimimientos standar.txt` define el conjunto
 
 `assets/lancha-charge.png` trae cuatro cuadros recortados de una hoja con fondo magenta: agarra la hamburguesa, muerde, mastica con la mano en la barriga y sube los brazos con destellos. Durante la recarga se muestra primero el primero y luego se repiten morder, masticar y subir los brazos. Posiciones en `LC_ATLAS` de `game-v4.js`.
 
-Kent usa sus dos cuadros de puños con grito (los mismos del golpe descendente) y Pingordy sus dos cuadros de carga con llamas y aura (los mismos de la presentación). El Fiel usa tres cuadros propios (`assets/fiel-charge.png`): temblando en cuclillas con los puños, con la lengua afuera y de lado; se repiten en bucle (1, 2, 3, 2). Los dos primeros se tocaban en la imagen original y se cortaron por columnas, así que los zapatos que se juntan quedan un poco recortados. Con la barra llena la animación continúa mientras se mantiene el botón. El aura y las partículas se dibujan por código con el color de cada personaje.
+Kent usa sus dos cuadros de puños con grito (los mismos del golpe descendente) y Pingordy sus dos cuadros de carga con llamas y aura (los mismos de la presentación). El Fiel usa dos cuadros propios (`assets/fiel-charge.png`): en cuclillas con los puños y la lengua afuera, uno con los ojos cerrados y otro riendo; se alternan unas 6 veces por segundo. Sustituyen a una primera versión de tres cuadros cuyos zapatos se tocaban y quedaban recortados. Con la barra llena la animación continúa mientras se mantiene el botón. El aura y las partículas se dibujan por código con el color de cada personaje.
 
 ---
 
