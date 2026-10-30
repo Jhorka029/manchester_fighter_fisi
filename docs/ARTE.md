@@ -74,9 +74,9 @@ Tamaños: los sprites de Lancha y El Fiel tienen margen vacío arriba, así que 
 
 Cuarto personaje, a partir de 16 imágenes con fondo magenta (carpeta de referencia con el cuerpo completo y 15 hojas de poses). Se recortaron fuera del juego, se separaron los cuadros (la hoja de la ulti se cortó en cuatro por columnas fijas) y se igualó el tamaño entre hojas ajustando por la cabeza y a ojo. Quedan 23 cuadros en `assets/pingordy.png`, con las posiciones en `PING_ATLAS` de `game-v4.js`. `assets/pingordy-face.png` es el retrato del menú.
 
-Asignación: reposo y caminar (idle, walk), puño (golpe alto), patada media y especial (medialuna y destello), golpe bajo y patada baja, agachado, defensa, golpeado, caído, salto y caída, presentación (carga de energía) y victoria, ulti (corrida y patada con explosión rosa) y rodada (tornado). Sin usar: dos cuadros de la ulti con notas musicales y estela, y el cuadro de la caída hacia atrás.
+Asignación: reposo y caminar (idle, walk), puño (golpe alto), patada media y especial (medialuna y destello), golpe bajo y patada baja, agachado, defensa, golpeado, caído, salto y caída, presentación (carga de energía) y victoria, ulti (corrida y patada con explosión rosa) y rodada (tornado). Sin usar: dos cuadros de la ulti con notas musicales y estela, y el cuadro de la caída hacia atrás. La patada aérea (tercer cuadro de la ulti) se volvió a recortar con la pierna completa: su zapato llegaba hasta la zona del cuadro siguiente y se había cortado; para separarlo de la explosión roja se conservó solo la parte oscura (pantalón y zapato) y la estela rosa.
 
-Faltan poses y usan la más cercana: el golpe descendente usa el puño, el agachado golpeado usa el golpeado, y el aterrizaje usa el agachado.
+El puño agachado de Pingordy (S + puño) usa su propio cuadro, en cuclillas con el puño extendido (`lowPunch` del atlas). Faltan poses y usan la más cercana: el golpe descendente usa el puño, el agachado golpeado usa el golpeado, y el aterrizaje usa el agachado.
 
 ---
 
@@ -88,7 +88,7 @@ Faltan poses y usan la más cercana: el golpe descendente usa el puño, el agach
 
 # Paso lunar de Pingordy
 
-El dash de Pingordy no usa cuadros nuevos: reutiliza los tres pasos de caminar (`walkA`, `walkC`, `walkB`, el segundo se añadió al atlas). Se desliza más lento que el dash normal, mirando al rival, con los pasos en orden normal al ir hacia atrás y al revés al ir hacia delante, una leve inclinación hacia atrás, un pequeño rebote y estela. Los valores propios están en `DASH_CHAR` de `game-v4.js`. Para un paso lunar más fiel haría falta una hoja con la punta del pie y el pie plano alternados.
+El dash de Pingordy usa cinco cuadros propios de paso lunar (`moon0` a `moon4`, de una hoja con las piernas cruzándose); si faltaran, cae a los tres pasos de caminar (`walkA`, `walkC`, `walkB`). Se desliza más lento que el dash normal, mirando al rival, con los pasos en orden normal al ir hacia atrás y al revés al ir hacia delante, una leve inclinación hacia atrás, un pequeño rebote y estela. Los valores propios están en `DASH_CHAR` de `game-v4.js`. Los dos primeros cuadros de la hoja se tocaban por los zapatos y se separaron con un corte vertical. Es la segunda versión de la hoja, que sustituye a la primera.
 
 # Estándar de poses
 
@@ -100,7 +100,7 @@ El archivo `D:\imagenes videojuego\Movimimientos standar.txt` define el conjunto
 
 `assets/lancha-charge.png` trae cuatro cuadros recortados de una hoja con fondo magenta: agarra la hamburguesa, muerde, mastica con la mano en la barriga y sube los brazos con destellos. Durante la recarga se muestra primero el primero y luego se repiten morder, masticar y subir los brazos. Posiciones en `LC_ATLAS` de `game-v4.js`.
 
-Kent usa sus dos cuadros de puños con grito (los mismos del golpe descendente) y Pingordy sus dos cuadros de carga con llamas y aura (los mismos de la presentación). El Fiel usa tres cuadros propios (`assets/fiel-charge.png`): temblando en cuclillas con los puños, con la lengua afuera y de lado; se repiten en bucle (1, 2, 3, 2). Los dos primeros se tocaban en la imagen original y se cortaron por columnas, así que los zapatos que se juntan quedan un poco recortados. Con la barra llena la animación continúa mientras se mantiene el botón. El aura y las partículas se dibujan por código con el color de cada personaje.
+Kent usa sus dos cuadros de puños con grito (los mismos del golpe descendente) y Pingordy sus dos cuadros de carga con llamas y aura (los mismos de la presentación). El Fiel usa dos cuadros propios (`assets/fiel-charge.png`): en cuclillas con los puños y la lengua afuera, uno con los ojos cerrados y otro riendo; se alternan unas 6 veces por segundo. Sustituyen a una primera versión de tres cuadros cuyos zapatos se tocaban y quedaban recortados. Con la barra llena la animación continúa mientras se mantiene el botón. El aura y las partículas se dibujan por código con el color de cada personaje.
 
 ---
 
@@ -111,3 +111,37 @@ Quinto personaje, a partir de 15 imágenes de la carpeta `inge.estrella` (cuerpo
 Asignación por el nombre de cada archivo: reposo y caminar, golpe alto (puño), golpe bajo (golpe bajo y patada baja), agachado, salto y caída, golpeado, derribo, victoria y presentación, especial 2 (lanza código con el teclado, es su proyectil), ulti (teclado, tornado de código, manos arriba con haz de código y laptop con explosión), recarga de energía (llamas y aura) y el haz de código del especial 1 como golpe descendente. La rodada usa el tornado de código.
 
 Faltan en su carpeta una pose de bloqueo y una patada media: la defensa usa el reposo y la patada media el puño. El primer cuadro del especial 1 (orbe de código) y el último (de pie) quedaron sin usar.
+
+---
+
+# Agarre de Pingordy
+
+Tres cuadros propios (`grabReach`, `grabHold`, `grabEnd` en `assets/pingordy.png`): alcanza con los brazos, agarra y jala con los brazos cruzados, y termina en guardia. Se usan en las tres fases de su suplex: durante la preparación y el contacto del agarre (alcanzar), mientras levanta y lanza al rival en arco (agarrar y jalar, con la inclinación hacia atrás que ya tenía la llave) y al recuperarse (guardia); si el agarre falla, vuelve a la guardia. La coreografía del rival y los tiempos no cambiaron. Kent e Ingestrella siguen usando poses provisionales (puño y golpe descendente) en su agarre.
+
+---
+
+# Agarre al aire y paso lunar con patada de Pingordy
+
+**Agarre al aire** (`airReach`, `airClutch`, `airLift`, `airLaunch`, `airEnd`): si el rival está saltando a menos de unos 100 px y a menos de 200 px de altura, J + K lo agarra en vez de fallar. Pingordy alcanza, aprieta, levanta y salta con los brazos arriba mientras el rival sube hasta unos 300 px girando y cae delante de él, con 14 de daño y derribo. Dura unos 0,98 s y se puede escapar igual que el agarre normal. Solo lo tiene Pingordy, porque es el único con cuadros para ello (`SETS[3].airGrab`).
+
+**Paso lunar con patada** (`ml0` a `ml6`, de una hoja con fondo verde y niebla): su especial (L) retrocede unos 95 px con el paso lunar durante 0,45 s (los seis primeros cuadros, con gestos de Michael Jackson) y termina con el cuadro de la patada alta, lanzando el mismo proyectil de siempre. Es el movimiento `moonKick`; agachado sigue usando la ráfaga baja de todos los personajes.
+
+Los dos primeros cuadros de la hoja del agarre al aire se tocaban y se separaron con un corte escalonado; los cuadros de paso lunar vienen de otra hoja a menor escala y se igualaron por altura (217 px).
+
+---
+
+# Suplex tornado de Pingordy
+
+En el agarre en el suelo, Pingordy ya no se inclina hacia atrás: tras alcanzar al rival lo sostiene delante mientras gira como un tornado (cuadro del tornado, aplanado y volteado rápido para dar la vuelta) y el rival gira con él; justo después lo lanza hacia arriba (hasta unos 300 px, con vuelta completa) y cae delante de él, con 14 de daño y derribo. Es la misma trayectoria del agarre al aire, que conserva sus cuadros propios (alcanzar, apretar, levantar, lanzar y recuperar). La secuencia dura unos 0,98 s y se puede escapar con J + K como siempre.
+
+Hoja del paso lunar con patada: se recortó quitando el fondo verde y la niebla por color (el pantalón y los zapatos negros se distinguen del fondo verde); los dos últimos cuadros se tocaban y se separaron por el color de la manga. La hoja anterior con fondo negro se descartó porque el pantalón negro se confundía con el fondo.
+
+---
+
+# Kike Parker
+
+Sexto personaje, a partir de 15 imágenes de la carpeta `kikeparker` (cuerpo completo sobre fondo verde y el resto sobre magenta). Se recortaron fuera del juego con un script de Python, se separaron los cuadros (la ulti, cuatro, por columnas fijas, y se limpiaron restos de los cuadros vecinos) y se igualó el tamaño a ojo con el resto (reposo de unos 219 px). Quedan 25 cuadros en `assets/kike.png`, con posiciones en `KP_ATLAS` de `game-v4.js`; `assets/kike-face.png` es el retrato (con un leve borde verde del recorte).
+
+Asignación por el nombre de cada archivo: reposo, caminar (tres pasos), golpe alto (puño), golpe bajo (golpe bajo con la mano al suelo, es su patada baja y su golpe bajo), agachado, bloqueo (pose propia), salto y caída, golpeado, derribo, victoria y presentación, especial 1 (ráfaga con la mano extendida), especial 2 (se inclina y empuja, es el golpe descendente y su preparación), ulti (multigolpe con los puños fantasma y el empuje final) y recarga de energía (aura rosa y aura eléctrica).
+
+Su patada media (K) usa cuatro cuadros propios (`kickUp`, `kickHit`, `kickKnee`, `kickEnd`: rodilla arriba, patada, rodilla de nuevo y guardia). Faltan en su carpeta: patada aérea, voltereta y agarre propios. Usa las poses de salto en el ataque aéreo y en la voltereta (con el arco por código), y las poses provisionales de los demás en la llave. Sus especiales 1 y 2 tenían tres cuadros cada uno; solo se usan los del medio y el descendente. El cuadro "recarga de energía" solo tiene dos cuadros y los alterna.
