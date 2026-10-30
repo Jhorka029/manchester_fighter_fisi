@@ -117,3 +117,31 @@ Faltan en su carpeta una pose de bloqueo y una patada media: la defensa usa el r
 # Agarre de Pingordy
 
 Tres cuadros propios (`grabReach`, `grabHold`, `grabEnd` en `assets/pingordy.png`): alcanza con los brazos, agarra y jala con los brazos cruzados, y termina en guardia. Se usan en las tres fases de su suplex: durante la preparación y el contacto del agarre (alcanzar), mientras levanta y lanza al rival en arco (agarrar y jalar, con la inclinación hacia atrás que ya tenía la llave) y al recuperarse (guardia); si el agarre falla, vuelve a la guardia. La coreografía del rival y los tiempos no cambiaron. Kent e Ingestrella siguen usando poses provisionales (puño y golpe descendente) en su agarre.
+
+---
+
+# Agarre al aire y paso lunar con patada de Pingordy
+
+**Agarre al aire** (`airReach`, `airClutch`, `airLift`, `airLaunch`, `airEnd`): si el rival está saltando a menos de unos 100 px y a menos de 200 px de altura, J + K lo agarra en vez de fallar. Pingordy alcanza, aprieta, levanta y salta con los brazos arriba mientras el rival sube hasta unos 300 px girando y cae delante de él, con 14 de daño y derribo. Dura unos 0,98 s y se puede escapar igual que el agarre normal. Solo lo tiene Pingordy, porque es el único con cuadros para ello (`SETS[3].airGrab`).
+
+**Paso lunar con patada** (`ml0` a `ml6`, de una hoja con fondo verde y niebla): su especial (L) retrocede unos 95 px con el paso lunar durante 0,45 s (los seis primeros cuadros, con gestos de Michael Jackson) y termina con el cuadro de la patada alta, lanzando el mismo proyectil de siempre. Es el movimiento `moonKick`; agachado sigue usando la ráfaga baja de todos los personajes.
+
+Los dos primeros cuadros de la hoja del agarre al aire se tocaban y se separaron con un corte escalonado; los cuadros de paso lunar vienen de otra hoja a menor escala y se igualaron por altura (217 px).
+
+---
+
+# Suplex tornado de Pingordy
+
+En el agarre en el suelo, Pingordy ya no se inclina hacia atrás: tras alcanzar al rival lo sostiene delante mientras gira como un tornado (cuadro del tornado, aplanado y volteado rápido para dar la vuelta) y el rival gira con él; justo después lo lanza hacia arriba (hasta unos 300 px, con vuelta completa) y cae delante de él, con 14 de daño y derribo. Es la misma trayectoria del agarre al aire, que conserva sus cuadros propios (alcanzar, apretar, levantar, lanzar y recuperar). La secuencia dura unos 0,98 s y se puede escapar con J + K como siempre.
+
+Hoja del paso lunar con patada: se recortó quitando el fondo verde y la niebla por color (el pantalón y los zapatos negros se distinguen del fondo verde); los dos últimos cuadros se tocaban y se separaron por el color de la manga. La hoja anterior con fondo negro se descartó porque el pantalón negro se confundía con el fondo.
+
+---
+
+# Kike Parker
+
+Sexto personaje, a partir de 15 imágenes de la carpeta `kikeparker` (cuerpo completo sobre fondo verde y el resto sobre magenta). Se recortaron fuera del juego con un script de Python, se separaron los cuadros (la ulti, cuatro, por columnas fijas, y se limpiaron restos de los cuadros vecinos) y se igualó el tamaño a ojo con el resto (reposo de unos 219 px). Quedan 25 cuadros en `assets/kike.png`, con posiciones en `KP_ATLAS` de `game-v4.js`; `assets/kike-face.png` es el retrato (con un leve borde verde del recorte).
+
+Asignación por el nombre de cada archivo: reposo, caminar (tres pasos), golpe alto (puño), golpe bajo (golpe bajo con la mano al suelo, es su patada baja y su golpe bajo), agachado, bloqueo (pose propia), salto y caída, golpeado, derribo, victoria y presentación, especial 1 (ráfaga con la mano extendida), especial 2 (se inclina y empuja, es el golpe descendente y su preparación), ulti (multigolpe con los puños fantasma y el empuje final) y recarga de energía (aura rosa y aura eléctrica).
+
+Su patada media (K) usa cuatro cuadros propios (`kickUp`, `kickHit`, `kickKnee`, `kickEnd`: rodilla arriba, patada, rodilla de nuevo y guardia). Faltan en su carpeta: patada aérea, voltereta y agarre propios. Usa las poses de salto en el ataque aéreo y en la voltereta (con el arco por código), y las poses provisionales de los demás en la llave. Sus especiales 1 y 2 tenían tres cuadros cada uno; solo se usan los del medio y el descendente. El cuadro "recarga de energía" solo tiene dos cuadros y los alterna.
