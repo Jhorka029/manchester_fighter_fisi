@@ -87,6 +87,11 @@ Paso lunar con los 5 cuadros propios (simulación y captura): hacia atrás los
 reproduce en orden (1 a 5) y hacia delante al revés; el dash sigue durando 0,35 s
 y recorre unos 180-190 px. Miden 217-219 px, igual que su reposo.
 
+Agarre de Pingordy con cuadros propios (simulación y captura): J + K de cerca
+muestra alcanzar, agarrar y jalar, y guardia (alcanzar > agarrar > guardia); el
+rival pasa a agarrado y luego caído, con 14 de daño, y se ve el suplex
+"¡SUPLEX TORNADO!". Sin errores.
+
 Prueba con mando físico: DualShock 4 ("Wireless Controller", Bluetooth,
 mapeo estándar) en Windows 11 con navegador Chromium. Verificado: detección,
 menú (personaje, dificultad, inicio), pausa/reanudar con OPTIONS, caminar,

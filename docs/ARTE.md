@@ -111,3 +111,9 @@ Quinto personaje, a partir de 15 imágenes de la carpeta `inge.estrella` (cuerpo
 Asignación por el nombre de cada archivo: reposo y caminar, golpe alto (puño), golpe bajo (golpe bajo y patada baja), agachado, salto y caída, golpeado, derribo, victoria y presentación, especial 2 (lanza código con el teclado, es su proyectil), ulti (teclado, tornado de código, manos arriba con haz de código y laptop con explosión), recarga de energía (llamas y aura) y el haz de código del especial 1 como golpe descendente. La rodada usa el tornado de código.
 
 Faltan en su carpeta una pose de bloqueo y una patada media: la defensa usa el reposo y la patada media el puño. El primer cuadro del especial 1 (orbe de código) y el último (de pie) quedaron sin usar.
+
+---
+
+# Agarre de Pingordy
+
+Tres cuadros propios (`grabReach`, `grabHold`, `grabEnd` en `assets/pingordy.png`): alcanza con los brazos, agarra y jala con los brazos cruzados, y termina en guardia. Se usan en las tres fases de su suplex: durante la preparación y el contacto del agarre (alcanzar), mientras levanta y lanza al rival en arco (agarrar y jalar, con la inclinación hacia atrás que ya tenía la llave) y al recuperarse (guardia); si el agarre falla, vuelve a la guardia. La coreografía del rival y los tiempos no cambiaron. Kent e Ingestrella siguen usando poses provisionales (puño y golpe descendente) en su agarre.
