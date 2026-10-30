@@ -4,7 +4,7 @@ const frontCanvas=$('#front-canvas'),fc=frontCanvas.getContext('2d');
 const coreFront={start,menu,padMenu,render};
 const front={active:true,page:'intro',elapsed:0,time:0,option:0,stage:0,picks:[0,1],side:0,mode:'cpu',difficulty:'normal',lastPad:{},musicNext:0,musicStep:0,painted:false};
 // Kent, Pingordy, Ingestrella and Kike Parker are not in the asset catalog yet; their faces live at the assets root.
-const FRONT_FACES=[...GAME_ASSETS.characters.map(c=>c.portrait),'assets/kent-face.png','assets/pingordy-face.png','assets/ingestrella-face.png','assets/kike-face.png'];
+const FRONT_FACES=[...GAME_ASSETS.characters.map(c=>c.portrait),'assets/personajes/kent/retrato.png','assets/personajes/pingordy/retrato.png','assets/personajes/ingestrella/retrato.png','assets/personajes/kike-parker/retrato.png'];
 const FRONT_ROLES=['POTENCIA','VELOCIDAD','EQUILIBRIO','COMBOS','CÓDIGO','LIDERAZGO'];
 const FRONT_PAGES={mode:['VS'],variant:['VS CPU','2 JUGADORES','ENTRENAMIENTO'],difficulty:['FÁCIL','NORMAL','DIFÍCIL']};
 function frontText(s,x,y,size=24,color='#fff',align='center'){fc.font=`900 ${size}px monospace`;fc.textAlign=align;fc.fillStyle='#10091c';fc.fillText(s,x+2,y+3);fc.fillStyle=color;fc.fillText(s,x,y)}

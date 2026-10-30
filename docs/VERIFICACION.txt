@@ -35,17 +35,17 @@ Esquives y defensa (simulación fotograma a fotograma, ráfaga de El Fiel):
   contraria avanzan unos 230 px; sin agacharse el doble toque sigue siendo dash.
   Lancha usa el atlas assets/roll-lancha.webp (10 cuadros: encoger, bola,
   rodar, levantarse). El Fiel hace una voltereta con los 5 cuadros de
-  assets/flip-fiel-prep.png y assets/flip-fiel.png: preparación, salto
+  assets/personajes/el-fiel/voltereta-preparacion.png y assets/personajes/el-fiel/voltereta.png: preparación, salto
   encogido, invertido, aterrizaje y de pie, con el arco dibujado por código.
 - La CPU esquiva o bloquea 6, 17 y 22 de 30 ráfagas (fácil, normal, difícil).
 
 Kent (tercer personaje, simulación y capturas): usa las 24 poses del atlas
-assets/kent.png; en una pasada se mostraron 22 (faltan caído y agachado
+assets/personajes/kent/atlas.png; en una pasada se mostraron 22 (faltan caído y agachado
 golpeado, poco frecuentes). Sin errores en 70 s de combate aleatorio contra la
 CPU en cuatro emparejamientos (Lancha, El Fiel y Kent como rival, y Kent contra
 Kent).
 
-Super de El Fiel (simulación y captura): usa 4 cuadros de assets/fiel-super.png
+Super de El Fiel (simulación y captura): usa 4 cuadros de assets/personajes/el-fiel/super.png
 (levantar el polo y golpe, en dos variantes que se alternan). Cada una de las 6
 ráfagas muestra el golpe y luego vuelve a levantar el polo; sin errores.
 Tamaño de Kent: reducido un 15 % (de 256 a 217 px en reposo) para igualar a

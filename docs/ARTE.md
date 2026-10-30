@@ -50,21 +50,21 @@ Los rayos, auras, cámara, estelas, sombras y ondas de impacto se dibujan por c�
 `assets/roll-lancha.webp` (1376x768, fondo magenta) contiene diez cuadros de Lancha, dos filas de cinco, mirando a la derecha: agachado, encogido, bola, cinco cuadros rodando y dos de levantarse. El motor los recorta con la misma rutina que los demás atlas (`extractPoses(im,5)`) y reproduce encoger, rodar en bucle y levantarse durante los 0,55 s de la rodada. 
 # Voltereta de El Fiel
 
-`assets/flip-fiel-prep.png` (preparación agachado) y `assets/flip-fiel.png` (salto encogido, invertido, aterrizaje y de pie), ambos sobre fondo magenta. El motor los recorta con `extractRow` y los reproduce en 0,65 s: preparación, salto encogido, invertido en lo alto del arco, encogido al bajar, aterrizaje y de pie. El arco vertical se dibuja elevando el sprite por código.
+`assets/personajes/el-fiel/voltereta-preparacion.png` (preparación agachado) y `assets/personajes/el-fiel/voltereta.png` (salto encogido, invertido, aterrizaje y de pie), ambos sobre fondo magenta. El motor los recorta con `extractRow` y los reproduce en 0,65 s: preparación, salto encogido, invertido en lo alto del arco, encogido al bajar, aterrizaje y de pie. El arco vertical se dibuja elevando el sprite por código.
 
 ---
 
 # Kent
 
-Tercer personaje, a partir de 16 imágenes generadas con fondo magenta (más una con fondo beige, una verde y una blanca). Se procesaron fuera del juego con un script de Python: se quita el fondo, se recorta cada pose, se iguala el tamaño entre imágenes (cada una se generó a otra escala, así que se ajustó con la altura del lienzo y a ojo) y se empaquetan 24 poses en `assets/kent.png`, ya transparente y guardado al doble del tamaño de juego. Las posiciones están en la constante `KENT_ATLAS` de `game-v4.js`: `[x, y, ancho, alto, ancla horizontal]`.
+Tercer personaje, a partir de 16 imágenes generadas con fondo magenta (más una con fondo beige, una verde y una blanca). Se procesaron fuera del juego con un script de Python: se quita el fondo, se recorta cada pose, se iguala el tamaño entre imágenes (cada una se generó a otra escala, así que se ajustó con la altura del lienzo y a ojo) y se empaquetan 24 poses en `assets/personajes/kent/atlas.png`, ya transparente y guardado al doble del tamaño de juego. Las posiciones están en la constante `KENT_ATLAS` de `game-v4.js`: `[x, y, ancho, alto, ancla horizontal]`.
 
-Poses usadas: guardia (reposo y caminar), puño, patada media, patada baja, golpe bajo, descendente, especial (onda de fuego), super (aura roja, dos cuadros), defensa con brazos cruzados, golpeado, caído, agachado, salto subiendo y bajando, aterrizaje, presentación y victoria, y la voltereta (salto, giro y aterrizaje). `assets/kent-face.png` es el retrato del menú. Sin usar: tres posturas de reposo enojado, la imagen de balón y varios cuadros de guardia repetidos.
+Poses usadas: guardia (reposo y caminar), puño, patada media, patada baja, golpe bajo, descendente, especial (onda de fuego), super (aura roja, dos cuadros), defensa con brazos cruzados, golpeado, caído, agachado, salto subiendo y bajando, aterrizaje, presentación y victoria, y la voltereta (salto, giro y aterrizaje). `assets/personajes/kent/retrato.png` es el retrato del menú. Sin usar: tres posturas de reposo enojado, la imagen de balón y varios cuadros de guardia repetidos.
 
 ---
 
 # Super de El Fiel
 
-`assets/fiel-super.png` contiene cuatro cuadros recortados de una imagen con fondo magenta (dos de levantar el polo y dos de golpe con la estela morada). Se quitaron los rótulos "BACKSWING" y "THE SWING" y los restos de otros cuadros. Las posiciones están en `FIEL_SUPER_ATLAS` de `game-v4.js`. La fila de abajo se dibujó más grande y con los pies cortados por el borde de la imagen, así que se redujo un 13 % y los zapatos aparecen recortados. Durante la super, cada ráfaga muestra el golpe y después vuelve a levantar el polo, alternando las dos variantes.
+`assets/personajes/el-fiel/super.png` contiene cuatro cuadros recortados de una imagen con fondo magenta (dos de levantar el polo y dos de golpe con la estela morada). Se quitaron los rótulos "BACKSWING" y "THE SWING" y los restos de otros cuadros. Las posiciones están en `FIEL_SUPER_ATLAS` de `game-v4.js`. La fila de abajo se dibujó más grande y con los pies cortados por el borde de la imagen, así que se redujo un 13 % y los zapatos aparecen recortados. Durante la super, cada ráfaga muestra el golpe y después vuelve a levantar el polo, alternando las dos variantes.
 
 Tamaños: los sprites de Lancha y El Fiel tienen margen vacío arriba, así que miden unos 217 px visibles aunque su lienzo sea de 258. Kent se escala con `KENT_SCALE` (0,85) para igualarlos.
 
@@ -72,7 +72,7 @@ Tamaños: los sprites de Lancha y El Fiel tienen margen vacío arriba, así que 
 
 # Pingordy
 
-Cuarto personaje, a partir de 16 imágenes con fondo magenta (carpeta de referencia con el cuerpo completo y 15 hojas de poses). Se recortaron fuera del juego, se separaron los cuadros (la hoja de la ulti se cortó en cuatro por columnas fijas) y se igualó el tamaño entre hojas ajustando por la cabeza y a ojo. Quedan 23 cuadros en `assets/pingordy.png`, con las posiciones en `PING_ATLAS` de `game-v4.js`. `assets/pingordy-face.png` es el retrato del menú.
+Cuarto personaje, a partir de 16 imágenes con fondo magenta (carpeta de referencia con el cuerpo completo y 15 hojas de poses). Se recortaron fuera del juego, se separaron los cuadros (la hoja de la ulti se cortó en cuatro por columnas fijas) y se igualó el tamaño entre hojas ajustando por la cabeza y a ojo. Quedan 23 cuadros en `assets/personajes/pingordy/atlas.png`, con las posiciones en `PING_ATLAS` de `game-v4.js`. `assets/personajes/pingordy/retrato.png` es el retrato del menú.
 
 Asignación: reposo y caminar (idle, walk), puño (golpe alto), patada media y especial (medialuna y destello), golpe bajo y patada baja, agachado, defensa, golpeado, caído, salto y caída, presentación (carga de energía) y victoria, ulti (corrida y patada con explosión rosa) y rodada (tornado). Sin usar: dos cuadros de la ulti con notas musicales y estela, y el cuadro de la caída hacia atrás. La patada aérea (tercer cuadro de la ulti) se volvió a recortar con la pierna completa: su zapato llegaba hasta la zona del cuadro siguiente y se había cortado; para separarlo de la explosión roja se conservó solo la parte oscura (pantalón y zapato) y la estela rosa.
 
@@ -82,7 +82,7 @@ El puño agachado de Pingordy (S + puño) usa su propio cuadro, en cuclillas con
 
 # Salto de Lancha
 
-`assets/lancha-jump.png` trae cinco cuadros recortados de una hoja de salto: agacharse, subida con el puño en alto, picada en el aire, aterrizaje de panza y caída. Se usan en el salto normal (subida y caída), el doble salto (picada y aterrizaje de panza) y el aterrizaje (agacharse). Los ataques en el aire y el resto de sus poses siguen usando el atlas original.
+`assets/personajes/lancha/salto-doble.png` trae cinco cuadros recortados de una hoja de salto: agacharse, subida con el puño en alto, picada en el aire, aterrizaje de panza y caída. Se usan en el salto normal (subida y caída), el doble salto (picada y aterrizaje de panza) y el aterrizaje (agacharse). Los ataques en el aire y el resto de sus poses siguen usando el atlas original.
 
 ---
 
@@ -98,15 +98,15 @@ El archivo `D:\imagenes videojuego\Movimimientos standar.txt` define el conjunto
 
 # Recarga de Lancha
 
-`assets/lancha-charge.png` trae cuatro cuadros recortados de una hoja con fondo magenta: agarra la hamburguesa, muerde, mastica con la mano en la barriga y sube los brazos con destellos. Durante la recarga se muestra primero el primero y luego se repiten morder, masticar y subir los brazos. Posiciones en `LC_ATLAS` de `game-v4.js`.
+`assets/personajes/lancha/recarga.png` trae cuatro cuadros recortados de una hoja con fondo magenta: agarra la hamburguesa, muerde, mastica con la mano en la barriga y sube los brazos con destellos. Durante la recarga se muestra primero el primero y luego se repiten morder, masticar y subir los brazos. Posiciones en `LC_ATLAS` de `game-v4.js`.
 
-Kent usa sus dos cuadros de puños con grito (los mismos del golpe descendente) y Pingordy sus dos cuadros de carga con llamas y aura (los mismos de la presentación). El Fiel usa dos cuadros propios (`assets/fiel-charge.png`): en cuclillas con los puños y la lengua afuera, uno con los ojos cerrados y otro riendo; se alternan unas 6 veces por segundo. Sustituyen a una primera versión de tres cuadros cuyos zapatos se tocaban y quedaban recortados. Con la barra llena la animación continúa mientras se mantiene el botón. El aura y las partículas se dibujan por código con el color de cada personaje.
+Kent usa sus dos cuadros de puños con grito (los mismos del golpe descendente) y Pingordy sus dos cuadros de carga con llamas y aura (los mismos de la presentación). El Fiel usa dos cuadros propios (`assets/personajes/el-fiel/recarga.png`): en cuclillas con los puños y la lengua afuera, uno con los ojos cerrados y otro riendo; se alternan unas 6 veces por segundo. Sustituyen a una primera versión de tres cuadros cuyos zapatos se tocaban y quedaban recortados. Con la barra llena la animación continúa mientras se mantiene el botón. El aura y las partículas se dibujan por código con el color de cada personaje.
 
 ---
 
 # Ingestrella
 
-Quinto personaje, a partir de 15 imágenes de la carpeta `inge.estrella` (cuerpo completo, agachado, dos especiales, caída del salto, victoria, derribo, golpes alto y bajo, golpeado, reposo, recarga de energía, salto, ulti y caminar). Dos hojas (cuerpo completo y especial 2) venían con fondo verde y el resto con magenta. Se recortaron fuera del juego con un script de Python, se limpió el borde verde del recorte, se separaron los cuadros (la ulti, cuatro, por columnas fijas) y se igualó el tamaño entre hojas a ojo comparando cabezas. Quedan 23 cuadros en `assets/ingestrella.png`, con posiciones en `IE_ATLAS` de `game-v4.js`; `assets/ingestrella-face.png` es el retrato.
+Quinto personaje, a partir de 15 imágenes de la carpeta `inge.estrella` (cuerpo completo, agachado, dos especiales, caída del salto, victoria, derribo, golpes alto y bajo, golpeado, reposo, recarga de energía, salto, ulti y caminar). Dos hojas (cuerpo completo y especial 2) venían con fondo verde y el resto con magenta. Se recortaron fuera del juego con un script de Python, se limpió el borde verde del recorte, se separaron los cuadros (la ulti, cuatro, por columnas fijas) y se igualó el tamaño entre hojas a ojo comparando cabezas. Quedan 23 cuadros en `assets/personajes/ingestrella/atlas.png`, con posiciones en `IE_ATLAS` de `game-v4.js`; `assets/personajes/ingestrella/retrato.png` es el retrato.
 
 Asignación por el nombre de cada archivo: reposo y caminar, golpe alto (puño), golpe bajo (golpe bajo y patada baja), agachado, salto y caída, golpeado, derribo, victoria y presentación, especial 2 (lanza código con el teclado, es su proyectil), ulti (teclado, tornado de código, manos arriba con haz de código y laptop con explosión), recarga de energía (llamas y aura) y el haz de código del especial 1 como golpe descendente. La rodada usa el tornado de código.
 
@@ -116,7 +116,7 @@ Faltan en su carpeta una pose de bloqueo y una patada media: la defensa usa el r
 
 # Agarre de Pingordy
 
-Tres cuadros propios (`grabReach`, `grabHold`, `grabEnd` en `assets/pingordy.png`): alcanza con los brazos, agarra y jala con los brazos cruzados, y termina en guardia. Se usan en las tres fases de su suplex: durante la preparación y el contacto del agarre (alcanzar), mientras levanta y lanza al rival en arco (agarrar y jalar, con la inclinación hacia atrás que ya tenía la llave) y al recuperarse (guardia); si el agarre falla, vuelve a la guardia. La coreografía del rival y los tiempos no cambiaron. Kent e Ingestrella siguen usando poses provisionales (puño y golpe descendente) en su agarre.
+Tres cuadros propios (`grabReach`, `grabHold`, `grabEnd` en `assets/personajes/pingordy/atlas.png`): alcanza con los brazos, agarra y jala con los brazos cruzados, y termina en guardia. Se usan en las tres fases de su suplex: durante la preparación y el contacto del agarre (alcanzar), mientras levanta y lanza al rival en arco (agarrar y jalar, con la inclinación hacia atrás que ya tenía la llave) y al recuperarse (guardia); si el agarre falla, vuelve a la guardia. La coreografía del rival y los tiempos no cambiaron. Kent e Ingestrella siguen usando poses provisionales (puño y golpe descendente) en su agarre.
 
 ---
 
@@ -140,7 +140,7 @@ Hoja del paso lunar con patada: se recortó quitando el fondo verde y la niebla 
 
 # Kike Parker
 
-Sexto personaje, a partir de 15 imágenes de la carpeta `kikeparker` (cuerpo completo sobre fondo verde y el resto sobre magenta). Se recortaron fuera del juego con un script de Python, se separaron los cuadros (la ulti, cuatro, por columnas fijas, y se limpiaron restos de los cuadros vecinos) y se igualó el tamaño a ojo con el resto (reposo de unos 219 px). Quedan 25 cuadros en `assets/kike.png`, con posiciones en `KP_ATLAS` de `game-v4.js`; `assets/kike-face.png` es el retrato (con un leve borde verde del recorte).
+Sexto personaje, a partir de 15 imágenes de la carpeta `kikeparker` (cuerpo completo sobre fondo verde y el resto sobre magenta). Se recortaron fuera del juego con un script de Python, se separaron los cuadros (la ulti, cuatro, por columnas fijas, y se limpiaron restos de los cuadros vecinos) y se igualó el tamaño a ojo con el resto (reposo de unos 219 px). Quedan 25 cuadros en `assets/personajes/kike-parker/atlas.png`, con posiciones en `KP_ATLAS` de `game-v4.js`; `assets/personajes/kike-parker/retrato.png` es el retrato (con un leve borde verde del recorte).
 
 Asignación por el nombre de cada archivo: reposo, caminar (tres pasos), golpe alto (puño), golpe bajo (golpe bajo con la mano al suelo, es su patada baja y su golpe bajo), agachado, bloqueo (pose propia), salto y caída, golpeado, derribo, victoria y presentación, especial 1 (ráfaga con la mano extendida), especial 2 (se inclina y empuja, es el golpe descendente y su preparación), ulti (multigolpe con los puños fantasma y el empuje final) y recarga de energía (aura rosa y aura eléctrica).
 

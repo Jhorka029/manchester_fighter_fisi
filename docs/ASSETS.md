@@ -13,10 +13,30 @@ assets/
     lancha/
       retrato.png
       movimientos/                 # 30 PNG transparentes
+      recarga.png                  # hamburguesa: 4 cuadros de recarga de energía
+      salto-doble.png              # salto, picada y aterrizaje de panza
     el-fiel/
       retrato.png
       movimientos/                 # 23 PNG transparentes
+      recarga.png                  # 2 cuadros de recarga
+      super.png                    # 4 cuadros de la super
+      voltereta-preparacion.png    # cuadro previo de la voltereta
+      voltereta.png                # 4 cuadros de la voltereta
+    kent/
+      atlas.png                    # 25 poses en un solo atlas
+      retrato.png
+    pingordy/
+      atlas.png
+      retrato.png
+    ingestrella/
+      atlas.png
+      retrato.png
+    kike-parker/
+      atlas.png
+      retrato.png
 ```
+
+Kent, Pingordy, Ingestrella y Kike Parker usan un atlas por personaje (`atlas.png`, con las posiciones en `game-v4.js`), no un PNG por pose. Las imágenes de cada personaje están en su carpeta.
 
 Las poses compartidas en los atlas anteriores se exportaron por separado usando los recortes y dimensiones del motor. Cada personaje tiene guardia, caminar, puños, patadas, agachado, reacciones, aterrizaje, salto, presentación y especial. Lancha añade diez cuadros de rodada; El Fiel, tres cuadros de aspa de molino.
 
