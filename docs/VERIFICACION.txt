@@ -172,3 +172,4 @@ Público de atrás más grande (capturas del patio y la cafetería): la fila de 
 Público más grande (captura): CROWD_SCALE pasó de 1,15 a 1,35, así que todos los espectadores miden un 17 % más; se ven bien en el patio.
 Kike Parker, especial con tigrillo (simulación y captura): L muestra kA > tiger > kB > reposo y no crea proyectiles; conecta con 12 de daño a 130 y 160 px y no llega a 230 px; agachado también sale. El tigrillo se ve saliendo del puño y golpeando al rival.
 Agarre de Kike Parker con 3 cuadros nuevos (simulación y captura): J + K de cerca muestra gReach > gHold > gTiger, el rival pasa a caído y recibe 14 de daño; el tigre sale con el gancho.
+Agarre de Kike Parker, versión con 5 cuadros (simulación y captura): gReach > gHold > gThrow > gTiger > gYawn; el rival sube (112, 160, 278 px) y el tigre le golpea en el aire, después cae y recibe 14 de daño. Los agarres de Lancha y Pingordy siguen igual.
