@@ -115,11 +115,49 @@ selección aparece como sexto retrato con el rol "LIDERAZGO"; su super muestra
 Patada media de Kike Parker con 4 cuadros propios (simulación y captura): K
 muestra rodilla arriba, patada, rodilla y guardia, conecta con 11 de daño.
 
+Agarre con mando (mando simulado): □ + ○ funciona con hasta unos 100 ms de
+diferencia entre los dos botones (antes 85 ms), y R3 o el clic del panel táctil
+lo hacen con un solo botón. Solo conecta a menos de unos 100 px del rival.
+
+Giro con mando (mando simulado): L3 lanza la rodada o voltereta de cada personaje
+hacia donde apunta el stick; sin dirección cruza hacia el rival. No sale
+defendiendo ni durante la espera de 1 s.
+
+Público (simulación y capturas): 21 sprites distintos en dos filas, con una
+disposición propia por escenario (57 espectadores en el patio, 45 en la entrada,
+20 en la cafetería y 31 en la plaza); en la cafetería y la plaza se dejan libres
+el refrigerador y la fuente "RIOJA". Con entusiasmo alto saltan más y sin él solo
+se balancean, en los cuatro escenarios. Sin errores.
+
+Cárdenas y Pepelucho (séptimo y octavo personaje, simulación y capturas): 20 de
+los 23 cuadros de Cárdenas y 26 de los 29 de Pepelucho se mostraron en una
+pasada de todos los movimientos (caminar, golpes, patadas, especial, salto, doble
+salto, dash, rodada, recarga, super y agarre), sin errores; los dos aparecen en
+la selección con los roles "TRABAJO SOCIAL" y "CÁTEDRA". Capturas: la moto de
+Pepelucho como especial, Cárdenas durmiendo al recargar y su super con el
+árbol ("ESTO NO ES UN EXAMEN").
+
+Pepelucho, ulti con la moto y giro en moto (simulación y capturas): la ulti
+muestra moto > patada > exámenes (2) > mano en el pecho, avanza unos 265 px y
+hace 36 de daño; la moto sale volando por la pantalla. El giro (S + doble toque)
+es agacharse > moto > de pie, cruza al rival sin empujarlo. Sin errores.
+
+Cárdenas versión 2 (simulación y capturas): la patada media (K) usa su cuadro
+nuevo y hace 11 de daño; el giro es roll0 > roll1 > roll2 (bola que gira) > roll3
+y cruza al rival; la ulti muestra los 5 cuadros nuevos en orden y el globo
+"¡ESTO NO ES UN EXAMEN!" legible al lado de la cabeza, sin tapar el marcador.
+
+Cárdenas, rodada y ulti pulidas (simulación y capturas): la rodada ya no se
+agranda (cuadros a la escala de la cabeza del reposo: 128-170 px de alto) y
+cruza al rival; los cinco cuadros de la ulti se recortaron con cortes
+escalonados, el del árbol conserva sus dos pies y la estela, y se ve limpio con
+los demás en juego.
+
 Prueba con mando físico: DualShock 4 ("Wireless Controller", Bluetooth,
 mapeo estándar) en Windows 11 con navegador Chromium. Verificado: detección,
 menú (personaje, dificultad, inicio), pausa/reanudar con OPTIONS, caminar,
 saltar, agacharse, defensa y ataques alto, medio, bajo, aéreo, descendente
 (R2), especial y super.
-Sin verificar: L2 como defensa, SHARE para volver al menú, dos mandos a la vez.
+Sin verificar: L2 como defensa, dos mandos a la vez. SHARE vuelve a la selección de personaje desde cualquier punto de la partida (probado con un mando simulado).
 
 No se ha probado en Android ni en R36S.

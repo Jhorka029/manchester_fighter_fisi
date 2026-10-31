@@ -145,3 +145,37 @@ Sexto personaje, a partir de 15 imágenes de la carpeta `kikeparker` (cuerpo com
 Asignación por el nombre de cada archivo: reposo, caminar (tres pasos), golpe alto (puño), golpe bajo (golpe bajo con la mano al suelo, es su patada baja y su golpe bajo), agachado, bloqueo (pose propia), salto y caída, golpeado, derribo, victoria y presentación, especial 1 (ráfaga con la mano extendida), especial 2 (se inclina y empuja, es el golpe descendente y su preparación), ulti (multigolpe con los puños fantasma y el empuje final) y recarga de energía (aura rosa y aura eléctrica).
 
 Su patada media (K) usa cuatro cuadros propios (`kickUp`, `kickHit`, `kickKnee`, `kickEnd`: rodilla arriba, patada, rodilla de nuevo y guardia). Faltan en su carpeta: patada aérea, voltereta y agarre propios. Usa las poses de salto en el ataque aéreo y en la voltereta (con el arco por código), y las poses provisionales de los demás en la llave. Sus especiales 1 y 2 tenían tres cuadros cada uno; solo se usan los del medio y el descendente. El cuadro "recarga de energía" solo tiene dos cuadros y los alterna.
+
+---
+
+# Público
+
+El público ya no son siluetas: `assets/publico/espectadores.png` es un atlas de 21 espectadores en pixel art (camisetas moradas y lilas, de distintos tamaños y poses, incluidos uno agachado y un grupo de dos). Salieron de una hoja de dos filas de personas sobre fondo blanco con sombras. Para recortarlos se borró el fondo por inundación desde los bordes (así desaparecen también las sombras y los huecos entre las piernas), se cortó a mano la pareja que se tocaba y se igualó la altura de las dos filas, que venían a distinta escala.
+
+En el juego (`drawCrowd`, `CROWD_STAGES` y `SPECT_ATLAS` en `game-v4.js`) hay dos filas: la de atrás, más pequeña y oscurecida, y la de delante, con un leve tinte morado para que no compitan con los luchadores. La disposición es distinta en cada escenario porque la perspectiva y los objetos cambian: línea de suelo (`base`), tamaño (`k`), separación, huecos al azar (`gap`, para que no sea una pared) y zonas sin gente (`skip`). Patio: pared completa. Entrada: sobre el pavimento, más pequeña y con huecos. Cafetería: unas 20 personas, pequeñas y a la escala del mostrador, solo en el suelo frente a él (no delante del refrigerador, el congelador ni las estanterías). Plaza: a los lados, dejando libre el centro para que se lea "RIOJA" en la fuente. Cada espectador es uno de los 21, algunos volteados. Siguen el entusiasmo de la pelea (`hype`): se balancean siempre y saltan más cuanto más entusiasmo. La foto de grupo que acompañaba a la hoja no se usa. El tamaño general de los espectadores se controla con `CROWD_SCALE` (1,15: unos 120 px de alto los de la fila delantera del patio).
+
+---
+
+# Cárdenas
+
+Séptimo personaje, a partir de 16 imágenes de la carpeta `cardenas` (cuerpo completo sobre fondo verde y el resto sobre magenta). Se recortaron con un script de Python que separa los cuadros por filas y columnas; el especial 2 (dos cuadros pegados) y la ulti (tres pegados y un globo de texto "¡ESTO NO ES UN EXAMEN!" suelto) se cortaron a mano por columnas y se descartó el globo. El tamaño se igualó a ojo con el resto. Quedan 23 cuadros en `assets/personajes/cardenas/atlas.png` (posiciones en `CD_ATLAS` de `game-v4.js`) y `retrato.png`.
+
+Asignación por el nombre de cada archivo: reposo, caminar (cuatro pasos propios, `walkSeq`), golpe alto (puño), golpe agachado (su golpe bajo), golpe bajo (patada baja, arrodillado), agachado, bloqueo, salto y caída, golpeado, derribo, victoria y presentación (la calculadora), especial 1 (tijeras de podar, es su proyectil), especial 2 (exámenes y la torta, es el golpe descendente y su preparación), ulti con los cinco cuadros de la hoja nueva en orden (brazos cruzados, exámenes volando, el árbol, las tijeras y la pizza con la calculadora) y el globo "¡ESTO NO ES UN EXAMEN!" aparte (`bubble`) y recarga de energía (se duerme con "zz" y brilla con "zZZ").
+
+Su patada media (K) usa el cuadro de la patada nueva (`mid`), su giro es una rodada con cuatro cuadros propios (agachado con las manos al suelo, de cabeza, hecho bola que gira por código, y de pie corriendo; `rollSeq`) y la ulti muestra el globo de texto. Faltan en su carpeta: patada aérea y agarre propios. Usa las poses de salto en el ataque aéreo y poses provisionales en la llave.
+
+# Pepelucho
+
+Octavo personaje, a partir de 20 imágenes de la carpeta `pepelucho` (todas sobre magenta; la hoja de la patada media mide 3584 px de ancho). Mismo proceso; el especial 2 (la escuadra) tenía dos cuadros pegados y se cortó por columnas; la ulti trae seis cuadros en dos filas. Quedan 29 cuadros en `assets/personajes/pepelucho/atlas.png` (posiciones en `PP_ATLAS`) y `retrato.png` (se le quitó el borde magenta).
+
+Asignación: reposo, caminar (tres pasos), golpe alto (puño), golpe bajo puño (agachado), golpe bajo (patada baja), agachado, bloqueo, salto y caída, golpeado, derribo, victoria, especial 1 (en moto, es su proyectil), especial 2 (la escuadra gigante, es el descendente), patada media (rodilla, patada y guardia; su K), patada alta (su ataque aéreo), agarre (alcanzar, el giro con estela y el final), ulti con toda la secuencia: llega en moto, patea la moto (cuadro de la patada de la imagen nueva, `motoKick`), la moto sale volando girando por la pantalla (`motoFly`, dibujada por código), lanza los exámenes (`papers1`, `papers2`) y termina con la mano en el pecho (`ultiEnd`) y recarga de energía (llamas azules con fórmulas).
+
+Su giro (S + doble toque, o L3 con el mando) es subirse a su moto: se agacha, pasa montado en la moto a través del rival, que no lo empuja, y se baja al otro lado (`rollSeq` en `SETS`).
+
+---
+
+# Ulti, patada y giro de Cárdenas (versión 2)
+
+La ulti se recortó de una hoja nueva con cinco cuadros y un globo de texto. Los cuadros se solapan en la hoja original (un pie de uno cae bajo el otro, las estelas cruzan), así que un corte recto no bastaba: cada uno se recortó con reglas escalonadas que siguen la unión con el vecino, y las estelas blancas y violetas, las hojas de las tijeras y las líneas de velocidad se asignaron por color al cuadro al que pertenecen. Los trozos sueltos pequeños se descartan. Queda una línea mínima de un cuadro vecino en el borde del cuadro de las tijeras. El globo "¡ESTO NO ES UN EXAMEN!" no va pegado al personaje: se dibuja por código (`drawBubble`) al lado de la cabeza, del lado contrario al rival, durante el inicio de la ulti (incluida la cinemática de acercamiento), porque encima de la cabeza lo tapaba el marcador de vida y el reloj. Se desvanece al cabo de un segundo. Los cuadros verdes de la patada y el giro se despillaron: se quitó el halo verde del borde y el verde que se veía a través de los lentes.
+
+Tamaño del giro de Cárdenas: los cuatro cuadros se escalaron comparando el tamaño de su cabeza con la del reposo (a 1,16 la cabeza medía un 27 % más y por eso se veía que se agrandaba al rodar; ahora 0,9). La bola de la rodada mide unos 164 px, menor que el personaje de pie, que es lo normal en una pose encogida.
