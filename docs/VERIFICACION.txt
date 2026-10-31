@@ -171,3 +171,4 @@ Proyectil de Joshi (simulación y captura): sale a la altura del balón del cuad
 Público de atrás más grande (capturas del patio y la cafetería): la fila de atrás pasó de k 0,86/0,80/0,66/0,74 a 0,98/0,90/0,74/0,84 (patio, entrada, cafetería, plaza), ahora casi del tamaño de la de delante y más proporcional al escenario; se mantienen la posición y los huecos de cada escenario.
 Público más grande (captura): CROWD_SCALE pasó de 1,15 a 1,35, así que todos los espectadores miden un 17 % más; se ven bien en el patio.
 Kike Parker, especial con tigrillo (simulación y captura): L muestra kA > tiger > kB > reposo y no crea proyectiles; conecta con 12 de daño a 130 y 160 px y no llega a 230 px; agachado también sale. El tigrillo se ve saliendo del puño y golpeando al rival.
+Agarre de Kike Parker con 3 cuadros nuevos (simulación y captura): J + K de cerca muestra gReach > gHold > gTiger, el rival pasa a caído y recibe 14 de daño; el tigre sale con el gancho.

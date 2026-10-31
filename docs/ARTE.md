@@ -191,3 +191,7 @@ Asignación: reposo (la guardia con el balón), caminar (nueve cuadros con el ba
 ## Kike Parker: especial 1 con tigrillo
 
 El especial (L) ya no lanza un proyectil. Es un golpe de corto alcance (movimiento `tiger` en `MOVES`: alcance 160 px frente a 112 del puño y 145 de la patada media, 12 de daño, 18 de energía; también sale agachado). Usa `assets/personajes/kike-parker/especial.png` (posiciones en `KT_ATLAS`), hecho a partir de dos imágenes sobre magenta: tres cuadros de Kike (`kA` preparando, `kB` con la mano abierta y `kYawn` bostezando mirando el reloj) y el puñetazo con el tigre de fuego (`tiger`). La secuencia (`tigerSeq`) es `kA` > `tiger` (en medio, durante el golpe) > `kB` > reposo. `kYawn` está en el atlas pero todavía no se usa.
+
+## Kike Parker: agarre con tigrillo
+
+El agarre (J + K) usa tres cuadros de `58.jpg` (sobre verde) añadidos a `especial.png`: `gReach` (alcanza con los dos puños), `gHold` (se agacha para apretar) y `gTiger` (gancho hacia arriba con el tigre de fuego), en `SETS[5].grab`. Antes usaba poses provisionales.
