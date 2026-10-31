@@ -1,6 +1,6 @@
 # Manchester FISI Fighter
 
-Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.5**, con Lancha, El Fiel, Kent, Pingordy, Ingestrella, Kike Parker, Cárdenas y Pepelucho, poderes propios y personajes inspirados en fotografías de referencia.
+Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.5**, con Lancha, El Fiel, Kent, Pingordy, Ingestrella, Kike Parker, Cárdenas, Pepelucho y Joshi, poderes propios y personajes inspirados en fotografías de referencia.
 
 **[Versión pública](https://jhorka029.github.io/manchester_fighter_fisi/)**
 
@@ -70,7 +70,7 @@ Ataques bajos: mantén abajo + puño o patada. En el menú: ← → tu personaje
 ## Incluye
 
 - Público de espectadores en pixel art que salta con la intensidad de la pelea.
-- Ocho personajes (Cárdenas duerme para recargar y su ulti es "Esto no es un examen"; Pepelucho lanza una moto y una escuadra gigante). Los primeros seis: Lancha, El Fiel, Kent (patadas de fuego), Pingordy (medialuna y tornado), Ingestrella (código y laptop) y Kike Parker (traje azul, puños y llave presidencial). El menú tiene una fila para elegir tu personaje y otra para el rival, también en 2 jugadores.
+- Nueve personajes (Joshi, jugador de básquet: lanza balones, su ulti es el "Combo de cancha" con un mate final; Cárdenas duerme para recargar y su ulti es "Esto no es un examen"; Pepelucho lanza una moto y una escuadra gigante). Los primeros seis: Lancha, El Fiel, Kent (patadas de fuego), Pingordy (medialuna y tornado), Ingestrella (código y laptop) y Kike Parker (traje azul, puños y llave presidencial). El menú tiene una fila para elegir tu personaje y otra para el rival, también en 2 jugadores.
 - Combate por rondas, tres dificultades de CPU y modo local de dos jugadores.
 - Ataques altos, medios, bajos, descendentes y aéreos.
 - Salto y patada aérea con poses distintas; patada baja sin derribo.

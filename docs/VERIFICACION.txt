@@ -161,3 +161,13 @@ saltar, agacharse, defensa y ataques alto, medio, bajo, aéreo, descendente
 Sin verificar: L2 como defensa, dos mandos a la vez. SHARE vuelve a la selección de personaje desde cualquier punto de la partida (probado con un mando simulado).
 
 No se ha probado en Android ni en R36S.
+
+Joshi (noveno personaje, simulación y capturas): con las imágenes sueltas nuevas (47 cuadros), todas las poses del motor (caminar, golpe alto, medio, bajo, descendente, especial normal y agachado, salto, patada aérea, defensa, agachado, recarga, super, agarre en el suelo y al aire, giro, golpeado, caída en el aire y derribo) se resuelven a un cuadro del atlas, sin errores. El especial lanza un balón de básquet naranja; la ulti muestra "COMBO DE CANCHA" con aura naranja. Mide 217 px en reposo, como Lancha. En la selección es el noveno retrato, con el rol "BÁSQUET". Provisionales: salto y giro.
+Caminar de Joshi con 9 cuadros (simulación y captura): el balón rebota (en la mano, al suelo y de vuelta) y el ciclo dura unos 0,7 s.
+Recarga de Joshi con 3 cuadros de aura (simulación y captura): charge0 > charge1 > charge2 > charge1 > charge2..., con el aura de llamas visible y sin agrandarse.
+Ulti de Joshi con 6 cuadros (simulación y captura): ulti0 > ulti1 > ulti2 > ulti3 > ulti4 (picada) > ulti5 (mate con polvo), que se mantiene hasta el final; quita 36 de vida. La recarga se reescaló: la cabeza mide 44 px como en reposo (antes 37) y ya no se ve más pequeño.
+Descendente de Joshi (simulación y captura): overheadPrep > overheadHit > ulti4 (caída en picada) y luego reposo; hace 15 de daño y derriba.
+Proyectil de Joshi (simulación y captura): sale a la altura del balón del cuadro de lanzar: 171 px sobre el suelo y 109 px delante de él de pie, 91 px y 72 px en el especial agachado (antes 82 y 28); conecta contra un rival de pie.
+Público de atrás más grande (capturas del patio y la cafetería): la fila de atrás pasó de k 0,86/0,80/0,66/0,74 a 0,98/0,90/0,74/0,84 (patio, entrada, cafetería, plaza), ahora casi del tamaño de la de delante y más proporcional al escenario; se mantienen la posición y los huecos de cada escenario.
+Público más grande (captura): CROWD_SCALE pasó de 1,15 a 1,35, así que todos los espectadores miden un 17 % más; se ven bien en el patio.
+Kike Parker, especial con tigrillo (simulación y captura): L muestra kA > tiger > kB > reposo y no crea proyectiles; conecta con 12 de daño a 130 y 160 px y no llega a 230 px; agachado también sale. El tigrillo se ve saliendo del puño y golpeando al rival.
