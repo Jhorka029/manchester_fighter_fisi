@@ -77,6 +77,8 @@ function audioCue(name,id=0){
  if(muted||!audioDirector.unlocked)return;
  if(['round1','round2','finalround','fight','ko','perfectko'].includes(name)){playSample(name,{voice:true});return}
  if(name==='button'){playSample('button');return}
+ if(name==='menu-move'){synthTone(1050,.055,'triangle',.095,0,1500);synthTone(2100,.035,'sine',.035,.02,1800);return}
+ if(name==='menu-back'){synthTone(660,.085,'triangle',.11,0,440);synthTone(330,.12,'triangle',.09,.065,220);return}
  if(name==='special'){audioDirector.duckUntil=Math.max(audioDirector.duckUntil,audio.currentTime+.65);playSample('special'+(id%4));return}
  if(name==='count'&&audio.currentTime<audioDirector.voiceEnd)return;
  const variation=(audioDirector.serial++%3-1)*.035,root=220*Math.pow(2,(id%9)/12),tone=(f,d=.12,type='triangle',v=.1,delay=0,end=f)=>synthTone(f*(1+variation),d,type,v,delay,end);
@@ -118,12 +120,17 @@ const oldFrontPad=frontPad;
 frontPad=function(){oldFrontPad();if(!audioDirector.unlocked&&pads().some(p=>p.buttons.some(b=>b.pressed)))void unlockGameAudio()};
 function menuAudioAction(fn,args,confirm=false){const outer=audioDirector.uiDepth===0;if(outer&&confirm)audioCue('button');audioDirector.uiDepth++;try{return fn(...args)}finally{audioDirector.uiDepth--;audioDirector.sync()}}
 const oldFrontGo=frontGo,oldFrontSelect=frontSelect,oldFrontMove=frontMove,oldFrontBackAudio=frontBack,oldFrontConfirmAudio=frontConfirm,oldFrontLaunchAudio=frontLaunch;
-frontGo=function(...args){return menuAudioAction(oldFrontGo,args)};
+frontGo=function(...args){audioDirector.routeDepth=(audioDirector.routeDepth||0)+1;try{return menuAudioAction(oldFrontGo,args)}finally{audioDirector.routeDepth--}};
 frontSelect=function(...args){return menuAudioAction(oldFrontSelect,args)};
 frontMove=function(...args){return menuAudioAction(oldFrontMove,args)};
-frontBack=function(...args){return menuAudioAction(oldFrontBackAudio,args)};
+frontBack=function(...args){const page=front.page,result=menuAudioAction(oldFrontBackAudio,args);if(ready&&front.page!==page)audioCue('menu-back');return result};
 frontConfirm=function(...args){return menuAudioAction(oldFrontConfirmAudio,args,ready&&['title','characters'].includes(front.page))};
 frontLaunch=function(...args){return menuAudioAction(oldFrontLaunchAudio,args,ready&&front.active&&front.page==='characters')};
+const beforeSelectionAudioUI=frontUI;
+const selectionAudioKey=()=>front.page==='characters'?front.side+':'+front.picks.join(','):String(front.option);
+let lastSelectionAudio={page:front.page,key:selectionAudioKey()};
+frontUI=function(){const now={page:front.page,key:selectionAudioKey()};if(ready&&front.active&&state==='menu'&&!audioDirector.routeDepth&&lastSelectionAudio.page===now.page&&lastSelectionAudio.key!==now.key)audioCue('menu-move');lastSelectionAudio=now;return beforeSelectionAudioUI()};
+$('#front-ui').addEventListener('click',e=>{const b=e.target.closest('[data-front="option"]');if(ready&&b&&+b.dataset.option!==front.option)audioCue('menu-move')},{capture:true});
 const oldAttack=attack,oldDamage=damage,oldEndRoundAudio=endRound;
 endRound=function(){const before=state;oldEndRoundAudio();if(before==='fight'&&state==='round'&&players.some(p=>p.hp<=0))audioCue(perfect?'perfectko':'ko')};
 attack=function(p,id){const ok=oldAttack(p,id);if(ok&&(id==='super'||MOVES[id]?.frame==='special'))audioCue(id==='super'?'super':'special',p.id);return ok};

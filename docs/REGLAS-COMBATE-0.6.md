@@ -1,8 +1,10 @@
 # Correcciones de combate y confirmación
 
-Esta revisión sigue siendo local. No se publicó en GitHub.
+Reglas de la revisión 0.6.
 
 El audio «seleccionar botón» se reproduce únicamente al confirmar el título para empezar y al confirmar los luchadores con Enter/¡A PELEAR!. Recorrer opciones, pulsar retratos para explorar, cambiar de modo/escenario y retroceder no lo disparan. La acción anidada de confirmar y comenzar la pelea produce una sola muestra.
+
+La navegación tiene sus propios efectos originales: uno corto y ascendente para cambiar de cuadro, y otro descendente al retroceder de sección. Son independientes de la muestra de confirmación.
 
 Cada ronda reinicia la orientación desde las posiciones de salida y la conserva correcta durante la cuenta regresiva, aunque los jugadores hayan cruzado lados en la ronda anterior. También se limpian estados de salto/entrada que pertenecían a esa ronda.
 

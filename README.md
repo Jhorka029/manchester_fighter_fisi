@@ -1,26 +1,26 @@
 # Manchester FISI Fighter
 
-Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.6 local**, con Lancha, El Fiel, Kent, Pingordy, Ingestrella, Kike Parker, Cárdenas, Pepelucho y Joshi, poderes propios y personajes inspirados en fotografías de referencia.
+Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.6**, con Lancha, El Fiel, Kent, Pingordy, Ingestrella, Kike Parker, Cárdenas, Pepelucho y Joshi, poderes propios y personajes inspirados en fotografías de referencia.
 
-Esta revisión local añade siete escenarios, créditos, auspicio de Core FK y música del usuario para menús y combate. La intro cambia de escenario cada segundo con acercamiento y fundido. El menú «Mezcla de audio» permite ajustar música y efectos por separado. Se requiere una primera tecla o clic si el navegador bloquea el audio automático. Ver [detalles de la revisión](docs/PRESENTACION-0.6.md). Esta revisión todavía no está publicada.
+Esta revisión añade siete escenarios, créditos, auspicio de Core FK y música del usuario para menús y combate. La intro cambia de escenario cada segundo con acercamiento y fundido. El menú «Mezcla de audio» permite ajustar música y efectos por separado. Se requiere una primera tecla o clic si el navegador bloquea el audio automático. Ver [detalles de la revisión](docs/PRESENTACION-0.6.md).
 
 **[Versión pública](https://jhorka029.github.io/manchester_fighter_fisi/)**
 
-## Presentación y menús 0.5
+## Presentación y menús 0.6
 
-La intro empieza automáticamente al abrir el juego y muestra los cuatro escenarios y los personajes. **Saltar intro** permanece visible para ir directamente al título con el escudo FISI en pixel art. La música intenta arrancar al cargar; si el navegador restringe el audio automático, se activa con la primera pulsación o clic sin detener la animación.
+La intro empieza automáticamente al abrir el juego y muestra los créditos, Core FK, los siete escenarios y los nueve personajes. **Saltar intro** permanece visible para ir directamente al título con el escudo FISI en pixel art. La música intenta arrancar al cargar; si el navegador restringe el audio automático, se activa con la primera pulsación o clic sin detener la animación.
 
 El recorrido es: título → seleccionar modo **VS** → **VS CPU**, **2 jugadores** o **entrenamiento** → dificultad solo en VS CPU → escenario → personajes. La cuadrícula central permite elegir P1 y su rival; usa **Tab**, los botones P1/CPU o LB/RB del mando para cambiar de selector. Los espacios oscuros están reservados y no son personajes adicionales.
 
-Escenarios: Patio FISI, Entrada UNSM, La cafetería y Plaza de Rioja. Los tres últimos usan las imágenes proporcionadas para esta versión. Las reglas de combate se conservan.
+Escenarios: Patio FISI, Entrada UNSM, La cafetería, Plaza de Rioja, Loza UNSM, Kokobombo - Fiesta Cachimbo y FISI. Los fondos nuevos usan las referencias proporcionadas, con Kokobombo y FISI adaptados a pixel art.
 
-Los recursos están separados en `assets/escenarios/`, `assets/interfaz/` y `assets/personajes/{lancha,el-fiel}/movimientos/`. Cada pose es un PNG individual transparente; `asset-catalog.js` registra sus rutas y alturas originales. Consulta [docs/ASSETS.md](docs/ASSETS.md).
+Los recursos están separados en `assets/escenarios/`, `assets/interfaz/`, `assets/audio/` y carpetas por personaje en `assets/personajes/`. Lancha y El Fiel conservan poses PNG individuales; los demás usan sus propios atlas. Consulta [docs/ASSETS.md](docs/ASSETS.md).
 
 ## Cómo jugar
 
 Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **¡A PELEAR!**. En entrenamiento la energía se mantiene llena para probar los supers.
 
-La confirmación sonora se limita al inicio desde el título y a confirmar los luchadores. Cada ronda reinicia la orientación hacia el rival y conserva su escala corporal. Una ulti no se interrumpe con golpes o agarres: se bloquea con defensa. Si ambos activan una ulti juntos, aparece un choque de pulsaciones: P1 pulsa I, P2 pulsa 0 del teclado numérico (RB/R1 con mando). Sólo el ganador libera la ulti; ambos gastan energía. [Reglas y detalles](docs/REGLAS-COMBATE-0.6.md).
+La muestra de confirmación se limita al inicio desde el título y a confirmar los luchadores. Al recorrer cuadros suena un efecto original breve y agudo; al retroceder, otro descendente. Cada ronda reinicia la orientación hacia el rival y conserva su escala corporal. Una ulti no se interrumpe con golpes o agarres: se bloquea con defensa. Si ambos activan una ulti juntos, aparece un choque de pulsaciones: P1 pulsa I, P2 pulsa 0 del teclado numérico (RB/R1 con mando). Sólo el ganador libera la ulti; ambos gastan energía. [Reglas y detalles](docs/REGLAS-COMBATE-0.6.md).
 
 | Acción | Jugador 1 |
 | --- | --- |

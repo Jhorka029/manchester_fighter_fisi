@@ -1,6 +1,6 @@
-# Presentación local 0.6
+# Presentación 0.6
 
-Cambios exclusivamente locales; no publicados en GitHub.
+Revisión 0.6 del proyecto.
 
 - Siete escenarios: los cuatro existentes, Loza UNSM, Kokobombo - Fiesta Cachimbo y FISI.
 - Loza usa la primera imagen proporcionada, sin alteraciones.
@@ -36,6 +36,8 @@ Locuciones recortadas del audio suministrado: Round One (0.20–1.45 s), Round T
 Especiales: cuatro muestras sin silencios largos, extraídas de 1.16–1.94 s, 4.70–5.43 s, 8.08–8.99 s y 11.90–13.03 s. Se reparten por índice de personaje módulo cuatro y se disparan al confirmar un especial (incluido el tigrillo de Kike) o una ulti. Los instantes aproximados indicados por el usuario se ajustaron a los inicios de señal del archivo real.
 
 Botones: una sola muestra del audio seleccionar botón (0.09–1.80 s), limitada a confirmar el título y confirmar los luchadores para pelear. No se reproduce al explorar, retroceder o cambiar de sección. Funciona con clic, teclado o mando y una confirmación anidada no duplica el sonido. Se suprimen los antiguos pitidos de menú. Los controles de volumen siguen siendo ajustables con teclado sin activar la navegación del juego. Las reglas del choque de ultis y de escala corporal están en REGLAS-COMBATE-0.6.md.
+
+Navegación: se añadieron dos efectos originales sintetizados en Web Audio. «menu-move» es un pulso ascendente de 1050 a 1500 Hz con un armónico breve; «menu-back» son dos notas descendentes de 660 a 440 Hz y de 330 a 220 Hz. Suenan al cambiar de cuadro o retroceder, respectivamente, con teclado, clic o mando. Volver a pulsar el mismo cuadro no repite el efecto, y las llamadas anidadas no lo duplican. Respetan silencio y volumen de efectos; no utilizan la muestra de confirmación.
 
 El navegador puede bloquear el audio al abrir: se desbloquea con la primera tecla o clic. No hay pantalla obligatoria para activar la música. La animación comienza automáticamente. Música y efectos respetan silencio, pausa y pestaña oculta. El audio y el logo se incrustan en el HTML autónomo; no requiere Internet.
 
