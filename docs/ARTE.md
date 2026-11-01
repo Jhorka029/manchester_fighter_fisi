@@ -195,3 +195,7 @@ El especial (L) ya no lanza un proyectil. Es un golpe de corto alcance (movimien
 ## Kike Parker: agarre con tigrillo
 
 El agarre (J + K) usa cinco cuadros de `especial.png` (de `58.jpg` y `60.jpg`, sobre verde): `gReach` (alcanza con los dos puños), `gHold` (se agacha para apretar), `gThrow` (lanza al rival hacia arriba con los brazos arriba), `gTiger` (gancho con el tigre de fuego mientras el rival sube por el aire) y `gYawn` (bosteza mirando el reloj mientras el rival cae). Como el golpe del tigre debe darse con el rival en el aire, la llave de Kike usa el lanzamiento hacia arriba (`upThrow` en `SETS[5]`, con los cuadros de `airGrab`) y no el lanzamiento de lado; el rival sube a 300 px, cae y recibe 14 de daño. En el fallo de agarre solo se ven `gReach` y `gHold`.
+
+# Ingestrella: imágenes nuevas
+
+Se volvió a extraer toda la carpeta `D:\imagenes videojuego\inge.estrella` (las 15 imágenes anteriores salieron idénticas) y se añadieron tres imágenes nuevas: `estrella_patada_media` (rodilla, patada y guardia; es su K, `midKick`), `esstrella_GOLPE_BAJO_PUÑO` (puño agachado, `lowPunch`) y `estrella_agarre` (alcanza, aprieta la carpeta FISI, la lanza y queda con papeles en el suelo; `grab`, con tiempos por edad). Las hojas del golpe bajo y del agarre tenían los cuadros pegados y se cortaron con cortes escalonados. Atlas: `assets/personajes/ingestrella/atlas.png` (posiciones en `IE_ATLAS`, 31 cuadros).
