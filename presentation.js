@@ -1,7 +1,9 @@
 'use strict';
 // Presentación local 0.6: utiliza el mismo elenco y catálogo que el combate.
-const PRESENTATION={stageBeat:1.4,fighterBeat:1.15,finalBeat:2.4};
-const presentationDuration=()=>GAME_ASSETS.stages.length*PRESENTATION.stageBeat+NAMES.length*PRESENTATION.fighterBeat+PRESENTATION.finalBeat;
+const PRESENTATION={creditsBeat:8,sponsorBeat:3,stageBeat:1.0,fighterBeat:1.15,finalBeat:2.4};
+const openingDuration=()=>PRESENTATION.creditsBeat+PRESENTATION.sponsorBeat;
+const presentationDuration=()=>openingDuration()+GAME_ASSETS.stages.length*PRESENTATION.stageBeat+NAMES.length*PRESENTATION.fighterBeat+PRESENTATION.finalBeat;
+const sponsorImage=new Image();sponsorImage.src='assets/interfaz/core-fk-pixel.png';
 const originalDrawFront=drawFront,originalFrontUI=frontUI;
 const clamp01=n=>Math.max(0,Math.min(1,n));
 const introEase=n=>1-Math.pow(1-clamp01(n),3);
@@ -23,8 +25,26 @@ function drawRosterPoster(){
  near.forEach((id,j)=>posterFighter(id,175+j*205,527,id===0?243:230,j>1));
 }
 function introBackdrop(id,t){
- frontCover(stageImages[id],1.035+Math.min(t,.9)*.025,Math.sin(t)*8);
+ const progress=clamp01(t/PRESENTATION.stageBeat);
+ frontCover(stageImages[id],reducedFX?1.025:1.015+progress*.10,Math.sin(t)*5);
+ if(id>0&&progress<.2){fc.save();fc.globalAlpha=1-progress/.2;frontCover(stageImages[id-1],reducedFX?1.025:1.115);fc.restore()}
  frontShade(.22);
+}
+function drawOpeningCredits(t){
+ frontCover(stageImages[6],1.035);frontShade(.9);
+ fc.fillStyle='#ee9a3444';fc.fillRect(132,106,696,2);fc.fillRect(132,454,696,2);
+ if(t<PRESENTATION.creditsBeat){
+  frontText('MANCHESTER FISI FIGHTER',480,82,20,'#ffce88');
+  frontText('Creador del Proyecto:',480,152,18,'#e9b56e');
+  frontText('Jordy Jhorkaet Curay Acosta',480,187,25,'#fff5dc');
+  frontText('Desarrolladores:',480,246,18,'#e9b56e');
+  ['Gabriel Alessandro Flores Ramírez','Darick Gerald Herrera Castillo','Ronald Lancha Chuquilin','Jordy Jhorkaet Curay Acosta'].forEach((name,i)=>frontText(name,480,282+i*37,22,'#f1e7fa'));
+ }else{
+  frontText('Auspiciadores:',480,147,25,'#ffd08a');
+  if(sponsorImage.complete&&sponsorImage.naturalWidth){const h=250,w=sponsorImage.width/sponsorImage.height*h;fc.fillStyle='#fff3dd';fc.fillRect(480-w/2-18,163,w+36,h+14);fc.drawImage(sponsorImage,480-w/2,170,w,h)}
+  else frontText('CORE FK',480,310,58,'#ee942f');
+  frontText('CORE FK',480,441,23,'#f0b15d');
+ }
 }
 function drawFighterCard(id,local){
  const duration=PRESENTATION.fighterBeat,k=clamp01(local/duration),color=THEMES[id].color;
@@ -49,16 +69,15 @@ frontUI=function(){originalFrontUI();$('#front-ui').classList.toggle('roster-tit
 drawFront=function(dt){
  if(!ready||!['intro','title'].includes(front.page)){originalDrawFront(dt);return}
  front.time+=dt;front.elapsed+=document.hidden?0:dt;fc.imageSmoothingEnabled=false;fc.clearRect(0,0,W,H);if(!front.painted)frontUI();
- const t=front.elapsed,stageEnd=GAME_ASSETS.stages.length*PRESENTATION.stageBeat,fighterEnd=stageEnd+NAMES.length*PRESENTATION.fighterBeat;
+ const t=front.elapsed,stageStart=openingDuration(),stageEnd=stageStart+GAME_ASSETS.stages.length*PRESENTATION.stageBeat,fighterEnd=stageEnd+NAMES.length*PRESENTATION.fighterBeat;
  if(front.page==='title'){
   drawRosterPoster();const g=fc.createLinearGradient(0,0,0,H);g.addColorStop(0,'#080518bd');g.addColorStop(.4,'#08051800');g.addColorStop(.85,'#08051800');g.addColorStop(1,'#080518dd');fc.fillStyle=g;fc.fillRect(0,0,W,H);
- }else if(t<stageEnd){
-  const i=Math.floor(t/PRESENTATION.stageBeat),local=t%PRESENTATION.stageBeat;introBackdrop(i,local);
+ }else if(t<stageStart){drawOpeningCredits(t)}else if(t<stageEnd){
+  const elapsed=t-stageStart,i=Math.floor(elapsed/PRESENTATION.stageBeat),local=elapsed%PRESENTATION.stageBeat;introBackdrop(i,local);
   fc.fillStyle='#0c0923c9';fc.fillRect(0,368,W,126);
   frontText('SIETE ESCENARIOS · UN MISMO ORGULLO',480,394,14,'#ffd18b');
   frontText(GAME_ASSETS.stages[i].name.toUpperCase(),480,438,i===5?27:35);
   frontText(GAME_ASSETS.stages[i].location,480,473,15,'#d5c9e4');
-  if(!reducedFX){const cover=1-introEase(local/.22);fc.fillStyle='#0b0719';fc.fillRect(0,0,W*cover,H)}
  }else if(t<fighterEnd){const n=(t-stageEnd)/PRESENTATION.fighterBeat;drawFighterCard(Math.min(NAMES.length-1,Math.floor(n)),(n%1)*PRESENTATION.fighterBeat)}
  else{drawRosterPoster();frontShade(.42);if(crestImage)fc.drawImage(crestImage,423,35,114,114);frontText('MANCHESTER',480,202,48,'#ffe0a0');frontText('FISI FIGHTER',480,258,55,'#ffc469');frontText('NUEVE LUCHADORES · UN SOLO CAMPUS',480,300,16,'#fff0cf');if(t>=presentationDuration())frontGo('title')}
  frontScore();

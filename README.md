@@ -1,6 +1,8 @@
 # Manchester FISI Fighter
 
-Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.5**, con Lancha, El Fiel, Kent, Pingordy, Ingestrella, Kike Parker, Cárdenas, Pepelucho y Joshi, poderes propios y personajes inspirados en fotografías de referencia.
+Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.6 local**, con Lancha, El Fiel, Kent, Pingordy, Ingestrella, Kike Parker, Cárdenas, Pepelucho y Joshi, poderes propios y personajes inspirados en fotografías de referencia.
+
+Esta revisión local añade siete escenarios, créditos, auspicio de Core FK y música del usuario para menús y combate. La intro cambia de escenario cada segundo con acercamiento y fundido. El menú «Mezcla de audio» permite ajustar música y efectos por separado. Se requiere una primera tecla o clic si el navegador bloquea el audio automático. Ver [detalles de la revisión](docs/PRESENTACION-0.6.md). Esta revisión todavía no está publicada.
 
 **[Versión pública](https://jhorka029.github.io/manchester_fighter_fisi/)**
 

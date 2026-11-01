@@ -26,3 +26,9 @@
  .stage-card img{aspect-ratio:2.5/1}
 }
 @media(prefers-reduced-motion:reduce){.intro-progress i{animation:none!important;width:100%}}
+.sound-mix{position:relative;font:12px system-ui;color:#f5e9ff;z-index:20}
+.sound-mix summary{cursor:pointer;padding:8px;border:1px solid #675073;border-radius:6px}
+.sound-mix[open]{background:#181020;padding:10px;border:1px solid #675073;border-radius:6px}
+.sound-mix label{display:flex;align-items:center;gap:8px;margin:8px 0;justify-content:space-between}
+.sound-mix input{width:100px;accent-color:#ffb85d}
+.sound-mix small{display:block;max-width:210px;line-height:1.4;color:#bfb2d0}
