@@ -20,6 +20,8 @@ Los recursos están separados en `assets/escenarios/`, `assets/interfaz/` y `ass
 
 Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **¡A PELEAR!**. En entrenamiento la energía se mantiene llena para probar los supers.
 
+La confirmación sonora se limita al inicio desde el título y a confirmar los luchadores. Cada ronda reinicia la orientación hacia el rival y conserva su escala corporal. Una ulti no se interrumpe con golpes o agarres: se bloquea con defensa. Si ambos activan una ulti juntos, aparece un choque de pulsaciones: P1 pulsa I, P2 pulsa 0 del teclado numérico (RB/R1 con mando). Sólo el ganador libera la ulti; ambos gastan energía. [Reglas y detalles](docs/REGLAS-COMBATE-0.6.md).
+
 | Acción | Jugador 1 |
 | --- | --- |
 | Mover | A / D |

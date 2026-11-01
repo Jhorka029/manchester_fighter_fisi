@@ -12,7 +12,7 @@ function rosterSprite(id,poseName='introA'){
  return showSprites[id*4+2]?.image||sprites[id*6];
 }
 function posterFighter(id,x,base,height,flip=false){
- const im=rosterSprite(id),w=im.width/im.height*height;
+ const g=fighterGeometry(id,SETS[id]?{kent:resolvePose(id,'introA')}:{show:2}),im=g.im; height*=g.h/258;const w=im.width/im.height*height;
  fc.save();fc.translate(Math.round(x),base);fc.scale(flip?-1:1,1);
  fc.fillStyle='#100c1844';fc.beginPath();fc.ellipse(0,0,w*.38,8,0,0,Math.PI*2);fc.fill();
  fc.drawImage(im,Math.round(-w/2),-height,Math.round(w),height);fc.restore();

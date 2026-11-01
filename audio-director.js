@@ -8,7 +8,7 @@ const AUDIO_TRACKS={
 const AUDIO_ENTRANCE='assets/audio/menu-arranque.mp3';
 const AUDIO_SAMPLES={round1:'assets/audio/round1.mp3',round2:'assets/audio/round2.mp3',finalround:'assets/audio/finalround.mp3',fight:'assets/audio/fight.mp3',ko:'assets/audio/ko.mp3',perfectko:'assets/audio/perfectko.mp3',button:'assets/audio/boton.mp3',special0:'assets/audio/especial-1.mp3',special1:'assets/audio/especial-2.mp3',special2:'assets/audio/especial-3.mp3',special3:'assets/audio/especial-4.mp3'};
 const mix={music:.24,effects:1};
-const audioDirector={unlocked:false,loading:null,output:null,sfx:null,musicBus:null,buffers:{},samples:{},playing:null,track:null,duckUntil:0,errors:[],events:[],serial:0,uiDepth:0,buttonSource:null,startedAt:null,voiceEnd:0};
+const audioDirector={unlocked:false,loading:null,output:null,sfx:null,musicBus:null,buffers:{},samples:{},samplesPlayed:[],playing:null,track:null,duckUntil:0,errors:[],events:[],serial:0,uiDepth:0,buttonSource:null,startedAt:null,voiceEnd:0};
 function audioGraph(){
  audio??=new(window.AudioContext||window.webkitAudioContext)();
  if(audioDirector.output)return;
@@ -116,15 +116,14 @@ addEventListener('keydown',e=>{if(!e.repeat)void unlockGameAudio()},{capture:tru
 addEventListener('gamepadconnected',()=>{void unlockGameAudio()});
 const oldFrontPad=frontPad;
 frontPad=function(){oldFrontPad();if(!audioDirector.unlocked&&pads().some(p=>p.buttons.some(b=>b.pressed)))void unlockGameAudio()};
-function menuAudioAction(fn,args){const outer=audioDirector.uiDepth===0;if(outer)audioCue('button');audioDirector.uiDepth++;try{return fn(...args)}finally{audioDirector.uiDepth--;audioDirector.sync()}}
+function menuAudioAction(fn,args,confirm=false){const outer=audioDirector.uiDepth===0;if(outer&&confirm)audioCue('button');audioDirector.uiDepth++;try{return fn(...args)}finally{audioDirector.uiDepth--;audioDirector.sync()}}
 const oldFrontGo=frontGo,oldFrontSelect=frontSelect,oldFrontMove=frontMove,oldFrontBackAudio=frontBack,oldFrontConfirmAudio=frontConfirm,oldFrontLaunchAudio=frontLaunch;
 frontGo=function(...args){return menuAudioAction(oldFrontGo,args)};
 frontSelect=function(...args){return menuAudioAction(oldFrontSelect,args)};
 frontMove=function(...args){return menuAudioAction(oldFrontMove,args)};
 frontBack=function(...args){return menuAudioAction(oldFrontBackAudio,args)};
-frontConfirm=function(...args){return menuAudioAction(oldFrontConfirmAudio,args)};
-frontLaunch=function(...args){return menuAudioAction(oldFrontLaunchAudio,args)};
-document.addEventListener('click',e=>{if(!e.target.closest('button,summary'))return;audioCue('button');audioDirector.uiDepth++;queueMicrotask(()=>{audioDirector.uiDepth--;audioDirector.sync()})},{capture:true});
+frontConfirm=function(...args){return menuAudioAction(oldFrontConfirmAudio,args,ready&&['title','characters'].includes(front.page))};
+frontLaunch=function(...args){return menuAudioAction(oldFrontLaunchAudio,args,ready&&front.active&&front.page==='characters')};
 const oldAttack=attack,oldDamage=damage,oldEndRoundAudio=endRound;
 endRound=function(){const before=state;oldEndRoundAudio();if(before==='fight'&&state==='round'&&players.some(p=>p.hp<=0))audioCue(perfect?'perfectko':'ko')};
 attack=function(p,id){const ok=oldAttack(p,id);if(ok&&(id==='super'||MOVES[id]?.frame==='special'))audioCue(id==='super'?'super':'special',p.id);return ok};

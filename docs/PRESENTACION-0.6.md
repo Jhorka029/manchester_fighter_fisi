@@ -35,7 +35,7 @@ Locuciones recortadas del audio suministrado: Round One (0.20–1.45 s), Round T
 
 Especiales: cuatro muestras sin silencios largos, extraídas de 1.16–1.94 s, 4.70–5.43 s, 8.08–8.99 s y 11.90–13.03 s. Se reparten por índice de personaje módulo cuatro y se disparan al confirmar un especial (incluido el tigrillo de Kike) o una ulti. Los instantes aproximados indicados por el usuario se ajustaron a los inicios de señal del archivo real.
 
-Botones: una sola muestra del audio seleccionar botón (0.09–1.80 s), igual para clic, confirmación y desplazamiento de selección con teclado o mando. Se suprimen los antiguos pitidos de menú y se evita duplicar la muestra cuando una acción abre otra pantalla. Selecciones rápidas funden la cola del sonido anterior. Los controles de volumen siguen siendo ajustables con teclado sin activar la navegación del juego.
+Botones: una sola muestra del audio seleccionar botón (0.09–1.80 s), limitada a confirmar el título y confirmar los luchadores para pelear. No se reproduce al explorar, retroceder o cambiar de sección. Funciona con clic, teclado o mando y una confirmación anidada no duplica el sonido. Se suprimen los antiguos pitidos de menú. Los controles de volumen siguen siendo ajustables con teclado sin activar la navegación del juego. Las reglas del choque de ultis y de escala corporal están en REGLAS-COMBATE-0.6.md.
 
 El navegador puede bloquear el audio al abrir: se desbloquea con la primera tecla o clic. No hay pantalla obligatoria para activar la música. La animación comienza automáticamente. Música y efectos respetan silencio, pausa y pestaña oculta. El audio y el logo se incrustan en el HTML autónomo; no requiere Internet.
 
