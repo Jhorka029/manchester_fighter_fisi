@@ -1,6 +1,6 @@
 // Recursos de la versión actual. Cada pose pertenece únicamente a su personaje.
 const GAME_ASSETS = {
-  "version": "0.5",
+  "version": "0.6",
   "crest": "assets/interfaz/escudo-fisi.png",
   "stages": [
     {
@@ -26,6 +26,24 @@ const GAME_ASSETS = {
       "name": "Plaza de Rioja",
       "location": "Rioja · San Martín",
       "image": "assets/escenarios/plaza-rioja.png"
+    },
+    {
+      "id": "loza-unsm",
+      "name": "Loza UNSM",
+      "location": "Ciudad Universitaria · Noche",
+      "image": "assets/escenarios/loza-unsm.png"
+    },
+    {
+      "id": "kokobombo",
+      "name": "Kokobombo - Fiesta Cachimbo",
+      "location": "Tarapoto · Fiesta Cachimbo",
+      "image": "assets/escenarios/kokobombo.png"
+    },
+    {
+      "id": "fisi",
+      "name": "FISI",
+      "location": "Facultad de Ingeniería de Sistemas e Informática",
+      "image": "assets/escenarios/fisi.png"
     }
   ],
   "characters": [

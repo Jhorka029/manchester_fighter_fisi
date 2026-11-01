@@ -102,7 +102,7 @@ async function load(){try{
  stageImages=stages;bg=stages[0];crestImage=crest;sprites=characters.flatMap(c=>c.base);extraSprites=characters.flatMap(c=>c.moves);followSprites=characters.flatMap(c=>c.follow);showSprites=characters.flatMap(c=>c.show);portrait=[...characters.map(c=>c.face),kentFace,pingFace,ieFace];rollSprites=characters[0].roll;
  fielRoll=[...extractRow(flipPrep,1),...extractRow(flip,4)];fielRollK=258*.95/fielRoll[4].height;buildKent(kentAtlas);buildFielSuper(superAtlas);cutAtlas(pingAtlas,PING_ATLAS,pingFrames);cutAtlas(ljAtlas,LJ_ATLAS,ljFrames);cutAtlas(lcAtlas,LC_ATLAS,lcFrames);cutAtlas(ieAtlas,IE_ATLAS,ieFrames);cutAtlas(kikeAtlas,KP_ATLAS,kpFrames);buildSpectators(crowdAtlas);cutAtlas(cardAtlas,CD_ATLAS,cdFrames);cutAtlas(pepeAtlas,PP_ATLAS,ppFrames);cutAtlas(joshiAtlas,JO_ATLAS,joFrames);cutAtlas(kikeTigerAtlas,KT_ATLAS,kpFrames);cutAtlas(fcAtlas,FC_ATLAS,lcFrames);
  portrait.push(...await Promise.all(['assets/personajes/kike-parker/retrato.png','assets/personajes/cardenas/retrato.png','assets/personajes/pepelucho/retrato.png','assets/personajes/joshi/retrato.png'].map(image)));
- ready=true;$('#status').textContent='v0.5 · Intro y menús renovados · 4 escenarios · 9 luchadores · Recursos organizados por personaje.';
+ ready=true;$('#status').textContent='v0.6 local · 7 escenarios · 9 luchadores · Intro y cartel del campus.';
  }catch(e){$('#status').textContent=e.message+' · Usa el HTML autónomo o un servidor local.';console.error(e)}}
 function fighter(id,x){return{id,x,y:0,vy:0,vx:0,hp:100,hpTrail:100,energy:50,wins:0,face:x<WORLD/2?1:-1,action:'idle',age:0,move:null,hit:false,stun:0,guard:false,crouched:false,stance:0,walk:false,cooldown:0,combo:0,comboTime:0,ai:0,aiInput:{},seq:0,flash:0,downTime:0,invulnerable:0,buffer:null,bufferTime:0,lastLevel:'',levelTime:0,landTime:0,ghostTime:0,dashCool:0,dashDir:0,prevDir:{},tapAt:{left:-9,right:-9},jumpAt:-9,leap:false,dustT:0,hpShake:0,comboPop:0,stats:{hits:0,damage:0,maxCombo:0,blocks:0,supers:0}}}
 function start(){if(!ready)return;mode=$('#mode').value;difficulty=$('#difficulty').value;players=[fighter(selected,420),fighter(selected?0:1,860)];round=1;paused=false;setMenu(false);canvas.focus();audio?.resume();sound(440,.15);state='vs';phaseTime=2.6;vsSlam=false;matchTime=0;Object.assign(camera,{x:WORLD/2,y:304,zoom:1.04})}
@@ -363,7 +363,10 @@ const CROWD_STAGES={
  'patio-fisi':{rows:[{k:.98,base:394,step:46},{k:1,base:416,step:50}],skip:[],gap:0},
  'entrada-unsm':{rows:[{k:.9,base:410,step:50},{k:.92,base:430,step:56}],skip:[],gap:.12},
  'cafeteria':{rows:[{k:.74,base:410,step:52},{k:.76,base:430,step:60}],skip:[[-90,410],[1120,1400]],gap:.18},
- 'plaza-rioja':{rows:[{k:.84,base:416,step:50},{k:.88,base:436,step:56}],skip:[[430,880]],gap:.1}
+ 'plaza-rioja':{rows:[{k:.84,base:416,step:50},{k:.88,base:436,step:56}],skip:[[430,880]],gap:.1},
+ 'loza-unsm':{rows:[{k:.66,base:363,step:78}],skip:[[0,240]],gap:.3},
+ 'kokobombo':{rows:[{k:.7,base:374,step:62}],skip:[],gap:.2},
+ 'fisi':{rows:[{k:.7,base:380,step:65}],skip:[[430,760]],gap:.22}
 };
 const CROWD_SCALE=1.35;   // overall size of the spectators
 const crowdCache={};
