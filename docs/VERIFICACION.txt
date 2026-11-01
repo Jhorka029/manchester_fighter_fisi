@@ -35,17 +35,17 @@ Esquives y defensa (simulación fotograma a fotograma, ráfaga de El Fiel):
   contraria avanzan unos 230 px; sin agacharse el doble toque sigue siendo dash.
   Lancha usa el atlas assets/roll-lancha.webp (10 cuadros: encoger, bola,
   rodar, levantarse). El Fiel hace una voltereta con los 5 cuadros de
-  assets/flip-fiel-prep.png y assets/flip-fiel.png: preparación, salto
+  assets/personajes/el-fiel/voltereta-preparacion.png y assets/personajes/el-fiel/voltereta.png: preparación, salto
   encogido, invertido, aterrizaje y de pie, con el arco dibujado por código.
 - La CPU esquiva o bloquea 6, 17 y 22 de 30 ráfagas (fácil, normal, difícil).
 
 Kent (tercer personaje, simulación y capturas): usa las 24 poses del atlas
-assets/kent.png; en una pasada se mostraron 22 (faltan caído y agachado
+assets/personajes/kent/atlas.png; en una pasada se mostraron 22 (faltan caído y agachado
 golpeado, poco frecuentes). Sin errores en 70 s de combate aleatorio contra la
 CPU en cuatro emparejamientos (Lancha, El Fiel y Kent como rival, y Kent contra
 Kent).
 
-Super de El Fiel (simulación y captura): usa 4 cuadros de assets/fiel-super.png
+Super de El Fiel (simulación y captura): usa 4 cuadros de assets/personajes/el-fiel/super.png
 (levantar el polo y golpe, en dos variantes que se alternan). Cada una de las 6
 ráfagas muestra el golpe y luego vuelve a levantar el polo; sin errores.
 Tamaño de Kent: reducido un 15 % (de 256 a 217 px en reposo) para igualar a
@@ -115,11 +115,61 @@ selección aparece como sexto retrato con el rol "LIDERAZGO"; su super muestra
 Patada media de Kike Parker con 4 cuadros propios (simulación y captura): K
 muestra rodilla arriba, patada, rodilla y guardia, conecta con 11 de daño.
 
+Agarre con mando (mando simulado): □ + ○ funciona con hasta unos 100 ms de
+diferencia entre los dos botones (antes 85 ms), y R3 o el clic del panel táctil
+lo hacen con un solo botón. Solo conecta a menos de unos 100 px del rival.
+
+Giro con mando (mando simulado): L3 lanza la rodada o voltereta de cada personaje
+hacia donde apunta el stick; sin dirección cruza hacia el rival. No sale
+defendiendo ni durante la espera de 1 s.
+
+Público (simulación y capturas): 21 sprites distintos en dos filas, con una
+disposición propia por escenario (57 espectadores en el patio, 45 en la entrada,
+20 en la cafetería y 31 en la plaza); en la cafetería y la plaza se dejan libres
+el refrigerador y la fuente "RIOJA". Con entusiasmo alto saltan más y sin él solo
+se balancean, en los cuatro escenarios. Sin errores.
+
+Cárdenas y Pepelucho (séptimo y octavo personaje, simulación y capturas): 20 de
+los 23 cuadros de Cárdenas y 26 de los 29 de Pepelucho se mostraron en una
+pasada de todos los movimientos (caminar, golpes, patadas, especial, salto, doble
+salto, dash, rodada, recarga, super y agarre), sin errores; los dos aparecen en
+la selección con los roles "TRABAJO SOCIAL" y "CÁTEDRA". Capturas: la moto de
+Pepelucho como especial, Cárdenas durmiendo al recargar y su super con el
+árbol ("ESTO NO ES UN EXAMEN").
+
+Pepelucho, ulti con la moto y giro en moto (simulación y capturas): la ulti
+muestra moto > patada > exámenes (2) > mano en el pecho, avanza unos 265 px y
+hace 36 de daño; la moto sale volando por la pantalla. El giro (S + doble toque)
+es agacharse > moto > de pie, cruza al rival sin empujarlo. Sin errores.
+
+Cárdenas versión 2 (simulación y capturas): la patada media (K) usa su cuadro
+nuevo y hace 11 de daño; el giro es roll0 > roll1 > roll2 (bola que gira) > roll3
+y cruza al rival; la ulti muestra los 5 cuadros nuevos en orden y el globo
+"¡ESTO NO ES UN EXAMEN!" legible al lado de la cabeza, sin tapar el marcador.
+
+Cárdenas, rodada y ulti pulidas (simulación y capturas): la rodada ya no se
+agranda (cuadros a la escala de la cabeza del reposo: 128-170 px de alto) y
+cruza al rival; los cinco cuadros de la ulti se recortaron con cortes
+escalonados, el del árbol conserva sus dos pies y la estela, y se ve limpio con
+los demás en juego.
+
 Prueba con mando físico: DualShock 4 ("Wireless Controller", Bluetooth,
 mapeo estándar) en Windows 11 con navegador Chromium. Verificado: detección,
 menú (personaje, dificultad, inicio), pausa/reanudar con OPTIONS, caminar,
 saltar, agacharse, defensa y ataques alto, medio, bajo, aéreo, descendente
 (R2), especial y super.
-Sin verificar: L2 como defensa, SHARE para volver al menú, dos mandos a la vez.
+Sin verificar: L2 como defensa, dos mandos a la vez. SHARE vuelve a la selección de personaje desde cualquier punto de la partida (probado con un mando simulado).
 
 No se ha probado en Android ni en R36S.
+
+Joshi (noveno personaje, simulación y capturas): con las imágenes sueltas nuevas (47 cuadros), todas las poses del motor (caminar, golpe alto, medio, bajo, descendente, especial normal y agachado, salto, patada aérea, defensa, agachado, recarga, super, agarre en el suelo y al aire, giro, golpeado, caída en el aire y derribo) se resuelven a un cuadro del atlas, sin errores. El especial lanza un balón de básquet naranja; la ulti muestra "COMBO DE CANCHA" con aura naranja. Mide 217 px en reposo, como Lancha. En la selección es el noveno retrato, con el rol "BÁSQUET". Provisionales: salto y giro.
+Caminar de Joshi con 9 cuadros (simulación y captura): el balón rebota (en la mano, al suelo y de vuelta) y el ciclo dura unos 0,7 s.
+Recarga de Joshi con 3 cuadros de aura (simulación y captura): charge0 > charge1 > charge2 > charge1 > charge2..., con el aura de llamas visible y sin agrandarse.
+Ulti de Joshi con 6 cuadros (simulación y captura): ulti0 > ulti1 > ulti2 > ulti3 > ulti4 (picada) > ulti5 (mate con polvo), que se mantiene hasta el final; quita 36 de vida. La recarga se reescaló: la cabeza mide 44 px como en reposo (antes 37) y ya no se ve más pequeño.
+Descendente de Joshi (simulación y captura): overheadPrep > overheadHit > ulti4 (caída en picada) y luego reposo; hace 15 de daño y derriba.
+Proyectil de Joshi (simulación y captura): sale a la altura del balón del cuadro de lanzar: 171 px sobre el suelo y 109 px delante de él de pie, 91 px y 72 px en el especial agachado (antes 82 y 28); conecta contra un rival de pie.
+Público de atrás más grande (capturas del patio y la cafetería): la fila de atrás pasó de k 0,86/0,80/0,66/0,74 a 0,98/0,90/0,74/0,84 (patio, entrada, cafetería, plaza), ahora casi del tamaño de la de delante y más proporcional al escenario; se mantienen la posición y los huecos de cada escenario.
+Público más grande (captura): CROWD_SCALE pasó de 1,15 a 1,35, así que todos los espectadores miden un 17 % más; se ven bien en el patio.
+Kike Parker, especial con tigrillo (simulación y captura): L muestra kA > tiger > kB > reposo y no crea proyectiles; conecta con 12 de daño a 130 y 160 px y no llega a 230 px; agachado también sale. El tigrillo se ve saliendo del puño y golpeando al rival.
+Agarre de Kike Parker con 3 cuadros nuevos (simulación y captura): J + K de cerca muestra gReach > gHold > gTiger, el rival pasa a caído y recibe 14 de daño; el tigre sale con el gancho.
+Agarre de Kike Parker, versión con 5 cuadros (simulación y captura): gReach > gHold > gThrow > gTiger > gYawn; el rival sube (112, 160, 278 px) y el tigre le golpea en el aire, después cae y recibe 14 de daño. Los agarres de Lancha y Pingordy siguen igual.
