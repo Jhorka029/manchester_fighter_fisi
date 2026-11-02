@@ -11,9 +11,10 @@ function rosterSprite(id,poseName='introA'){
  const set=SETS[id];if(set){const fr=set.frames[resolvePose(id,poseName)];return fr.image}
  return showSprites[id*4+2]?.image||sprites[id*6];
 }
-function posterFighter(id,x,base,height,flip=false){
- const g=fighterGeometry(id,SETS[id]?{kent:resolvePose(id,'introA')}:{show:2}),im=g.im; height*=g.h/258;const w=im.width/im.height*height;
- fc.save();fc.translate(Math.round(x),base);fc.scale(flip?-1:1,1);
+function posterMotion(id,time){const phase=time*(1.65+id*.13)+id*.82;return reducedFX?{x:0,y:0,angle:0}:{x:Math.sin(phase*.7)*1.1,y:Math.sin(phase)*2,angle:Math.sin(phase*.8)*.006};}
+function posterFighter(id,x,base,height,flip=false,animate=false){
+ const g=fighterGeometry(id,SETS[id]?{kent:resolvePose(id,'introA')}:{show:2}),im=g.im;const w=im.width/im.height*height,m=animate?posterMotion(id,front.time):{x:0,y:0,angle:0};
+ fc.save();fc.translate(Math.round(x+m.x),base+m.y);fc.scale(flip?-1:1,1);fc.rotate(m.angle);
  fc.fillStyle='#100c1844';fc.beginPath();fc.ellipse(0,0,w*.38,8,0,0,Math.PI*2);fc.fill();
  fc.drawImage(im,Math.round(-w/2),-height,Math.round(w),height);fc.restore();
 }
@@ -21,8 +22,8 @@ function drawRosterPoster(){
  const i=GAME_ASSETS.stages.findIndex(s=>s.id==='fisi');frontCover(stageImages[i],1);
  // Dos filas escalonadas mantienen visibles las caras y los trajes originales.
  const back=[6,2,4,5,7],near=[0,1,3,8];
- back.forEach((id,j)=>posterFighter(id,115+j*180,405,185,j>2));
- near.forEach((id,j)=>posterFighter(id,175+j*205,527,id===0?243:230,j>1));
+ back.forEach((id,j)=>posterFighter(id,115+j*180,405,185,j>2,true));
+ near.forEach((id,j)=>posterFighter(id,175+j*205,527,230,j>1,true));
 }
 function introBackdrop(id,t){
  const progress=clamp01(t/PRESENTATION.stageBeat);
@@ -46,16 +47,16 @@ function drawOpeningCredits(t){
   frontText('CORE FK',480,441,23,'#f0b15d');
  }
 }
-function drawFighterCard(id,local){
+function drawFighterCard(id,local,orderIndex=id){
  const duration=PRESENTATION.fighterBeat,k=clamp01(local/duration),color=THEMES[id].color;
  frontCover(stageImages[(id+4)%stageImages.length],1.08);frontShade(.76);
  fc.fillStyle=THEMES[id].dark;fc.beginPath();fc.moveTo(0,0);fc.lineTo(710,0);fc.lineTo(465,H);fc.lineTo(0,H);fc.fill();
  if(!reducedFX){fc.globalAlpha=.28;fc.fillStyle=color;for(let j=0;j<16;j++){const x=((local*900+j*127)%(W+300))-150;fc.fillRect(x,75+j*27,150+j%3*50,2)}fc.globalAlpha=1}
  const enter=reducedFX?1:introEase(local/.32),exit=reducedFX?0:introEase((local-duration+.17)/.17);
  const x=665+(1-enter)*580-exit*100;
- if(portrait[id]){fc.save();fc.globalAlpha=.16;const im=portrait[id],side=Math.min(im.width,im.height);fc.drawImage(im,(im.width-side)/2,0,side,side,0,0,520,520);fc.restore()}
+ if(portrait[id]){fc.save();fc.globalAlpha=.20;const im=portrait[id],crop=portraitPhotoCrop(im,id);fc.drawImage(im,crop.x,crop.y,crop.side,crop.side,0,0,520,520);fc.restore()}
  posterFighter(id,x,530,405,id%2===1);
- frontText(String(id+1).padStart(2,'0')+' / '+String(NAMES.length).padStart(2,'0'),65,125,20,color,'left');
+ frontText(String(orderIndex+1).padStart(2,'0')+' / '+String(NAMES.length).padStart(2,'0'),65,125,20,color,'left');
  frontText('EL ORGULLO DEL CAMPUS',65,173,14,'#cfc2e3','left');
  const size=NAMES[id].length>10?42:54;
  frontText(NAMES[id],65-(1-enter)*450,263,size,color,'left');
@@ -78,11 +79,11 @@ drawFront=function(dt){
   frontText('SIETE ESCENARIOS · UN MISMO ORGULLO',480,394,14,'#ffd18b');
   frontText(GAME_ASSETS.stages[i].name.toUpperCase(),480,438,i===5?27:35);
   frontText(GAME_ASSETS.stages[i].location,480,473,15,'#d5c9e4');
- }else if(t<fighterEnd){const n=(t-stageEnd)/PRESENTATION.fighterBeat;drawFighterCard(Math.min(NAMES.length-1,Math.floor(n)),(n%1)*PRESENTATION.fighterBeat)}
+ }else if(t<fighterEnd){const n=(t-stageEnd)/PRESENTATION.fighterBeat,order=typeof ROSTER_ORDER==='undefined'?NAMES.map((_,i)=>i):ROSTER_ORDER,pos=Math.min(NAMES.length-1,Math.floor(n));drawFighterCard(order[pos],(n%1)*PRESENTATION.fighterBeat,pos)}
  else{drawRosterPoster();frontShade(.42);if(crestImage)fc.drawImage(crestImage,423,35,114,114);frontText('MANCHESTER',480,202,48,'#ffe0a0');frontText('FISI FIGHTER',480,258,55,'#ffc469');frontText('NUEVE LUCHADORES · UN SOLO CAMPUS',480,300,16,'#fff0cf');if(t>=presentationDuration())frontGo('title')}
  frontScore();
 };
 frontUI();
 const combatDebugV05=window.fisiDebug;
-window.fisiDebug=()=>({...combatDebugV05(),version:'0.6'});
-$('.brand small').textContent='TORNEO DEL CAMPUS · EDICIÓN ARCADE 0.6';
+window.fisiDebug=()=>({...combatDebugV05(),version:'0.7'});
+$('.brand small').textContent='TORNEO DEL CAMPUS · EDICIÓN ARCADE 0.7';

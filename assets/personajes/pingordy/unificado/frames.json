@@ -1,0 +1,1315 @@
+[
+  {
+    "name": "stance0",
+    "height": 435.24,
+    "anchor": 0.48760330578512395,
+    "bounds": [
+      85,
+      5,
+      238,
+      347
+    ],
+    "width": 242,
+    "pixelHeight": 351
+  },
+  {
+    "name": "walk0",
+    "height": 434.96444444444444,
+    "anchor": 0.438953488372093,
+    "bounds": [
+      35,
+      8,
+      340,
+      447
+    ],
+    "width": 344,
+    "pixelHeight": 451
+  },
+  {
+    "name": "walk1",
+    "height": 432.0711111111111,
+    "anchor": 0.4897959183673469,
+    "bounds": [
+      459,
+      8,
+      241,
+      444
+    ],
+    "width": 245,
+    "pixelHeight": 448
+  },
+  {
+    "name": "walk2",
+    "height": 434,
+    "anchor": 0.3422818791946309,
+    "bounds": [
+      875,
+      9,
+      145,
+      446
+    ],
+    "width": 149,
+    "pixelHeight": 450
+  },
+  {
+    "name": "walk3",
+    "height": 434.96444444444444,
+    "anchor": 0.375,
+    "bounds": [
+      1220,
+      8,
+      172,
+      447
+    ],
+    "width": 176,
+    "pixelHeight": 451
+  },
+  {
+    "name": "walk4",
+    "height": 431.1066666666667,
+    "anchor": 0.4584527220630373,
+    "bounds": [
+      34,
+      582,
+      345,
+      443
+    ],
+    "width": 349,
+    "pixelHeight": 447
+  },
+  {
+    "name": "walk5",
+    "height": 432.0711111111111,
+    "anchor": 0.5481171548117155,
+    "bounds": [
+      457,
+      581,
+      235,
+      444
+    ],
+    "width": 239,
+    "pixelHeight": 448
+  },
+  {
+    "name": "walk6",
+    "height": 433.03555555555556,
+    "anchor": 0.34868421052631576,
+    "bounds": [
+      869,
+      581,
+      148,
+      445
+    ],
+    "width": 152,
+    "pixelHeight": 449
+  },
+  {
+    "name": "walk7",
+    "height": 433.03555555555556,
+    "anchor": 0.3945945945945946,
+    "bounds": [
+      1215,
+      581,
+      181,
+      445
+    ],
+    "width": 185,
+    "pixelHeight": 449
+  },
+  {
+    "name": "moon0",
+    "height": 438.1333333333333,
+    "anchor": 0.47440273037542663,
+    "bounds": [
+      98,
+      3,
+      289,
+      420
+    ],
+    "width": 293,
+    "pixelHeight": 424
+  },
+  {
+    "name": "moon1",
+    "height": 439.1666666666667,
+    "anchor": 0.445993031358885,
+    "bounds": [
+      548,
+      3,
+      283,
+      421
+    ],
+    "width": 287,
+    "pixelHeight": 425
+  },
+  {
+    "name": "moon2",
+    "height": 439.1666666666667,
+    "anchor": 0.4522058823529412,
+    "bounds": [
+      992,
+      3,
+      268,
+      421
+    ],
+    "width": 272,
+    "pixelHeight": 425
+  },
+  {
+    "name": "moon3",
+    "height": 439.1666666666667,
+    "anchor": 0.4925925925925926,
+    "bounds": [
+      1434,
+      3,
+      266,
+      421
+    ],
+    "width": 270,
+    "pixelHeight": 425
+  },
+  {
+    "name": "moon4",
+    "height": 439.1666666666667,
+    "anchor": 0.4816053511705686,
+    "bounds": [
+      96,
+      447,
+      295,
+      421
+    ],
+    "width": 299,
+    "pixelHeight": 425
+  },
+  {
+    "name": "moon5",
+    "height": 439.1666666666667,
+    "anchor": 0.43243243243243246,
+    "bounds": [
+      539,
+      447,
+      292,
+      421
+    ],
+    "width": 296,
+    "pixelHeight": 425
+  },
+  {
+    "name": "moon6",
+    "height": 439.1666666666667,
+    "anchor": 0.43014705882352944,
+    "bounds": [
+      992,
+      447,
+      268,
+      421
+    ],
+    "width": 272,
+    "pixelHeight": 425
+  },
+  {
+    "name": "moon7",
+    "height": 439.1666666666667,
+    "anchor": 0.5830258302583026,
+    "bounds": [
+      1434,
+      447,
+      267,
+      421
+    ],
+    "width": 271,
+    "pixelHeight": 425
+  },
+  {
+    "name": "ultimate0",
+    "height": 430.3833333333333,
+    "anchor": 0.21370967741935484,
+    "bounds": [
+      93,
+      8,
+      244,
+      353
+    ],
+    "width": 248,
+    "pixelHeight": 357
+  },
+  {
+    "name": "ultimate1",
+    "height": 425.56111111111113,
+    "anchor": 0.46,
+    "bounds": [
+      475,
+      11,
+      246,
+      349
+    ],
+    "width": 250,
+    "pixelHeight": 353
+  },
+  {
+    "name": "ultimate2",
+    "height": 426.76666666666665,
+    "anchor": 0.1673469387755102,
+    "bounds": [
+      813,
+      9,
+      241,
+      350
+    ],
+    "width": 245,
+    "pixelHeight": 354
+  },
+  {
+    "name": "ultimate3",
+    "height": 420.7388888888889,
+    "anchor": 0.39915966386554624,
+    "bounds": [
+      1165,
+      15,
+      234,
+      345
+    ],
+    "width": 238,
+    "pixelHeight": 349
+  },
+  {
+    "name": "ultimate4",
+    "height": 380.9555555555556,
+    "anchor": 0.47333333333333333,
+    "bounds": [
+      64,
+      404,
+      296,
+      312
+    ],
+    "width": 300,
+    "pixelHeight": 316
+  },
+  {
+    "name": "ultimate5",
+    "height": 431.5888888888889,
+    "anchor": 0.6323529411764706,
+    "bounds": [
+      468,
+      363,
+      200,
+      354
+    ],
+    "width": 204,
+    "pixelHeight": 358
+  },
+  {
+    "name": "ultimate6",
+    "height": 429.1777777777778,
+    "anchor": 0.21052631578947367,
+    "bounds": [
+      828,
+      365,
+      148,
+      352
+    ],
+    "width": 152,
+    "pixelHeight": 356
+  },
+  {
+    "name": "ultimate7",
+    "height": 419.53333333333336,
+    "anchor": 0.5311203319502075,
+    "bounds": [
+      1142,
+      373,
+      237,
+      344
+    ],
+    "width": 241,
+    "pixelHeight": 348
+  },
+  {
+    "name": "ultimate8",
+    "height": 409.8888888888889,
+    "anchor": 0.3021148036253776,
+    "bounds": [
+      31,
+      731,
+      327,
+      336
+    ],
+    "width": 331,
+    "pixelHeight": 340
+  },
+  {
+    "name": "ultimate9",
+    "height": 418.3277777777778,
+    "anchor": 0.23529411764705882,
+    "bounds": [
+      457,
+      724,
+      285,
+      343
+    ],
+    "width": 289,
+    "pixelHeight": 347
+  },
+  {
+    "name": "ultimate10",
+    "height": 409.8888888888889,
+    "anchor": 0.3594306049822064,
+    "bounds": [
+      780,
+      731,
+      277,
+      336
+    ],
+    "width": 281,
+    "pixelHeight": 340
+  },
+  {
+    "name": "ultimate11",
+    "height": 413.50555555555553,
+    "anchor": 0.4927007299270073,
+    "bounds": [
+      1141,
+      728,
+      270,
+      339
+    ],
+    "width": 274,
+    "pixelHeight": 343
+  },
+  {
+    "name": "whip0",
+    "height": 442.8772727272727,
+    "anchor": 0.5768025078369906,
+    "bounds": [
+      52,
+      69,
+      315,
+      445
+    ],
+    "width": 319,
+    "pixelHeight": 449
+  },
+  {
+    "name": "whip1",
+    "height": 439.91818181818184,
+    "anchor": 0.5638629283489096,
+    "bounds": [
+      451,
+      73,
+      317,
+      442
+    ],
+    "width": 321,
+    "pixelHeight": 446
+  },
+  {
+    "name": "whip2",
+    "height": 491.2090909090909,
+    "anchor": 0.540453074433657,
+    "bounds": [
+      836,
+      21,
+      305,
+      494
+    ],
+    "width": 309,
+    "pixelHeight": 498
+  },
+  {
+    "name": "whip3",
+    "height": 411.31363636363636,
+    "anchor": 0.5353846153846153,
+    "bounds": [
+      1207,
+      101,
+      321,
+      413
+    ],
+    "width": 325,
+    "pixelHeight": 417
+  },
+  {
+    "name": "whip4",
+    "height": 418.2181818181818,
+    "anchor": 0.7782515991471215,
+    "bounds": [
+      8,
+      567,
+      465,
+      420
+    ],
+    "width": 469,
+    "pixelHeight": 424
+  },
+  {
+    "name": "whip5",
+    "height": 401.45,
+    "anchor": 0.36450381679389315,
+    "bounds": [
+      390,
+      582,
+      520,
+      403
+    ],
+    "width": 524,
+    "pixelHeight": 407
+  },
+  {
+    "name": "whip6",
+    "height": 423.15,
+    "anchor": 0.54375,
+    "bounds": [
+      862,
+      562,
+      316,
+      425
+    ],
+    "width": 320,
+    "pixelHeight": 429
+  },
+  {
+    "name": "whip7",
+    "height": 421.17727272727274,
+    "anchor": 0.5230263157894737,
+    "bounds": [
+      1234,
+      562,
+      300,
+      423
+    ],
+    "width": 304,
+    "pixelHeight": 427
+  },
+  {
+    "name": "combat0",
+    "height": 434,
+    "anchor": 0.47639484978540775,
+    "bounds": [
+      86,
+      5,
+      229,
+      296
+    ],
+    "width": 233,
+    "pixelHeight": 300
+  },
+  {
+    "name": "combat1",
+    "height": 428.2133333333333,
+    "anchor": 0.43555555555555553,
+    "bounds": [
+      445,
+      9,
+      221,
+      292
+    ],
+    "width": 225,
+    "pixelHeight": 296
+  },
+  {
+    "name": "combat2",
+    "height": 316.82,
+    "anchor": 0.5132275132275133,
+    "bounds": [
+      813,
+      86,
+      185,
+      215
+    ],
+    "width": 189,
+    "pixelHeight": 219
+  },
+  {
+    "name": "combat3",
+    "height": 425.32,
+    "anchor": 0.25177304964539005,
+    "bounds": [
+      1134,
+      11,
+      278,
+      290
+    ],
+    "width": 282,
+    "pixelHeight": 294
+  },
+  {
+    "name": "combat4",
+    "height": 393.49333333333334,
+    "anchor": 0.2867132867132867,
+    "bounds": [
+      83,
+      302,
+      282,
+      268
+    ],
+    "width": 286,
+    "pixelHeight": 272
+  },
+  {
+    "name": "combat5",
+    "height": 396.38666666666666,
+    "anchor": 0.16607773851590105,
+    "bounds": [
+      449,
+      295,
+      279,
+      270
+    ],
+    "width": 283,
+    "pixelHeight": 274
+  },
+  {
+    "name": "combat6",
+    "height": 312.48,
+    "anchor": 0.2696245733788396,
+    "bounds": [
+      761,
+      349,
+      289,
+      212
+    ],
+    "width": 293,
+    "pixelHeight": 216
+  },
+  {
+    "name": "combat7",
+    "height": 267.6333333333333,
+    "anchor": 0.15,
+    "bounds": [
+      1113,
+      379,
+      306,
+      181
+    ],
+    "width": 310,
+    "pixelHeight": 185
+  },
+  {
+    "name": "combat8",
+    "height": 371.79333333333335,
+    "anchor": 0.46060606060606063,
+    "bounds": [
+      118,
+      577,
+      161,
+      253
+    ],
+    "width": 165,
+    "pixelHeight": 257
+  },
+  {
+    "name": "combat9",
+    "height": 377.58,
+    "anchor": 0.40764331210191085,
+    "bounds": [
+      480,
+      571,
+      153,
+      257
+    ],
+    "width": 157,
+    "pixelHeight": 261
+  },
+  {
+    "name": "combat10",
+    "height": 303.8,
+    "anchor": 0.2861356932153392,
+    "bounds": [
+      745,
+      573,
+      335,
+      206
+    ],
+    "width": 339,
+    "pixelHeight": 210
+  },
+  {
+    "name": "combat11",
+    "height": 256.06,
+    "anchor": 0.49710982658959535,
+    "bounds": [
+      1182,
+      588,
+      169,
+      173
+    ],
+    "width": 173,
+    "pixelHeight": 177
+  },
+  {
+    "name": "combat12",
+    "height": 305.24666666666667,
+    "anchor": 0.5291479820627802,
+    "bounds": [
+      73,
+      869,
+      219,
+      207
+    ],
+    "width": 223,
+    "pixelHeight": 211
+  },
+  {
+    "name": "combat13",
+    "height": 130.2,
+    "anchor": 0.38421052631578945,
+    "bounds": [
+      383,
+      971,
+      376,
+      86
+    ],
+    "width": 380,
+    "pixelHeight": 90
+  },
+  {
+    "name": "combat14",
+    "height": 439.7866666666667,
+    "anchor": 0.6478260869565218,
+    "bounds": [
+      806,
+      771,
+      226,
+      300
+    ],
+    "width": 230,
+    "pixelHeight": 304
+  },
+  {
+    "name": "combat15",
+    "height": 500.5466666666667,
+    "anchor": 0.32286995515695066,
+    "bounds": [
+      1159,
+      729,
+      219,
+      342
+    ],
+    "width": 223,
+    "pixelHeight": 346
+  },
+  {
+    "name": "acro0",
+    "height": 412.92,
+    "anchor": 0.584070796460177,
+    "bounds": [
+      36,
+      14,
+      335,
+      329
+    ],
+    "width": 339,
+    "pixelHeight": 333
+  },
+  {
+    "name": "acro1",
+    "height": 405.48,
+    "anchor": 0.5261044176706827,
+    "bounds": [
+      442,
+      23,
+      245,
+      323
+    ],
+    "width": 249,
+    "pixelHeight": 327
+  },
+  {
+    "name": "acro2",
+    "height": 352.16,
+    "anchor": 0.6084905660377359,
+    "bounds": [
+      834,
+      70,
+      208,
+      280
+    ],
+    "width": 212,
+    "pixelHeight": 284
+  },
+  {
+    "name": "acro3",
+    "height": 435.24,
+    "anchor": 0.4083333333333333,
+    "bounds": [
+      1183,
+      5,
+      236,
+      347
+    ],
+    "width": 240,
+    "pixelHeight": 351
+  },
+  {
+    "name": "acro4",
+    "height": 297.6,
+    "anchor": 0.35398230088495575,
+    "bounds": [
+      82,
+      389,
+      222,
+      236
+    ],
+    "width": 226,
+    "pixelHeight": 240
+  },
+  {
+    "name": "acro5",
+    "height": 391.84,
+    "anchor": 0.34102564102564104,
+    "bounds": [
+      365,
+      370,
+      386,
+      312
+    ],
+    "width": 390,
+    "pixelHeight": 316
+  },
+  {
+    "name": "acro6",
+    "height": 385.64,
+    "anchor": 0.3026315789473684,
+    "bounds": [
+      766,
+      393,
+      300,
+      307
+    ],
+    "width": 304,
+    "pixelHeight": 311
+  },
+  {
+    "name": "acro7",
+    "height": 297.6,
+    "anchor": 0.7175792507204611,
+    "bounds": [
+      1081,
+      420,
+      343,
+      236
+    ],
+    "width": 347,
+    "pixelHeight": 240
+  },
+  {
+    "name": "acro8",
+    "height": 442.68,
+    "anchor": 0.2864864864864865,
+    "bounds": [
+      93,
+      709,
+      181,
+      353
+    ],
+    "width": 185,
+    "pixelHeight": 357
+  },
+  {
+    "name": "acro9",
+    "height": 434,
+    "anchor": 0.3687150837988827,
+    "bounds": [
+      457,
+      717,
+      175,
+      346
+    ],
+    "width": 179,
+    "pixelHeight": 350
+  },
+  {
+    "name": "acro10",
+    "height": 411.68,
+    "anchor": 0.24918032786885247,
+    "bounds": [
+      766,
+      729,
+      301,
+      328
+    ],
+    "width": 305,
+    "pixelHeight": 332
+  },
+  {
+    "name": "acro11",
+    "height": 488.56,
+    "anchor": 0.2798165137614679,
+    "bounds": [
+      1203,
+      678,
+      214,
+      390
+    ],
+    "width": 218,
+    "pixelHeight": 394
+  },
+  {
+    "name": "flourish0",
+    "height": 385.64,
+    "anchor": 0.6721311475409836,
+    "bounds": [
+      46,
+      22,
+      301,
+      307
+    ],
+    "width": 305,
+    "pixelHeight": 311
+  },
+  {
+    "name": "flourish1",
+    "height": 388.12,
+    "anchor": 0.48184818481848185,
+    "bounds": [
+      409,
+      20,
+      299,
+      309
+    ],
+    "width": 303,
+    "pixelHeight": 313
+  },
+  {
+    "name": "flourish2",
+    "height": 385.64,
+    "anchor": 0.4882154882154882,
+    "bounds": [
+      767,
+      22,
+      293,
+      307
+    ],
+    "width": 297,
+    "pixelHeight": 311
+  },
+  {
+    "name": "flourish3",
+    "height": 381.92,
+    "anchor": 0.4689655172413793,
+    "bounds": [
+      1129,
+      25,
+      286,
+      304
+    ],
+    "width": 290,
+    "pixelHeight": 308
+  },
+  {
+    "name": "flourish4",
+    "height": 471.2,
+    "anchor": 0.15,
+    "bounds": [
+      46,
+      336,
+      311,
+      376
+    ],
+    "width": 315,
+    "pixelHeight": 380
+  },
+  {
+    "name": "flourish5",
+    "height": 353.4,
+    "anchor": 0.4074074074074074,
+    "bounds": [
+      480,
+      362,
+      212,
+      281
+    ],
+    "width": 216,
+    "pixelHeight": 285
+  },
+  {
+    "name": "flourish6",
+    "height": 380.68,
+    "anchor": 0.7317708333333334,
+    "bounds": [
+      754,
+      400,
+      380,
+      303
+    ],
+    "width": 384,
+    "pixelHeight": 307
+  },
+  {
+    "name": "flourish7",
+    "height": 461.28,
+    "anchor": 0.4021164021164021,
+    "bounds": [
+      1217,
+      347,
+      185,
+      368
+    ],
+    "width": 189,
+    "pixelHeight": 372
+  },
+  {
+    "name": "flourish8",
+    "height": 422.84,
+    "anchor": 0.3484848484848485,
+    "bounds": [
+      131,
+      726,
+      194,
+      337
+    ],
+    "width": 198,
+    "pixelHeight": 341
+  },
+  {
+    "name": "flourish9",
+    "height": 421.6,
+    "anchor": 0.3487394957983193,
+    "bounds": [
+      466,
+      726,
+      234,
+      336
+    ],
+    "width": 238,
+    "pixelHeight": 340
+  },
+  {
+    "name": "flourish10",
+    "height": 417.88,
+    "anchor": 0.4420289855072464,
+    "bounds": [
+      847,
+      729,
+      134,
+      333
+    ],
+    "width": 138,
+    "pixelHeight": 337
+  },
+  {
+    "name": "flourish11",
+    "height": 425.32,
+    "anchor": 0.42162162162162165,
+    "bounds": [
+      1201,
+      726,
+      181,
+      339
+    ],
+    "width": 185,
+    "pixelHeight": 343
+  },
+  {
+    "name": "lunar0",
+    "height": 435.0093023255814,
+    "anchor": 0.4099722991689751,
+    "bounds": [
+      106,
+      6,
+      357,
+      427
+    ],
+    "width": 361,
+    "pixelHeight": 431
+  },
+  {
+    "name": "lunar1",
+    "height": 435.0093023255814,
+    "anchor": 0.41350210970464135,
+    "bounds": [
+      581,
+      6,
+      233,
+      427
+    ],
+    "width": 237,
+    "pixelHeight": 431
+  },
+  {
+    "name": "lunar2",
+    "height": 435.0093023255814,
+    "anchor": 0.40939597315436244,
+    "bounds": [
+      1017,
+      6,
+      145,
+      427
+    ],
+    "width": 149,
+    "pixelHeight": 431
+  },
+  {
+    "name": "lunar3",
+    "height": 431.9813953488372,
+    "anchor": 0.38317757009345793,
+    "bounds": [
+      1388,
+      6,
+      317,
+      424
+    ],
+    "width": 321,
+    "pixelHeight": 428
+  },
+  {
+    "name": "lunar4",
+    "height": 425.92558139534884,
+    "anchor": 0.4301675977653631,
+    "bounds": [
+      97,
+      452,
+      354,
+      418
+    ],
+    "width": 358,
+    "pixelHeight": 422
+  },
+  {
+    "name": "lunar5",
+    "height": 425.92558139534884,
+    "anchor": 0.39015151515151514,
+    "bounds": [
+      566,
+      452,
+      260,
+      418
+    ],
+    "width": 264,
+    "pixelHeight": 422
+  },
+  {
+    "name": "lunar6",
+    "height": 426.93488372093026,
+    "anchor": 0.4391891891891892,
+    "bounds": [
+      1015,
+      452,
+      144,
+      419
+    ],
+    "width": 148,
+    "pixelHeight": 423
+  },
+  {
+    "name": "lunar7",
+    "height": 425.92558139534884,
+    "anchor": 0.4086687306501548,
+    "bounds": [
+      1386,
+      452,
+      319,
+      418
+    ],
+    "width": 323,
+    "pixelHeight": 422
+  },
+  {
+    "name": "headmoon0",
+    "height": 435.2122905027933,
+    "anchor": 0.689922480620155,
+    "bounds": [
+      62,
+      4,
+      254,
+      355
+    ],
+    "width": 258,
+    "pixelHeight": 359
+  },
+  {
+    "name": "headmoon1",
+    "height": 435.2122905027933,
+    "anchor": 0.23318385650224216,
+    "bounds": [
+      452,
+      4,
+      219,
+      355
+    ],
+    "width": 223,
+    "pixelHeight": 359
+  },
+  {
+    "name": "headmoon2",
+    "height": 435.2122905027933,
+    "anchor": 0.2543103448275862,
+    "bounds": [
+      802,
+      4,
+      228,
+      355
+    ],
+    "width": 232,
+    "pixelHeight": 359
+  },
+  {
+    "name": "headmoon3",
+    "height": 435.2122905027933,
+    "anchor": 0.25217391304347825,
+    "bounds": [
+      1165,
+      4,
+      226,
+      355
+    ],
+    "width": 230,
+    "pixelHeight": 359
+  },
+  {
+    "name": "headmoon4",
+    "height": 436.4245810055866,
+    "anchor": 0.27075812274368233,
+    "bounds": [
+      65,
+      366,
+      273,
+      356
+    ],
+    "width": 277,
+    "pixelHeight": 360
+  },
+  {
+    "name": "headmoon5",
+    "height": 436.4245810055866,
+    "anchor": 0.16091954022988506,
+    "bounds": [
+      474,
+      366,
+      170,
+      356
+    ],
+    "width": 174,
+    "pixelHeight": 360
+  },
+  {
+    "name": "headmoon6",
+    "height": 436.4245810055866,
+    "anchor": 0.18562874251497005,
+    "bounds": [
+      842,
+      366,
+      163,
+      356
+    ],
+    "width": 167,
+    "pixelHeight": 360
+  },
+  {
+    "name": "headmoon7",
+    "height": 436.4245810055866,
+    "anchor": 0.1834862385321101,
+    "bounds": [
+      1184,
+      366,
+      214,
+      356
+    ],
+    "width": 218,
+    "pixelHeight": 360
+  },
+  {
+    "name": "headmoon8",
+    "height": 434,
+    "anchor": 0.3118279569892473,
+    "bounds": [
+      51,
+      728,
+      275,
+      354
+    ],
+    "width": 279,
+    "pixelHeight": 358
+  },
+  {
+    "name": "headmoon9",
+    "height": 434,
+    "anchor": 0.19665271966527198,
+    "bounds": [
+      452,
+      728,
+      235,
+      354
+    ],
+    "width": 239,
+    "pixelHeight": 358
+  },
+  {
+    "name": "headmoon10",
+    "height": 434,
+    "anchor": 0.1686746987951807,
+    "bounds": [
+      845,
+      728,
+      162,
+      354
+    ],
+    "width": 166,
+    "pixelHeight": 358
+  },
+  {
+    "name": "headmoon11",
+    "height": 434,
+    "anchor": 0.3,
+    "bounds": [
+      1146,
+      728,
+      256,
+      354
+    ],
+    "width": 260,
+    "pixelHeight": 358
+  },
+  {
+    "name": "flying0",
+    "height": 374.0394736842105,
+    "anchor": 0.36619718309859156,
+    "bounds": [
+      45,
+      30,
+      351,
+      651
+    ],
+    "width": 355,
+    "pixelHeight": 655
+  },
+  {
+    "name": "flying1",
+    "height": 304.9421052631579,
+    "anchor": 0.188212927756654,
+    "bounds": [
+      579,
+      35,
+      522,
+      530
+    ],
+    "width": 526,
+    "pixelHeight": 534
+  },
+  {
+    "name": "flying2",
+    "height": 266.11052631578946,
+    "anchor": 0.1701492537313433,
+    "bounds": [
+      1103,
+      36,
+      666,
+      462
+    ],
+    "width": 670,
+    "pixelHeight": 466
+  },
+  {
+    "name": "flying3",
+    "height": 371.7552631578947,
+    "anchor": 0.3302180685358255,
+    "bounds": [
+      1820,
+      34,
+      317,
+      647
+    ],
+    "width": 321,
+    "pixelHeight": 651
+  }
+]

@@ -4,3 +4,5 @@ node_modules/
 work/
 *.zip
 dist/
+# Bocetos anteriores de Pingordy; el juego utiliza la carpeta unificado.
+assets/personajes/pingordy/movimientos/

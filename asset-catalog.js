@@ -1,6 +1,6 @@
 // Recursos de la versión actual. Cada pose pertenece únicamente a su personaje.
 const GAME_ASSETS = {
-  "version": "0.6",
+  "version": "0.7",
   "crest": "assets/interfaz/escudo-fisi.png",
   "stages": [
     {

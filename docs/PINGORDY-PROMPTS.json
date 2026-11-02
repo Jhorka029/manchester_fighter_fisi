@@ -1,0 +1,76 @@
+{
+  "tool": "image_gen integrada",
+  "identityReference": "assets/personajes/pingordy/atlas.png (atlas original; referencia, no mostrado)",
+  "sharedConstraints": "Mismo adulto de rostro angular y piel morena, cabello corto oscuro peinado, vincha rosa, camisa formal rojo-magenta de manga larga, corbata azul con rayas diagonales, pantalón negro y zapatos negros. Anatomía adulta esbelta, cabeza proporcionada. Pixel art arcade detallado de 16 bits, contorno magenta fino, perfil derecho. Fondo transparente, cuerpo entero, escala anatómica constante, celdas separadas. Sin pelo rizado voluminoso, sin proporciones infantiles, sin extremidades cortadas.",
+  "sheets": [
+    {
+      "source": "exec-a476152c-f399-4e33-9bf0-84f9e660e0a2.png",
+      "used": "stance0",
+      "prompt": "Extend the EXACT existing Pingordy design from the original atlas. 12 sprites in 4 columns x 3 rows. First cell: right-facing side fighting guard, stationary canonical pose. Remaining movement draft cells not used. Preserve adult angular tan face, straight swept dark hair, pink headband, crimson shirt, blue striped tie, charcoal trousers, black shoes, fine square arcade pixels."
+    },
+    {
+      "source": "exec-fd501dcb-c6a8-4370-a671-a3a70ffbfc2e.png",
+      "used": "walk0..7",
+      "prompt": "Eight RIGHT-facing walk-cycle keyframes, 4 columns 2 rows. Alternate wide stride and narrow passing poses. Left hand IN POCKET throughout. 1 left heel contact wide stride; 2 down support; 3 feet close under hips passing right knee; 4 right knee up; 5 opposite right heel contact; 6 right support; 7 feet close passing left knee; 8 left knee up. Distinguish near and far leg shading. Same body scale and detailed pixel-art identity."
+    },
+    {
+      "source": "exec-c4eb2c8b-3e9e-4a95-b4ab-182ddf3a572b.png",
+      "used": "moon0..7",
+      "prompt": "Eight consecutive RIGHT-facing moonwalk frames sliding backward left, 4 columns 2 rows. Left hand trouser pocket. Alternate flat-foot sliding support and raised heel/toe support, exchange legs and loop. Same adult identity, shirt, tie, anatomy and fine pixel palette."
+    },
+    {
+      "source": "exec-a44a05e2-3353-4ad4-b40b-68c01bc0fb0e.png",
+      "used": "ultimate0..11",
+      "prompt": "Twelve ultimate dance poses, 4 columns 3 rows: touch headband; sharp shoulder isolation; cross step; forward lean 25 degrees; deeper lean 40 degrees; recover; toe stand; heel pivot; arm point right; dance kick; hand at headband releasing beam; return side guard. Same adult pixel-art identity and body scale. No rendered beam: supplied by game engine."
+    },
+    {
+      "source": "exec-d366e554-0db2-4e67-9f83-26216b09304e.png",
+      "used": "whip0..7",
+      "prompt": "Eight RIGHT-facing overhead headband whip frames, 4 columns 2 rows: reach knot; pull headband free; raise cloth overhead; wind back; snap cloth down and forward right; follow through; gather cloth to forehead; retie and return guard. No forehead band while held as whip. Same adult body, face, clothes and pixel detail. Cloth attached to hand, no energy effects."
+    },
+    {
+      "source": "exec-cab3e307-6004-4b70-b1d5-90c415715be8.png",
+      "used": "combat0..15",
+      "prompt": "Sixteen full-body combat sprites in 4 columns 4 rows. Side guard, crossed-arm block, crouch guard, hurt recoil; high punch, medium sidekick, crouch punch, sweep; jump up, jump down, airborne kick, somersault tuck; landing, lying KO, charge fists down, victory fist up. Same anatomy and pixel design across all actions, crouching naturally shorter, no rendered energy."
+    },
+    {
+      "source": "exec-fe6bba19-607d-4a7d-8365-1ee50f8ff2fb.png",
+      "used": "acro0..11",
+      "prompt": "Twelve full-body acrobatics sprites in 4 columns 3 rows. Forward grab reach, grab clutch, bent-knee lift, overhead throw release; aerial tuck, sideways acrobatic flip, throw finish, airborne grab reach; headband-touch dance preparation, knee lift, high dance kick, finger-up victory. No opponent or energy drawn. Same adult identity, body scale and fine pixel style."
+    },
+    {
+      "source": "exec-1f3d21f9-6503-4e44-8055-62ebaf626ca4.png",
+      "used": "flourish0..11",
+      "references": [
+        "unificado/stance0.png: identidad",
+        "imágenes 2, 3, 6 y 7 del usuario: poses"
+      ],
+      "prompt": "Production sprites for SAME Pingordy as canonical image. Lock adult tan angular face, short swept black hair, pink headband, magenta-crimson shirt, blue diagonally striped tie, black trousers and shoes; detailed fine 16-bit square pixels. Exactly twelve full-body sprites in four columns, three rows, transparent, constant body scale, separate cells. Row one: four coherent power-charge poses, wide bent-knee stance, fists at waist, determined shout, chest expansion and tightening fists. Row two: high rising kick with back three-quarter view and straight raised leg; hovering dance kick with bent legs and crossed forearms; rightward speed dash leaning forward with trailing fist; victorious crossed-arm one-toe stance with raised knee. Row three: four upright rotation poses, right profile, back three-quarter, left profile, front three-quarter. Do not draw energy, aura, notes, shadows or beams; game engine supplies effects. No change to identity or proportions."
+    },
+    {
+      "source": "exec-003c3454-1b2a-404e-9e62-3998fcc6821e.png",
+      "used": "lunar0..7",
+      "references": [
+        "unificado/stance0.png: identidad"
+      ],
+      "prompt": "Exactly eight sprites, four columns two rows, transparent. Same slim adult Pingordy identity and detailed 16-bit pixel art. Moonwalk backwards left while facing right, hand in trouser pocket, no raised knees. Alternate wide and narrow stances, raised heel versus flat sliding foot. Frame one: left flat foot forward, right toe behind. Two: flat foot slides back. Three: feet close directly under hips and exchange heel support. Four: right flat foot moves forward. Five: opposite wide stance. Six: right flat foot slides back. Seven: feet close, opposite heel exchange. Eight: left flat foot moves forward to loop. Same head level and body scale, whole body contained in own cell, no effects or text."
+    },
+    {
+      "source": "exec-eef9545b-d038-40ec-a1ed-f290330dcdec.png",
+      "used": "headmoon0..11",
+      "references": [
+        "unificado/stance0.png: identidad invariable",
+        "codex-clipboard-813154c6-049a-4f88-bb18-2f80dac66af8.png: mano en cabeza y paso lunar"
+      ],
+      "prompt": "Extend Pingordy with the exact pixel-art identity of canonical stance: adult angular tan face, short swept dark hair, pink headband and tails, magenta-crimson long sleeve shirt, blue diagonally striped tie, charcoal trousers and black shoes, same slim adult anatomy and fine 16-bit pixels. Pose reference only: Michael Jackson style right-facing backward glide with hand resting on forehead/headband and other arm relaxed down. Exactly twelve full-body sprites in four columns, three rows, transparent with separate cells and constant body scale. First four consecutive frames: hand at chest; elbow raised hand near cheek; fingers reach forehead; palm rests on headband. Remaining eight loop a moonwalk with palm on forehead the whole time: wide flat-front-foot/toe-back support, sliding flat foot, feet close heel exchange, opposite flat foot moves forward, reversed wide support, flat slide back, feet close opposite heel exchange, foot returns forward to loop. Face right and glide left. Mostly straight legs, no high knee, slight forward lean. No effects, background, shadows or text; preserve identity and pixel detail."
+    },
+    {
+      "source": "exec-e79a0ca5-c934-4c03-b289-9ce336fff693.png",
+      "used": "flying0..3",
+      "references": [
+        "unificado/stance0.png: identidad"
+      ],
+      "prompt": "Four full-body transparent 16-bit arcade sprites in one row. Preserve the exact adult Pingordy face, short swept dark hair, pink headband, crimson shirt, blue diagonally striped tie, black trousers and shoes. Flying sidekick right: takeoff chamber; extend right leg; impact with right leg COMPLETELY STRAIGHT horizontally to right, shoe leading, left leg bent back underneath, both arms guarding head; retract for landing. Body airborne and leaning into attack, never a knee strike or grounded kick. Consistent anatomy, detailed square pixels and separate full-body cells, no effects or text."
+    }
+  ]
+}
