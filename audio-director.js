@@ -50,9 +50,9 @@ function preloadGameAudio(){
 function unlockGameAudio(){
  try{preloadGameAudio();const attempt=audio.resume();if(audio.state==='running'){audioDirector.unlocked=true;audioDirector.sync()}attempt.then(()=>{audioDirector.unlocked=audio.state==='running';audioDirector.sync()}).catch(()=>{});return Promise.resolve()}catch(e){audioDirector.errors.push(e.message);return Promise.resolve()}
 }
-function playSample(key,{voice=false}={}){
+function playSample(key,{voice=false,volume=1}={}){
  if(muted||!audioDirector.unlocked||!audioDirector.samples[key])return false;
- const now=audio.currentTime,s=audio.createBufferSource(),g=audio.createGain();s.buffer=audioDirector.samples[key];s.connect(g);g.connect(audioDirector.sfx);g.gain.value=voice?1:.85;
+ const now=audio.currentTime,s=audio.createBufferSource(),g=audio.createGain();s.buffer=audioDirector.samples[key];s.connect(g);g.connect(audioDirector.sfx);g.gain.value=(voice?1:.85)*Math.max(0,Math.min(2,volume));
  if(key==='button'){const old=audioDirector.buttonSource;if(old){old.gain.gain.setTargetAtTime(0,now,.015);try{old.source.stop(now+.07)}catch{}}audioDirector.buttonSource={source:s,gain:g}}
  if(voice){audioDirector.voiceEnd=now+s.buffer.duration;audioDirector.duckUntil=Math.max(audioDirector.duckUntil,audioDirector.voiceEnd+.12)}
  audioDirector.samplesPlayed??=[];audioDirector.samplesPlayed.push({key,time:now});if(audioDirector.samplesPlayed.length>100)audioDirector.samplesPlayed.shift();
@@ -95,7 +95,7 @@ audioDirector.sync=function(){
  if(!audioDirector.output)return;
  const visible=!document.hidden,allowed=audioDirector.unlocked&&!muted&&!paused&&visible&&ready;
  if(audioDirector.unlocked&&audioDirector.pendingButton&&audioDirector.samples.button){if(performance.now()-audioDirector.pendingButton<500)playSample('button');audioDirector.pendingButton=null}
- const track=['fight','round','match'].includes(state)?'combat':state==='menu'&&front.page==='characters'?'characters':'menu';
+ const track=typeof gameMusicTrack==='function'?gameMusicTrack():['fight','round','match'].includes(state)?'combat':state==='menu'&&front.page==='characters'?'characters':'menu';
  const buffer=audioDirector.buffers[track]||(track==='menu'?audioDirector.bootstrap:null),upgrade=audioDirector.playing?.bootstrap&&track==='menu'&&audioDirector.buffers.menu;
  if(ready&&audioDirector.unlocked&&buffer&&(track!==audioDirector.track||upgrade)){
   const now=audio.currentTime,old=audioDirector.playing;

@@ -1,16 +1,18 @@
 # Manchester FISI Fighter
 
-Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.6**, con Lancha, El Fiel, Kent, Pingordy, Ingestrella, Kike Parker, Cárdenas, Pepelucho y Joshi, poderes propios y personajes inspirados en fotografías de referencia.
+Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.7**, con Lancha, El Fiel, Kent, Pingordy, Joshi, Ingestrella, Kike Parker, Cárdenas y Pepelucho, poderes propios y personajes inspirados en fotografías de referencia.
+
+La revisión 0.7 añade vida individual de una a cinco barras en VS, ropa alternativa en duelos espejo y el modo **Batalla**: cinco estudiantes elegibles, ocho rivales con dificultad progresiva, escenarios al azar, continuaciones y final con trofeo JAVA. Incluye 40 cruces con voz y 52 audios nuevos. [Reglas, controles y progresión](docs/MODOS-0.7.md).
 
 Esta revisión añade siete escenarios, créditos, auspicio de Core FK y música del usuario para menús y combate. La intro cambia de escenario cada segundo con acercamiento y fundido. El menú «Mezcla de audio» permite ajustar música y efectos por separado. Se requiere una primera tecla o clic si el navegador bloquea el audio automático. Ver [detalles de la revisión](docs/PRESENTACION-0.6.md).
 
-**[Versión pública](https://jhorka029.github.io/manchester_fighter_fisi/)**
+**[Jugar versión 0.7](https://jhorka029.github.io/manchester_fighter_fisi/)**
 
 ## Presentación y menús 0.6
 
 La intro empieza automáticamente al abrir el juego y muestra los créditos, Core FK, los siete escenarios y los nueve personajes. **Saltar intro** permanece visible para ir directamente al título con el escudo FISI en pixel art. La música intenta arrancar al cargar; si el navegador restringe el audio automático, se activa con la primera pulsación o clic sin detener la animación.
 
-El recorrido es: título → seleccionar modo **VS** → **VS CPU**, **2 jugadores** o **entrenamiento** → dificultad solo en VS CPU → escenario → personajes. La cuadrícula central permite elegir P1 y su rival; usa **Tab**, los botones P1/CPU o LB/RB del mando para cambiar de selector. Los espacios oscuros están reservados y no son personajes adicionales.
+El recorrido VS es: título → seleccionar modo **VS** → **VS CPU**, **2 jugadores** o **entrenamiento** → dificultad solo en VS CPU → escenario → personajes. La cuadrícula central permite elegir P1 y su rival; usa **Tab**, los botones P1/CPU o LB/RB del mando para cambiar de selector. Q/E o X/Y ajusta sus barras de vida. En **Batalla** se elige únicamente al estudiante; escenario, rival y dificultad siguen la progresión del torneo. Los espacios oscuros están reservados y no son personajes adicionales.
 
 Escenarios: Patio FISI, Entrada UNSM, La cafetería, Plaza de Rioja, Loza UNSM, Kokobombo - Fiesta Cachimbo y FISI. Los fondos nuevos usan las referencias proporcionadas, con Kokobombo y FISI adaptados a pixel art.
 
@@ -20,7 +22,7 @@ Los recursos están separados en `assets/escenarios/`, `assets/interfaz/`, `asse
 
 Elige un personaje, selecciona VS CPU, dos jugadores o entrenamiento y pulsa **¡A PELEAR!**. En entrenamiento la energía se mantiene llena para probar los supers.
 
-La muestra de confirmación se limita al inicio desde el título y a confirmar los luchadores. Al recorrer cuadros suena un efecto original breve y agudo; al retroceder, otro descendente. Cada ronda reinicia la orientación hacia el rival y conserva su escala corporal. Una ulti no se interrumpe con golpes o agarres: se bloquea con defensa. Si ambos activan una ulti juntos, aparece un choque de pulsaciones: P1 pulsa I, P2 pulsa 0 del teclado numérico (RB/R1 con mando). Sólo el ganador libera la ulti; ambos gastan energía. [Reglas y detalles](docs/REGLAS-COMBATE-0.6.md).
+La muestra de confirmación se usa al iniciar desde el título, confirmar los luchadores y aceptar una continuación en Batalla. Al recorrer cuadros suena un efecto original breve y agudo; al retroceder, otro descendente. Cada ronda reinicia la orientación hacia el rival y conserva su escala corporal. Una ulti no se interrumpe con golpes o agarres: se bloquea con defensa. Si ambos activan una ulti juntos, aparece un choque de pulsaciones: P1 pulsa I, P2 pulsa 0 del teclado numérico (RB/R1 con mando). Sólo el ganador libera la ulti; ambos gastan energía. [Reglas y detalles](docs/REGLAS-COMBATE-0.6.md).
 
 | Acción | Jugador 1 |
 | --- | --- |

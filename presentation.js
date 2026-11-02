@@ -47,7 +47,7 @@ function drawOpeningCredits(t){
   frontText('CORE FK',480,441,23,'#f0b15d');
  }
 }
-function drawFighterCard(id,local){
+function drawFighterCard(id,local,orderIndex=id){
  const duration=PRESENTATION.fighterBeat,k=clamp01(local/duration),color=THEMES[id].color;
  frontCover(stageImages[(id+4)%stageImages.length],1.08);frontShade(.76);
  fc.fillStyle=THEMES[id].dark;fc.beginPath();fc.moveTo(0,0);fc.lineTo(710,0);fc.lineTo(465,H);fc.lineTo(0,H);fc.fill();
@@ -56,7 +56,7 @@ function drawFighterCard(id,local){
  const x=665+(1-enter)*580-exit*100;
  if(portrait[id]){fc.save();fc.globalAlpha=.16;const im=portrait[id],side=Math.min(im.width,im.height);fc.drawImage(im,(im.width-side)/2,0,side,side,0,0,520,520);fc.restore()}
  posterFighter(id,x,530,405,id%2===1);
- frontText(String(id+1).padStart(2,'0')+' / '+String(NAMES.length).padStart(2,'0'),65,125,20,color,'left');
+ frontText(String(orderIndex+1).padStart(2,'0')+' / '+String(NAMES.length).padStart(2,'0'),65,125,20,color,'left');
  frontText('EL ORGULLO DEL CAMPUS',65,173,14,'#cfc2e3','left');
  const size=NAMES[id].length>10?42:54;
  frontText(NAMES[id],65-(1-enter)*450,263,size,color,'left');
@@ -79,11 +79,11 @@ drawFront=function(dt){
   frontText('SIETE ESCENARIOS · UN MISMO ORGULLO',480,394,14,'#ffd18b');
   frontText(GAME_ASSETS.stages[i].name.toUpperCase(),480,438,i===5?27:35);
   frontText(GAME_ASSETS.stages[i].location,480,473,15,'#d5c9e4');
- }else if(t<fighterEnd){const n=(t-stageEnd)/PRESENTATION.fighterBeat;drawFighterCard(Math.min(NAMES.length-1,Math.floor(n)),(n%1)*PRESENTATION.fighterBeat)}
+ }else if(t<fighterEnd){const n=(t-stageEnd)/PRESENTATION.fighterBeat,order=typeof ROSTER_ORDER==='undefined'?NAMES.map((_,i)=>i):ROSTER_ORDER,pos=Math.min(NAMES.length-1,Math.floor(n));drawFighterCard(order[pos],(n%1)*PRESENTATION.fighterBeat,pos)}
  else{drawRosterPoster();frontShade(.42);if(crestImage)fc.drawImage(crestImage,423,35,114,114);frontText('MANCHESTER',480,202,48,'#ffe0a0');frontText('FISI FIGHTER',480,258,55,'#ffc469');frontText('NUEVE LUCHADORES · UN SOLO CAMPUS',480,300,16,'#fff0cf');if(t>=presentationDuration())frontGo('title')}
  frontScore();
 };
 frontUI();
 const combatDebugV05=window.fisiDebug;
-window.fisiDebug=()=>({...combatDebugV05(),version:'0.6'});
-$('.brand small').textContent='TORNEO DEL CAMPUS · EDICIÓN ARCADE 0.6';
+window.fisiDebug=()=>({...combatDebugV05(),version:'0.7'});
+$('.brand small').textContent='TORNEO DEL CAMPUS · EDICIÓN ARCADE 0.7';
