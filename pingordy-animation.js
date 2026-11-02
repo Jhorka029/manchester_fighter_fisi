@@ -17,7 +17,7 @@ function pingFrame(prefix,index){return{kent:prefix+index}}
 function pingMoonPose(age,limit=0){const transition=limit===PINGORDY_STYLE.dashTime?.10:.22;if(age<transition)return pingFrame('headmoon',Math.min(3,Math.floor(age/transition*4)));const step=limit?Math.min(7,Math.floor((age-transition)/Math.max(.01,limit-transition)*8)):Math.floor((age-transition)*PINGORDY_STYLE.moonRate)%8;return pingFrame('headmoon',4+step);}
 pose=function(p){
  if(p.id!==3||!pingFrames.ultimate0)return pingOriginalPose(p);
- if((state==='round'||state==='match')&&p.hp>0&&p.hp===Math.max(...players.map(v=>v.hp)))return pingFrame('flourish',7);
+ if((state==='round'||state==='match')&&isRoundChampion(p))return pingFrame('flourish',7);
  if(state==='intro'&&phaseTime>.9)return introElapsed<.55?{kent:'idle'}:pingFrame('flourish',Math.floor((introElapsed-.55)*PINGORDY_STYLE.chargeRate)%4);
  if(p.action==='charge')return pingFrame('flourish',Math.floor(p.age*PINGORDY_STYLE.chargeRate)%4);
  if(p.action==='roll')return pingFrame('flourish',8+Math.floor(p.age*PINGORDY_STYLE.spinRate)%4);
@@ -53,7 +53,7 @@ function pingRibbon(radius,y,t,front,width=3){
  const start=front?0:Math.PI;for(let j=0;j<=18;j++){const a=start+j/18*Math.PI,x=Math.cos(a)*radius,yy=y+Math.sin(a)*10+Math.sin(a+t)*3;j?ctx.lineTo(Math.round(x),Math.round(yy)):ctx.moveTo(Math.round(x),Math.round(yy));}ctx.stroke();
 }
 function drawPingordyEffects(p,front){
- const victory=(state==='round'||state==='match')&&p.hp>0&&p.hp===Math.max(...players.map(v=>v.hp));
+ const victory=(state==='round'||state==='match')&&isRoundChampion(p);
  const introCharge=state==='intro'&&phaseTime>.9&&introElapsed>=.55;
  const charging=p.action==='charge'||introCharge,rolling=p.action==='roll',air=p.action==='attack'&&p.moveId==='airKick';
  const grabbing=p.action==='throwing',grabbed=grabbing?players.find(v=>v!==p&&v.action==='thrown'&&v.throwBy===3):null;
