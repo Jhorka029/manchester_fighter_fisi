@@ -9,7 +9,7 @@ function applyPingordyDesign(){Object.assign(pingFrames,pingUnifiedFrames);for(c
 const PINGORDY_STYLE={moonRate:8,dashTime:.46,chargeRate:9,spinRate:18,lunarStartup:.85};
 Object.assign(DASH_CHAR[3],{time:PINGORDY_STYLE.dashTime,fwd:640,back:580});
 ROLL[3].arc=0;
-function versusHeight(id){return id===3?380:characterHeight(id)*380/258;}
+function versusHeight(id){return 380;}
 const pingOldApply=applyPingordyDesign;
 applyPingordyDesign=function(){pingOldApply();for(let i=0;i<8;i++)pingFrames['moon'+i]=pingUnifiedFrames['headmoon'+(i+4)];pingFrames.airKick=pingUnifiedFrames.flying2;pingFrames.win=pingUnifiedFrames.flourish7;pingFrames.charge=pingUnifiedFrames.flourish0;pingFrames.ml6=pingUnifiedFrames.flourish4;};
 const pingOriginalPose=pose;

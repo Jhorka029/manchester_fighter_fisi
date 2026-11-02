@@ -13,7 +13,7 @@ function rosterSprite(id,poseName='introA'){
 }
 function posterMotion(id,time){const phase=time*(1.65+id*.13)+id*.82;return reducedFX?{x:0,y:0,angle:0}:{x:Math.sin(phase*.7)*1.1,y:Math.sin(phase)*2,angle:Math.sin(phase*.8)*.006};}
 function posterFighter(id,x,base,height,flip=false,animate=false){
- const g=fighterGeometry(id,SETS[id]?{kent:resolvePose(id,'introA')}:{show:2}),im=g.im;if(!animate)height*=g.h/258;const w=im.width/im.height*height,m=animate?posterMotion(id,front.time):{x:0,y:0,angle:0};
+ const g=fighterGeometry(id,SETS[id]?{kent:resolvePose(id,'introA')}:{show:2}),im=g.im;const w=im.width/im.height*height,m=animate?posterMotion(id,front.time):{x:0,y:0,angle:0};
  fc.save();fc.translate(Math.round(x+m.x),base+m.y);fc.scale(flip?-1:1,1);fc.rotate(m.angle);
  fc.fillStyle='#100c1844';fc.beginPath();fc.ellipse(0,0,w*.38,8,0,0,Math.PI*2);fc.fill();
  fc.drawImage(im,Math.round(-w/2),-height,Math.round(w),height);fc.restore();
@@ -54,7 +54,7 @@ function drawFighterCard(id,local,orderIndex=id){
  if(!reducedFX){fc.globalAlpha=.28;fc.fillStyle=color;for(let j=0;j<16;j++){const x=((local*900+j*127)%(W+300))-150;fc.fillRect(x,75+j*27,150+j%3*50,2)}fc.globalAlpha=1}
  const enter=reducedFX?1:introEase(local/.32),exit=reducedFX?0:introEase((local-duration+.17)/.17);
  const x=665+(1-enter)*580-exit*100;
- if(portrait[id]){fc.save();fc.globalAlpha=.16;const im=portrait[id],side=Math.min(im.width,im.height);fc.drawImage(im,(im.width-side)/2,0,side,side,0,0,520,520);fc.restore()}
+ if(portrait[id]){fc.save();fc.globalAlpha=.20;const im=portrait[id],crop=portraitPhotoCrop(im,id);fc.drawImage(im,crop.x,crop.y,crop.side,crop.side,0,0,520,520);fc.restore()}
  posterFighter(id,x,530,405,id%2===1);
  frontText(String(orderIndex+1).padStart(2,'0')+' / '+String(NAMES.length).padStart(2,'0'),65,125,20,color,'left');
  frontText('EL ORGULLO DEL CAMPUS',65,173,14,'#cfc2e3','left');

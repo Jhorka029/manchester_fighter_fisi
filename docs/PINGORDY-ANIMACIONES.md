@@ -17,7 +17,7 @@ La serie activa tiene 101 sprites transparentes independientes en `assets/person
 - Emparejamiento VS: Pingordy se dibuja a 380 unidades de alto, igual que El Fiel, sin modificar su tamaño de combate.
 - Agarre: aura detrás del dúo, siete cintas de torbellino, destellos y notas musicales; órbitas adicionales siguen al rival durante la elevación y el lanzamiento. El efecto entra en 0,09 segundos y se desvanece en los últimos 0,16. En el giro del agarre tornado se usan cuatro poses verticales; el resto del agarre conserva sus poses de alcance, sujeción y lanzamiento. Un escape corta los efectos inmediatamente. No se cambian daño, duración ni ventana de escape.
 
-El icono `unificado/retrato.png` es un recorte de la postura canónica, sin generar otra cara. Menú, VS e intro comparten los mismos sprites y retrato. Ningún estado visible vuelve a las imágenes descartadas. No se modifican las animaciones del resto del elenco.
+El archivo `unificado/retrato.png` conserva el recorte de la postura canónica como recurso histórico. El icono visible ahora usa `retrato-real.jpg`, la fotografía original suministrada por el usuario. Menú, VS e intro comparten esa fotografía y los mismos sprites. Ningún estado visible vuelve a las animaciones descartadas. No se modifican las animaciones del resto del elenco.
 
 Los recortes conservan alfa real y eliminan componentes sueltos de celdas vecinas. Usan escala por lámina, sin estirar una pose agachada hasta altura de pie; el render usa `imageSmoothingEnabled=false`. `frames.json` conserva límites, anclajes y escala. El atlas histórico se conserva como referencia y ya no se carga para mostrar al personaje.
 

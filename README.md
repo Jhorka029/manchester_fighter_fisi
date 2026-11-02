@@ -2,6 +2,8 @@
 
 Videojuego de peleas 2D con estética de arcade de 16 bits. Versión **0.7**, con Lancha, El Fiel, Kent, Pingordy, Joshi, Ingestrella, Kike Parker, Cárdenas y Pepelucho, poderes propios y personajes inspirados en fotografías de referencia.
 
+Tamaños uniformes en VS, selección e intro, y siete retratos fotográficos originales nuevos. [Detalles de retratos y presentación](docs/RETRATOS-0.7.md).
+
 La revisión 0.7 añade vida individual de una a cinco barras en VS, ropa alternativa en duelos espejo y el modo **Batalla**: cinco estudiantes elegibles, ocho rivales con dificultad progresiva, escenarios al azar, continuaciones y final con trofeo JAVA. Incluye 40 cruces con voz y 52 audios nuevos. [Reglas, controles y progresión](docs/MODOS-0.7.md).
 
 Esta revisión añade siete escenarios, créditos, auspicio de Core FK y música del usuario para menús y combate. La intro cambia de escenario cada segundo con acercamiento y fundido. El menú «Mezcla de audio» permite ajustar música y efectos por separado. Se requiere una primera tecla o clic si el navegador bloquea el audio automático. Ver [detalles de la revisión](docs/PRESENTACION-0.6.md).
