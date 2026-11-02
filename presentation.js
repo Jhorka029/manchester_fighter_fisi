@@ -11,9 +11,10 @@ function rosterSprite(id,poseName='introA'){
  const set=SETS[id];if(set){const fr=set.frames[resolvePose(id,poseName)];return fr.image}
  return showSprites[id*4+2]?.image||sprites[id*6];
 }
-function posterFighter(id,x,base,height,flip=false){
- const g=fighterGeometry(id,SETS[id]?{kent:resolvePose(id,'introA')}:{show:2}),im=g.im; height*=g.h/258;const w=im.width/im.height*height;
- fc.save();fc.translate(Math.round(x),base);fc.scale(flip?-1:1,1);
+function posterMotion(id,time){const phase=time*(1.65+id*.13)+id*.82;return reducedFX?{x:0,y:0,angle:0}:{x:Math.sin(phase*.7)*1.1,y:Math.sin(phase)*2,angle:Math.sin(phase*.8)*.006};}
+function posterFighter(id,x,base,height,flip=false,animate=false){
+ const g=fighterGeometry(id,SETS[id]?{kent:resolvePose(id,'introA')}:{show:2}),im=g.im;if(!animate)height*=g.h/258;const w=im.width/im.height*height,m=animate?posterMotion(id,front.time):{x:0,y:0,angle:0};
+ fc.save();fc.translate(Math.round(x+m.x),base+m.y);fc.scale(flip?-1:1,1);fc.rotate(m.angle);
  fc.fillStyle='#100c1844';fc.beginPath();fc.ellipse(0,0,w*.38,8,0,0,Math.PI*2);fc.fill();
  fc.drawImage(im,Math.round(-w/2),-height,Math.round(w),height);fc.restore();
 }
@@ -21,8 +22,8 @@ function drawRosterPoster(){
  const i=GAME_ASSETS.stages.findIndex(s=>s.id==='fisi');frontCover(stageImages[i],1);
  // Dos filas escalonadas mantienen visibles las caras y los trajes originales.
  const back=[6,2,4,5,7],near=[0,1,3,8];
- back.forEach((id,j)=>posterFighter(id,115+j*180,405,185,j>2));
- near.forEach((id,j)=>posterFighter(id,175+j*205,527,id===0?243:230,j>1));
+ back.forEach((id,j)=>posterFighter(id,115+j*180,405,185,j>2,true));
+ near.forEach((id,j)=>posterFighter(id,175+j*205,527,230,j>1,true));
 }
 function introBackdrop(id,t){
  const progress=clamp01(t/PRESENTATION.stageBeat);
