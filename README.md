@@ -15,7 +15,7 @@ GitHub Pages publica `index.html` y sus recursos relativos desde `main` (raíz).
 
 ## Contenido actual
 
-Nueve luchadores: Lancha, El Fiel, Kent, Pingordy, Joshi, Ingestrella, Kike Parker, Cárdenas y Pepelucho. Diez escenarios, incluida la selección al azar y Sótano FISI. Modos VS CPU, dos jugadores, entrenamiento y Batalla. Vida individual de una a cinco barras en VS, vestuario alternativo en duelos espejo, choque de ultis y daño reducido contra escudo.
+Diez luchadores: Lancha, El Fiel, Kent, Pingordy, Joshi, Guichard, Ingestrella, Kike Parker, Cárdenas y Pepelucho. Diez escenarios, incluida la selección al azar y Sótano FISI. Modos VS CPU, dos jugadores, entrenamiento y Batalla. Vida individual de una a cinco barras en VS, vestuario alternativo en duelos espejo, choque de ultis y daño reducido contra escudo.
 
 La revisión 0.11 corrige el recorte al caer y aterrizar de Lancha, incorpora ocho poses de agarre para Lancha y ocho para El Fiel, añade destellos y anillos de impacto, y hace accesible la opción de escenario al azar con ratón tanto en escritorio como en móvil. Ver docs/AGARRES-0.11.md.
 

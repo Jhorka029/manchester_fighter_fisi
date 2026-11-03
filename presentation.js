@@ -21,8 +21,8 @@ function posterFighter(id,x,base,height,flip=false,animate=false){
 function drawRosterPoster(){
  const i=GAME_ASSETS.stages.findIndex(s=>s.id==='fisi');frontCover(stageImages[i],1);
  // Dos filas escalonadas mantienen visibles las caras y los trajes originales.
- const back=[6,2,4,5,7],near=[0,1,3,8];
- back.forEach((id,j)=>posterFighter(id,115+j*180,405,185,j>2,true));
+ const back=[6,2,4,5,9,7],near=[0,1,3,8];
+ back.forEach((id,j)=>posterFighter(id,95+j*150,405,185,j>2,true));
  near.forEach((id,j)=>posterFighter(id,175+j*205,527,230,j>1,true));
 }
 function introBackdrop(id,t){
@@ -80,7 +80,7 @@ drawFront=function(dt){
   frontText(GAME_ASSETS.stages[i].name.toUpperCase(),480,438,i===5?27:35);
   frontText(GAME_ASSETS.stages[i].location,480,473,15,'#d5c9e4');
  }else if(t<fighterEnd){const n=(t-stageEnd)/PRESENTATION.fighterBeat,order=typeof ROSTER_ORDER==='undefined'?NAMES.map((_,i)=>i):ROSTER_ORDER,pos=Math.min(NAMES.length-1,Math.floor(n));drawFighterCard(order[pos],(n%1)*PRESENTATION.fighterBeat,pos)}
- else{drawRosterPoster();frontShade(.42);if(crestImage)fc.drawImage(crestImage,423,35,114,114);frontText('MANCHESTER',480,202,48,'#ffe0a0');frontText('FISI FIGHTER',480,258,55,'#ffc469');frontText('NUEVE LUCHADORES · UN SOLO CAMPUS',480,300,16,'#fff0cf');if(t>=presentationDuration())frontGo('title')}
+ else{drawRosterPoster();frontShade(.42);if(crestImage)fc.drawImage(crestImage,423,35,114,114);frontText('MANCHESTER',480,202,48,'#ffe0a0');frontText('FISI FIGHTER',480,258,55,'#ffc469');frontText('DIEZ LUCHADORES · UN SOLO CAMPUS',480,300,16,'#fff0cf');if(t>=presentationDuration())frontGo('title')}
  frontScore();
 };
 frontUI();

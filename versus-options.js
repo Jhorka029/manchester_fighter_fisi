@@ -1,5 +1,5 @@
 'use strict';
-const ROSTER_ORDER=[1,0,2,3,8,4,5,6,7],STUDENT_IDS=[0,1,2,3,8];
+const ROSTER_ORDER=[1,0,2,3,8,9,4,5,6,7],STUDENT_IDS=[0,1,2,3,8,9];
 const LIFE_COLORS=['#ed4b58','#f4cb50','#9be76b','#79ddf5','#4972f4'],LIFE_NAMES=['Rojo','Amarillo','Verde claro','Celeste','Azul'];
 front.lifeBars=[1,1];let lastRoundWinner=-1;
 function getMaxHp(p){return p.maxHp||100;}
