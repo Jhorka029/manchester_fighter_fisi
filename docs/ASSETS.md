@@ -48,9 +48,12 @@ assets/
     guichard/
       atlas.png
       retrato.png
+    adriano/
+      atlas.png
+      retrato.png
 ```
 
-Kent, Pingordy, Ingestrella, Kike Parker, Cárdenas, Pepelucho, Joshi y Guichard usan un atlas por personaje (`atlas.png`, con las posiciones en `game-v4.js`), no un PNG por pose. Las imágenes de cada personaje están en su carpeta.
+Kent, Pingordy, Ingestrella, Kike Parker, Cárdenas, Pepelucho, Joshi, Guichard y Adriano usan un atlas por personaje (`atlas.png`, con las posiciones en `game-v4.js`), no un PNG por pose. Las imágenes de cada personaje están en su carpeta.
 
 Las poses compartidas en los atlas anteriores se exportaron por separado usando los recortes y dimensiones del motor. Cada personaje tiene guardia, caminar, puños, patadas, agachado, reacciones, aterrizaje, salto, presentación y especial. Lancha añade diez cuadros de rodada; El Fiel, tres cuadros de aspa de molino.
 

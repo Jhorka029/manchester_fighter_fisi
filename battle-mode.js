@@ -1,6 +1,6 @@
 'use strict';
 const battle={active:false,hero:0,route:[],index:0,phase:'combat',age:0,continues:0,lastStage:-1,needDialogue:true,preparing:false,choice:0,pad:{},lastBeat:-1};
-const CAMPAIGN_BARS=[1,1,2,2,3,3,4,4,5];
+const CAMPAIGN_BARS=[1,1,2,2,3,3,4,4,4,5];
 FRONT_PAGES.mode=['VS','BATALLA'];
 function battleLevel(){return{enemy:battle.route[battle.index],bars:CAMPAIGN_BARS[battle.index],reaction:1.28-battle.index*.105,difficulty:battle.index<2?'easy':battle.index<5?'normal':'hard'};}
 function campaignRoute(hero){return ROSTER_ORDER.filter(id=>id!==hero&&id!==7).concat(7);}
