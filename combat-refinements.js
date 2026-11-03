@@ -58,7 +58,7 @@ damage=function(p,o,m,sourceX=p.x){
  if(powerClash||usingUltimate(o))return false;
  const ultimate=!!m.ultimate||usingUltimate(p);if(!ultimate)return preClashDamage(p,o,m,sourceX);
  const inv=o.invulnerable,action=o.action;o.invulnerable=0;o.armorUsed=true;if(['down','thrown'].includes(o.action))o.action='idle';
- const blocked=canBlock(o,sourceX,m.level),hit=preClashDamage(p,o,{...m,cost:blocked?0:m.cost,ultimate:true},sourceX);
+ const blocked=canBlock(o,sourceX,m.level),hit=preClashDamage(p,o,{...m,cost:blocked?0:m.cost,chipDamage:blocked?m.damage*.1:undefined,ultimate:true},sourceX);
  if(!hit){o.invulnerable=inv;o.action=action}return hit;
 };
 canThrow=function(p,o){return !powerClash&&!usingUltimate(o)&&preClashThrow(p,o)};

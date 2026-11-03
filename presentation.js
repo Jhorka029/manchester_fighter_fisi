@@ -32,7 +32,7 @@ function introBackdrop(id,t){
  frontShade(.22);
 }
 function drawOpeningCredits(t){
- frontCover(stageImages[6],1.035);frontShade(.9);
+ frontCover(stageImageById('fisi'),1.035);frontShade(.9);
  fc.fillStyle='#ee9a3444';fc.fillRect(132,106,696,2);fc.fillRect(132,454,696,2);
  if(t<PRESENTATION.creditsBeat){
   frontText('MANCHESTER FISI FIGHTER',480,82,20,'#ffce88');

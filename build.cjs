@@ -1,6 +1,11 @@
 // node build.cjs [ruta-del-html]. Genera un juego autónomo sin servidor.
 const fs=require('fs'),path=require('path');
-const root=__dirname,out=process.argv[2]?path.resolve(process.argv[2]):path.join(root,'dist','Manchester-FISI-Fighter-v0.7.html');
+const root=__dirname;
+// En la carpeta organizada bue/work/github-deploy, la entrega vive en bue/outputs.
+// Un clon independiente genera su entrega en su propia carpeta outputs.
+const organizedWorkspace=path.basename(root)==='github-deploy'&&path.basename(path.dirname(root))==='work';
+const outputDir=organizedWorkspace?path.resolve(root,'../../outputs'):path.join(root,'outputs');
+const out=process.argv[2]?path.resolve(process.argv[2]):path.join(outputDir,'Manchester-FISI-Fighter-v0.11.html');
 let html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const scripts=[...html.matchAll(/<script src="([^"]+)"><\/script>/g)].map(m=>({tag:m[0],src:m[1],code:fs.readFileSync(path.join(root,m[1]),'utf8')}));
 const styles=[...html.matchAll(/<link rel="stylesheet" href="([^"]+)">/g)].map(m=>({tag:m[0],src:m[1],code:fs.readFileSync(path.join(root,m[1]),'utf8')}));

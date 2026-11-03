@@ -24,7 +24,7 @@ beginRound=function(){lastRoundWinner=-1;baseHealthRound();applyMatchAppearance(
 hud=function(){
  players.forEach((p,i)=>{const x=i?543:35,hp=Math.max(0,p.hp),layer=Math.max(1,Math.ceil(hp/100)),part=hp<=0?0:((hp-1e-7)%100+1e-7)/100,al=i?'right':'left';
  rect(x-3,36,385,27,'#e4c48e');rect(x,39,379,21,'#25192e');if(layer>1)rect(x,39,379,21,LIFE_COLORS[layer-2]);const width=379*Math.min(1,part);rect(i?x+379-width:x,39,width,21,LIFE_COLORS[layer-1]);rect(x,39,379,4,'#ffffff44');if(p.hpShake>0)rect(x,39,379,21,'#ffffff33');
- text(NAMES[p.id]+(p.alternate?' · FISI':''),i?925:35,27,19,'#fff1d0',al);text(layer+' / '+(p.lifeBars||1)+' BARRAS · '+Math.ceil(hp)+' / '+getMaxHp(p),i?925:35,76,10,'#e8dff3',al);
+ text(NAMES[p.id]+(p.alternate?' · FISI':''),i?925:35,27,19,'#fff1d0',al);text(layer+' / '+(p.lifeBars||1)+' BARRAS · '+Number(hp.toFixed(1))+' / '+getMaxHp(p),i?925:35,76,10,'#e8dff3',al);
  if(p.dizzy>0)rect(x,62,379*p.dizzy/100,3,'#fa8acb');for(let n=1;n<=(p.lifeBars||1);n++)rect(x+145+(n-1)*18,83,14,4,hp>0&&n<=layer?LIFE_COLORS[n-1]:'#332841');if(typeof battle!=='undefined'&&!battle.active)for(let j=0;j<2;j++){ctx.fillStyle=j<p.wins?'#ffdb72':'#42304e';ctx.beginPath();ctx.arc(i?915-j*18:45+j*18,90,4,0,7);ctx.fill();}
  rect(x,487,379,13,'#19172b');rect(i?x+379-379*p.energy/100:x,487,379*p.energy/100,13,p.energy>=100?THEMES[p.id].color:'#738de9');text(p.energy>=100?'SUPER LISTO':Math.floor(p.energy)+'% ENERGÍA',i?922:35,517,13,'#d9d0eb',al);
  });text(mode==='training'?'∞':Math.ceil(Math.max(0,clock)).toString().padStart(2,'0'),480,60,36,'#fff0c8','center');text(typeof battle!=='undefined'&&battle.active?'BATALLA '+(battle.index+1)+'/8':'AL MEJOR DE 3',480,79,10,'#d2bbdf','center');

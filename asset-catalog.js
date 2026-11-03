@@ -1,14 +1,8 @@
 // Recursos de la versión actual. Cada pose pertenece únicamente a su personaje.
 const GAME_ASSETS = {
-  "version": "0.7",
+  "version": "0.11",
   "crest": "assets/interfaz/escudo-fisi.png",
   "stages": [
-    {
-      "id": "patio-fisi",
-      "name": "Patio FISI",
-      "location": "Campus · Atardecer",
-      "image": "assets/escenarios/patio-fisi.png"
-    },
     {
       "id": "entrada-unsm",
       "name": "Entrada UNSM",
@@ -44,6 +38,30 @@ const GAME_ASSETS = {
       "name": "FISI",
       "location": "Facultad de Ingeniería de Sistemas e Informática",
       "image": "assets/escenarios/fisi.png"
+    },
+    {
+      "id": "puerta-2-unsm",
+      "name": "Puerta 2 UNSM",
+      "location": "Ciudad Universitaria · Noche",
+      "image": "assets/escenarios/puerta-2-unsm.png"
+    },
+    {
+      "id": "comedor-unsm",
+      "name": "Comedor UNSM",
+      "location": "Campus · Hora de almuerzo",
+      "image": "assets/escenarios/comedor-unsm.png"
+    },
+    {
+      "id": "estacionamiento-comedor",
+      "name": "Estacionamiento comedor",
+      "location": "Ciudad Universitaria · Atardecer",
+      "image": "assets/escenarios/estacionamiento-comedor.png"
+    },
+    {
+      "id": "sotano-fisi",
+      "name": "Sótano FISI",
+      "location": "Facultad de Ingeniería de Sistemas e Informática · Sótano",
+      "image": "assets/escenarios/sotano-fisi.png"
     }
   ],
   "characters": [
@@ -255,3 +273,4 @@ const GAME_ASSETS = {
     }
   ]
 };
+function stageImageById(id){return stageImages[GAME_ASSETS.stages.findIndex(s=>s.id===id)]||stageImages[0];}
