@@ -1,0 +1,191 @@
+{
+  "checks": [
+    {
+      "name": "Atlas Ingestrella nuevo",
+      "ok": true,
+      "data": 31
+    },
+    {
+      "name": "Patada media Dadick completa",
+      "ok": true,
+      "data": [
+        "kickUp",
+        "kickHit",
+        "kickEnd"
+      ]
+    },
+    {
+      "name": "Patada media dano 11",
+      "ok": true,
+      "data": 89
+    },
+    {
+      "name": "Punetazo bajo propio",
+      "ok": true,
+      "data": {
+        "kent": "lowPunch"
+      }
+    },
+    {
+      "name": "Golpe bajo dano 6",
+      "ok": true,
+      "data": 94
+    },
+    {
+      "name": "Cuatro poses agarre carpeta",
+      "ok": true,
+      "data": [
+        "grabReach",
+        "grabHold",
+        "grabThrow",
+        "grabEnd"
+      ]
+    },
+    {
+      "name": "Agarre dano 14",
+      "ok": true,
+      "data": 86
+    },
+    {
+      "name": "Codigo nace a altura de mano",
+      "ok": true,
+      "data": {
+        "x": 652,
+        "y": 304,
+        "vx": 360,
+        "life": 0,
+        "owner": {
+          "id": 4,
+          "x": 400,
+          "y": 0,
+          "vy": 0,
+          "vx": 0,
+          "hp": 100,
+          "hpTrail": 100,
+          "maxHp": 100,
+          "lifeBars": 1,
+          "energy": 100,
+          "wins": 0,
+          "face": 1,
+          "action": "idle",
+          "age": 0,
+          "move": null,
+          "hit": false,
+          "stun": 0,
+          "guard": false,
+          "crouched": false,
+          "stance": 0,
+          "walk": false,
+          "cooldown": 0,
+          "combo": 0,
+          "comboTime": 0,
+          "ai": 0,
+          "aiInput": {},
+          "seq": 0,
+          "flash": 0,
+          "downTime": 0,
+          "invulnerable": 0,
+          "buffer": null,
+          "bufferTime": 0,
+          "lastLevel": "",
+          "levelTime": 0,
+          "landTime": 0,
+          "ghostTime": -1.6666666666666656,
+          "dashCool": 0,
+          "dashDir": 0,
+          "prevDir": {
+            "left": false,
+            "right": false
+          },
+          "tapAt": {
+            "left": -9,
+            "right": -9
+          },
+          "jumpAt": -9,
+          "leap": false,
+          "dustT": 0,
+          "hpShake": 0,
+          "comboPop": 1,
+          "stats": {
+            "hits": 1,
+            "damage": 11,
+            "maxCombo": 1,
+            "blocks": 0,
+            "supers": 0
+          },
+          "proneTime": 0,
+          "heldU": false,
+          "airDashT": 0,
+          "wallUsed": false,
+          "dizzyCalm": -1.5833333333333326,
+          "dizzy": 0,
+          "gcRolled": false,
+          "gaitClock": 0,
+          "walkDir": 0,
+          "walkClock": 0
+        },
+        "super": false,
+        "low": false,
+        "move": {
+          "label": "RÁFAGA",
+          "frame": "special",
+          "level": "mid",
+          "startup": 0.25,
+          "active": 0.06,
+          "recovery": 0.38,
+          "damage": 11,
+          "reach": 0,
+          "bottom": 70,
+          "top": 130,
+          "stun": 0.25,
+          "push": 16,
+          "cost": 18,
+          "projectile": true,
+          "knockdown": false
+        }
+      }
+    },
+    {
+      "name": "Codigo conecta dano 11",
+      "ok": true,
+      "data": 89
+    },
+    {
+      "name": "Joshi conserva origen balon",
+      "ok": true
+    },
+    {
+      "name": "IA especial segun distancia 0",
+      "ok": true,
+      "data": {
+        "near": 160,
+        "far": 0
+      }
+    },
+    {
+      "name": "IA especial segun distancia 5",
+      "ok": true,
+      "data": {
+        "near": 178,
+        "far": 0
+      }
+    },
+    {
+      "name": "IA especial segun distancia 4",
+      "ok": true,
+      "data": {
+        "near": 163,
+        "far": 156
+      }
+    },
+    {
+      "name": "Patada aerea reciente conservada",
+      "ok": true
+    },
+    {
+      "name": "Kike conserva diez tigrillos",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

@@ -406,7 +406,7 @@ function applyTeacherFrames(){
  Object.assign(kpFrames,teacherFrames['kike-parker']);Object.assign(ieFrames,teacherFrames.ingestrella);Object.assign(cdFrames,teacherFrames.cardenas);
  ieFrames.airKick=ieFrames.air2;kpFrames.airKick=kpFrames.air3;cdFrames.airKick=cdFrames.air2;
  cdFrames.overheadPrep=cdFrames.over0;cdFrames.overheadHit=cdFrames.over2;
- SETS[4].midKick=['kick0','kick1','kick0','kick2'];
+ // Ingestrella usa ahora la patada media original del atlas integrado desde Dadick.
 }
 let tigrillos=[],tigrilloEvents=[];
 function tigerEvent(event){tigrilloEvents.push(event);if(tigrilloEvents.length>100)tigrilloEvents.shift();}

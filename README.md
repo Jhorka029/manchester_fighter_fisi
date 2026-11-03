@@ -2,6 +2,8 @@
 
 Juego de lucha 2D con estética arcade de 16 bits. Versión **0.11**.
 
+Incluye la [integración de Dadick](docs/INTEGRACION-DADICK-0.11.md): nuevas animaciones de Ingestrella, proyectil de código a la altura de la mano y uso de especiales cuerpo a cuerpo por la CPU según la distancia.
+
 **[Jugar en GitHub Pages](https://jhorka029.github.io/manchester_fighter_fisi/)**
 
 ## Abrir y editar
