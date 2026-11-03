@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "name": "Ocho poses y recuperacion 0",
+      "ok": true,
+      "frames": [
+        "0-grab0",
+        "0-grab1",
+        "0-grab2",
+        "0-grab3",
+        "0-grab4",
+        "0-grab5",
+        "0-grab6",
+        "0-grab7"
+      ]
+    },
+    {
+      "name": "Dano de agarre intacto 0",
+      "ok": true,
+      "hp": 86
+    },
+    {
+      "name": "Ocho poses y recuperacion 1",
+      "ok": true,
+      "frames": [
+        "1-grab0",
+        "1-grab1",
+        "1-grab2",
+        "1-grab3",
+        "1-grab4",
+        "1-grab5",
+        "1-grab6",
+        "1-grab7"
+      ]
+    },
+    {
+      "name": "Dano de agarre intacto 1",
+      "ok": true,
+      "hp": 86
+    },
+    {
+      "name": "Caida usa frame limpio",
+      "ok": true
+    },
+    {
+      "name": "Aterrizaje usa frame limpio",
+      "ok": true
+    },
+    {
+      "name": "18 recursos cargados",
+      "ok": true
+    },
+    {
+      "name": "Click al azar 1365",
+      "ok": true
+    },
+    {
+      "name": "Click al azar 390",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

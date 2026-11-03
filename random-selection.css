@@ -1,0 +1,15 @@
+.random-card{background:linear-gradient(140deg,#2d1a48,#1b233e)!important}.random-stage-icon{display:grid;place-items:center;width:100%;aspect-ratio:2.5/1;color:#ffdc8e;font:900 5cqw monospace;text-shadow:3px 3px #8f3d78}.random-fighter-icon{display:block;font:900 3cqw/1.4 monospace;color:#ffdc8e}.random-label{font:900 .65cqw monospace;color:#ffdc8e}.battle-stage-choice{display:flex;flex-direction:column;max-width:16cqw}.battle-stage-choice select{max-width:100%;padding:.6cqw;background:#21172f;color:#fff1d2;border:1px solid #8a698f;border-radius:4px;font:700 .8cqw monospace}.battle-picker .selection-bar{gap:.65cqw}.stage-options .random-card{min-height:0}
+@media(min-width:651px){.life-settings{left:22%;right:22%}}
+@media(max-width:650px){.battle-stage-choice{max-width:100%;width:100%}.battle-stage-choice select{font-size:12px;padding:8px}.random-fighter-icon{font-size:30px}.random-label{font-size:8px}.random-stage-icon{font-size:40px}}
+
+/* Once escenarios: la lista ocupa el espacio disponible y permite desplazarse. */
+@media(min-width:651px){
+ .stage-select{display:flex;flex-direction:column;min-height:0}
+ .stage-select .stage-current{margin:.6cqw 0 .8cqw;flex-shrink:0}
+ .stage-options{min-height:0;overflow-y:auto;grid-template-columns:repeat(4,minmax(0,1fr));align-content:start;scrollbar-width:thin;padding:.2cqw}
+ .stage-card{flex-shrink:0}
+ .stage-select .front-actions,.stage-select>small{flex-shrink:0}
+ .stage-options .random-card{order:-1}
+ .random-stage-icon{font-size:3cqw;aspect-ratio:2.5/1;max-height:7cqw}
+}
+@media(max-width:650px){.stage-options .random-card{order:-1}.stage-options .random-stage-icon{height:75px;aspect-ratio:auto}}
