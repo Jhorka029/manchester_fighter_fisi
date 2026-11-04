@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "cycle": 1,
+      "teacher": 4,
+      "passed": true
+    },
+    {
+      "cycle": 2,
+      "teacher": 6,
+      "passed": true
+    },
+    {
+      "cycle": 3,
+      "teacher": 5,
+      "passed": true
+    },
+    {
+      "cycle": 4,
+      "teacher": 4,
+      "passed": true
+    },
+    {
+      "cycle": 5,
+      "teacher": 6,
+      "passed": true
+    },
+    {
+      "cycle": 6,
+      "teacher": 5,
+      "passed": true
+    },
+    {
+      "cycle": 7,
+      "teacher": 4,
+      "passed": true
+    },
+    {
+      "cycle": 8,
+      "teacher": 6,
+      "passed": true
+    },
+    {
+      "cycle": 9,
+      "teacher": 5,
+      "passed": true
+    },
+    {
+      "cycle": 10,
+      "teacher": 7,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

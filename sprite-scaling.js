@@ -15,11 +15,25 @@ fighterGeometry=function(id,q){
  const original=beforeVisibleGeometry(id,q);
  if(q.fiel10)return original; // Los PNG nuevos ya están recortados; no leer sus píxeles durante el ataque.
  if(q.lanchaShot)return geometryAtHeight(original,VISIBLE_FIGHTER_HEIGHT*LANCHA_SHOT_ASSETS[q.lanchaShot].height/LANCHA_SHOT_ASSETS.shot0.height);
- let g=trimGeometry(original);
- if(state==='intro')return geometryAtHeight(g,VISIBLE_FIGHTER_HEIGHT);
- const idle=SETS[id]?resolvePose(id,'idle'):null;
- if(q.base===0||q.base===1||q.base===2||q.base===4||q.kent===idle&&idle!==null)g=geometryAtHeight(g,VISIBLE_FIGHTER_HEIGHT);
- return g;
+ // Una unidad de dibujo por colección, calculada desde el cuerpo de pie.
+ // El alto del rectángulo cambia al encoger las piernas o elevar brazos/efectos;
+ // eso no debe cambiar el tamaño de la cabeza ni ensanchar el cuerpo.
+ let reference,units;
+ if(q.kent!==undefined){const idle=SETS[id].frames.idle;reference=idle.height*visibleSprite(idle.image).h/idle.image.height;units=SETS[id].frames[q.kent].height;}
+ else if(q.fsup!==undefined){reference=fielSuper.backA.height;units=fielSuper[q.fsup].height;}
+ else if(q.lj!==undefined){reference=ljFrames.up.height;units=ljFrames[q.lj].height;}
+ else if(q.lc!==undefined){reference=id===0?lcFrames.flex.height:440;units=lcFrames[q.lc].height;}
+ else if(q.roll!==undefined){reference=400;units=rollSprites[q.roll].height;}
+ else if(q.fiel!==undefined){reference=fielRoll.at(-1).height;units=fielRoll[q.fiel].height;}
+ else if(q.show!==undefined){reference=showSprites[id*4+2].height;units=showSprites[id*4+q.show].height;}
+ else if(q.extra!==undefined||q.follow!==undefined){reference=440;units=(q.extra!==undefined?extraSprites[id*6+q.extra]:followSprites[id*4+q.follow]).height;}
+ else{reference=visibleSprite(sprites[id*6]).h;units=original.im.height;}
+ // Estas hojas se dibujaron con resoluciones corporales distintas a su atlas.
+ // Compensación única por colección; nunca depende del tiempo ni de la cámara.
+ let calibration=1;
+ if(id===1&&q.lc!==undefined)calibration=.9;
+ if(id===4&&q.kent!==undefined){if(/^air[0-3]$/.test(q.kent))calibration=.88;else if(/^charge[AB]$/.test(q.kent))calibration=1.12;else if(/^jump(Up|Down)$/.test(q.kent))calibration=1.10;else if(q.kent==='flipSpin')calibration=1.08;}
+ return trimGeometry(geometryAtHeight(original,VISIBLE_FIGHTER_HEIGHT*units/reference*calibration));
 };
 frontHero=function(id,x,y,height=320,flip=false,intro=false){
  const q=SETS[id]?{kent:resolvePose(id,intro?(Math.floor(front.time*2)%2?'introB':'introA'):'idle')}:intro?{show:2+Math.floor(front.time*2)%2}:{base:0},g=fighterGeometry(id,q),b=visibleSprite(g.im),w=b.w/b.h*height;

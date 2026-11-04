@@ -2,6 +2,10 @@
 
 Juego de lucha 2D con estética arcade de 16 bits. Versión **0.11**.
 
+Prototipo local: **Historia (En desarrollo)**, con cinco estudiantes, diez ciclos de aventura lateral, plataformas, enemigos, mejoras y un combate docente al final de cada nivel. [Código, físicas, niveles y controles](docs/HISTORIA-AVENTURA.md). Pendiente de publicar.
+
+Revisión local pendiente de publicar: [proporciones corporales y Kike adaptado al ZIP original](docs/PROPORCIONES-KIKE-ZIP.md). Corrige cambios de escala entre movimientos y mejora agarre, descendente y ulti, con tigrillos más grandes.
+
 Incluye la [integración de Dadick](docs/INTEGRACION-DADICK-0.11.md): nuevas animaciones de Ingestrella, proyectil de código a la altura de la mano y uso de especiales cuerpo a cuerpo por la CPU según la distancia.
 
 **[Jugar en GitHub Pages](https://jhorka029.github.io/manchester_fighter_fisi/)**

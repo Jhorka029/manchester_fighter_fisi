@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "Controles tactiles visibles fuera del escenario",
+    "Salto mediante toque",
+    "Codigo mediante toque",
+    "Portal y boton docente mediante toque"
+  ],
+  "errors": []
+}

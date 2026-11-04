@@ -1,176 +1,6 @@
 'use strict';
 // Las láminas se recortan por celda; height expresa escala corporal, no una altura fija por pose.
 const TEACHER_FRAME_ASSETS={
-  "kike-parker": {
-    "walkF0": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkF0.png",
-      "height": 438,
-      "anchor": 0.6135,
-      "width": 132,
-      "sourceHeight": 233
-    },
-    "walkF1": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkF1.png",
-      "height": 432.361,
-      "anchor": 0.5882,
-      "width": 124,
-      "sourceHeight": 230
-    },
-    "walkF2": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkF2.png",
-      "height": 424.841,
-      "anchor": 0.6155,
-      "width": 135,
-      "sourceHeight": 226
-    },
-    "walkF3": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkF3.png",
-      "height": 424.841,
-      "anchor": 0.5924,
-      "width": 126,
-      "sourceHeight": 226
-    },
-    "walkF4": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkF4.png",
-      "height": 419.202,
-      "anchor": 0.5975,
-      "width": 129,
-      "sourceHeight": 223
-    },
-    "walkF5": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkF5.png",
-      "height": 419.202,
-      "anchor": 0.6295,
-      "width": 145,
-      "sourceHeight": 223
-    },
-    "walkB0": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkB0.png",
-      "height": 430.481,
-      "anchor": 0.492,
-      "width": 116,
-      "sourceHeight": 229
-    },
-    "walkB1": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkB1.png",
-      "height": 426.721,
-      "anchor": 0.4896,
-      "width": 110,
-      "sourceHeight": 227
-    },
-    "walkB2": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkB2.png",
-      "height": 424.841,
-      "anchor": 0.4445,
-      "width": 100,
-      "sourceHeight": 226
-    },
-    "walkB3": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkB3.png",
-      "height": 424.841,
-      "anchor": 0.4545,
-      "width": 98,
-      "sourceHeight": 226
-    },
-    "walkB4": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkB4.png",
-      "height": 424.841,
-      "anchor": 0.4895,
-      "width": 96,
-      "sourceHeight": 226
-    },
-    "walkB5": {
-      "src": "assets/personajes/kike-parker/revision-0.8/walkB5.png",
-      "height": 424.841,
-      "anchor": 0.5308,
-      "width": 99,
-      "sourceHeight": 226
-    },
-    "air0": {
-      "src": "assets/personajes/kike-parker/revision-0.8/air0.png",
-      "height": 436.12,
-      "anchor": 0.5042,
-      "width": 144,
-      "sourceHeight": 232
-    },
-    "air1": {
-      "src": "assets/personajes/kike-parker/revision-0.8/air1.png",
-      "height": 422.961,
-      "anchor": 0.5344,
-      "width": 148,
-      "sourceHeight": 225
-    },
-    "air2": {
-      "src": "assets/personajes/kike-parker/revision-0.8/air2.png",
-      "height": 344.009,
-      "anchor": 0.4358,
-      "width": 188,
-      "sourceHeight": 183
-    },
-    "air3": {
-      "src": "assets/personajes/kike-parker/revision-0.8/air3.png",
-      "height": 278.215,
-      "anchor": 0.3733,
-      "width": 235,
-      "sourceHeight": 148
-    },
-    "bite0": {
-      "src": "assets/personajes/kike-parker/revision-0.8/bite0.png",
-      "height": 421.082,
-      "anchor": 0.5528,
-      "width": 177,
-      "sourceHeight": 224
-    },
-    "bite1": {
-      "src": "assets/personajes/kike-parker/revision-0.8/bite1.png",
-      "height": 415.442,
-      "anchor": 0.5234,
-      "width": 183,
-      "sourceHeight": 221
-    },
-    "summon0": {
-      "src": "assets/personajes/kike-parker/revision-0.8/summon0.png",
-      "height": 438,
-      "anchor": 0.4685,
-      "width": 138,
-      "sourceHeight": 233
-    },
-    "summon1": {
-      "src": "assets/personajes/kike-parker/revision-0.8/summon1.png",
-      "height": 438,
-      "anchor": 0.4748,
-      "width": 159,
-      "sourceHeight": 233
-    },
-    "summon2": {
-      "src": "assets/personajes/kike-parker/revision-0.8/summon2.png",
-      "height": 438,
-      "anchor": 0.4507,
-      "width": 164,
-      "sourceHeight": 233
-    },
-    "summon3": {
-      "src": "assets/personajes/kike-parker/revision-0.8/summon3.png",
-      "height": 438,
-      "anchor": 0.4476,
-      "width": 169,
-      "sourceHeight": 233
-    },
-    "summon4": {
-      "src": "assets/personajes/kike-parker/revision-0.8/summon4.png",
-      "height": 434.24,
-      "anchor": 0.409,
-      "width": 208,
-      "sourceHeight": 231
-    },
-    "summon5": {
-      "src": "assets/personajes/kike-parker/revision-0.8/summon5.png",
-      "height": 438,
-      "anchor": 0.5061,
-      "width": 155,
-      "sourceHeight": 233
-    }
-  },
   "tigrillos": {
     "run0": {
       "src": "assets/personajes/kike-parker/tigrillos/run0.png",
@@ -403,8 +233,8 @@ const teacherFramesReady=Promise.all(Object.entries(TEACHER_FRAME_ASSETS).map(as
 // La frase de activación de Kike se conserva solo como texto, sin pista de voz.
 const teacherAudioReady=Promise.resolve();
 function applyTeacherFrames(){
- Object.assign(kpFrames,teacherFrames['kike-parker']);Object.assign(ieFrames,teacherFrames.ingestrella);Object.assign(cdFrames,teacherFrames.cardenas);
- ieFrames.airKick=ieFrames.air2;kpFrames.airKick=kpFrames.air3;cdFrames.airKick=cdFrames.air2;
+ Object.assign(ieFrames,teacherFrames.ingestrella);Object.assign(cdFrames,teacherFrames.cardenas);
+ ieFrames.airKick=ieFrames.air2;cdFrames.airKick=cdFrames.air2;
  cdFrames.overheadPrep=cdFrames.over0;cdFrames.overheadHit=cdFrames.over2;
  // Ingestrella usa ahora la patada media original del atlas integrado desde Dadick.
 }
@@ -463,14 +293,15 @@ function drawTigrillos(){
  for(const c of tigrillos){const frame=c.phase==='run'?'run'+Math.floor(c.age*18)%8:c.phase==='leap'?'bite'+Math.min(3,Math.floor(c.phaseAge*13)):'claw'+Math.min(3,Math.floor(c.phaseAge*15));
   if(c.phase==='claw'){c.x=c.target.x+(c.index%2?18:-18);c.y=FLOOR-c.target.y-55-(c.index%3)*16;}
   if(!reducedFX&&c.phase==='run'){rect(c.x-c.face*39,c.y-14,18,2,'#ffde9c99');rect(c.x-c.face*48,c.y-6,12,2,'#d89c6d77');}
-  drawCatSprite(frame,c.x,c.y,c.face,65,c.phase==='claw'?Math.min(1,(.28-c.phaseAge)/.07):1);
+  drawCatSprite(frame,c.x,c.y,c.face,84,c.phase==='claw'?Math.min(1,(.28-c.phaseAge)/.07):1);
+  if(c.phase==='claw'&&!reducedFX){ctx.save();ctx.globalAlpha=Math.max(0,1-c.phaseAge/.28);ctx.strokeStyle='#fff0be';ctx.lineWidth=3;for(let j=0;j<3;j++){ctx.beginPath();ctx.moveTo(c.x-28+j*13,c.y-84-j*5);ctx.lineTo(c.x-5+j*13,c.y-39-j*5);ctx.stroke();}ctx.restore();}
  }
 }
 function drawBiteTigrillo(p){
  if(state!=='fight'||p.id!==5||p.action!=='attack'||!['overhead','charged'].includes(p.moveId))return;
  const m=p.move,t=p.age-m.startup;if(t<-.17||t>m.active+.22)return;
  const k=Math.max(0,Math.min(1,(t+.17)/(.17+m.active))),distance=38+k*125,arc=Math.sin(k*Math.PI)*50;
- drawCatSprite(t<0?'bite'+Math.min(2,Math.floor((t+.17)/.17*3)):'claw'+Math.min(3,Math.floor(t*18)),p.x+p.face*distance,FLOOR-p.y-65-arc,p.face,96,Math.min(1,(m.active+.22-t)/.15));
+ drawCatSprite(t<0?'bite'+Math.min(2,Math.floor((t+.17)/.17*3)):'claw'+Math.min(3,Math.floor(t*18)),p.x+p.face*distance,FLOOR-p.y-65-arc,p.face,116,Math.min(1,(m.active+.22-t)/.15));
  if(!reducedFX&&t>=0&&t<m.active){ctx.save();ctx.strokeStyle='#ffe5a8';ctx.lineWidth=2;for(let i=0;i<3;i++){ctx.beginPath();ctx.moveTo(p.x+p.face*(distance-12-i*7),FLOOR-128+i*12);ctx.lineTo(p.x+p.face*(distance+15-i*7),FLOOR-91+i*12);ctx.stroke();}ctx.restore();}
 }
 const teacherOldDraw=drawFighter;

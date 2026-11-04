@@ -1,0 +1,401 @@
+{
+  "checks": [
+    {
+      "name": "Guardia de pie 218 0",
+      "ok": true,
+      "data": 218
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 0 charge",
+      "ok": true,
+      "data": {
+        "h": 214.57078651685393,
+        "w": 108.26516853932586
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 0 roll",
+      "ok": true,
+      "data": {
+        "h": 117.72,
+        "w": 115.54000000000002
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 0 airKick",
+      "ok": true,
+      "data": {
+        "h": 140.70909090909092,
+        "w": 155.07727272727274
+      }
+    },
+    {
+      "name": "Guardia de pie 218 1",
+      "ok": true,
+      "data": 218
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 1 charge",
+      "ok": true,
+      "data": {
+        "h": 191.74090909090907,
+        "w": 150.27136363636362
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 1 roll",
+      "ok": true,
+      "data": {
+        "h": 154.89473684210526,
+        "w": 124.29824561403508
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 1 airKick",
+      "ok": true,
+      "data": {
+        "h": 145.1681818181818,
+        "w": 159.53636363636363
+      }
+    },
+    {
+      "name": "Guardia de pie 218 2",
+      "ok": true,
+      "data": 218
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 2 charge",
+      "ok": true,
+      "data": {
+        "h": 215.866927592955,
+        "w": 130.1174168297456
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 2 roll",
+      "ok": true,
+      "data": {
+        "h": 167.65949119373775,
+        "w": 198.37573385518593
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 2 airKick",
+      "ok": true,
+      "data": {
+        "h": 167.65949119373775,
+        "w": 198.37573385518593
+      }
+    },
+    {
+      "name": "Guardia de pie 218 3",
+      "ok": true,
+      "data": 218.00000000000003
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 3 charge",
+      "ok": true,
+      "data": {
+        "h": 190.985590778098,
+        "w": 179.6772334293948
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 3 roll",
+      "ok": true,
+      "data": {
+        "h": 211.08933717579254,
+        "w": 147.00864553314122
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 3 airKick",
+      "ok": true,
+      "data": {
+        "h": 133.66676778401336,
+        "w": 192.68845745487639
+      }
+    },
+    {
+      "name": "Guardia de pie 218 4",
+      "ok": true,
+      "data": 218
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 4 charge",
+      "ok": true,
+      "data": {
+        "h": 238.56000000000003,
+        "w": 160.72000000000003
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 4 roll",
+      "ok": true,
+      "data": {
+        "h": 253.26,
+        "w": 185.22
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 4 airKick",
+      "ok": true,
+      "data": {
+        "h": 159.4516,
+        "w": 177.51447656250002
+      }
+    },
+    {
+      "name": "Guardia de pie 218 5",
+      "ok": true,
+      "data": 217.99999999999997
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 5 charge",
+      "ok": true,
+      "data": {
+        "h": 208.5590551181102,
+        "w": 156.2047244094488
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 5 roll",
+      "ok": true,
+      "data": {
+        "h": 214.4016506189821,
+        "w": 113.04814305364509
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 5 airKick",
+      "ok": true,
+      "data": {
+        "h": 159.63779527559055,
+        "w": 191.39370078740157
+      }
+    },
+    {
+      "name": "Guardia de pie 218 6",
+      "ok": true,
+      "data": 218
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 6 charge",
+      "ok": true,
+      "data": {
+        "h": 202.03661327231117,
+        "w": 117.23112128146452
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 6 roll",
+      "ok": true,
+      "data": {
+        "h": 159.1350114416476,
+        "w": 164.12356979405035
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 6 airKick",
+      "ok": true,
+      "data": {
+        "h": 187.0015972540046,
+        "w": 205.14354325625877
+      }
+    },
+    {
+      "name": "Guardia de pie 218 7",
+      "ok": true,
+      "data": 218
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 7 charge",
+      "ok": true,
+      "data": {
+        "h": 216.52702702702703,
+        "w": 128.14864864864865
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 7 roll",
+      "ok": true,
+      "data": {
+        "h": 203.2702702702703,
+        "w": 181.17567567567565
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 7 airKick",
+      "ok": true,
+      "data": {
+        "h": 217.50900900900902,
+        "w": 156.13513513513516
+      }
+    },
+    {
+      "name": "Guardia de pie 218 8",
+      "ok": true,
+      "data": 218
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 8 charge",
+      "ok": true,
+      "data": {
+        "h": 261.6,
+        "w": 227.5218390804598
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 8 roll",
+      "ok": true,
+      "data": {
+        "h": 201.46206896551723,
+        "w": 126.28965517241379
+      }
+    },
+    {
+      "name": "Escala no depende de la cuenta regresiva 8 airKick",
+      "ok": true,
+      "data": {
+        "h": 219.50344827586207,
+        "w": 241.55402298850575
+      }
+    },
+    {
+      "name": "Voltereta Fiel conserva cuerpo encogido",
+      "ok": true
+    },
+    {
+      "name": "Recarga Fiel no aumenta cuerpo",
+      "ok": true
+    },
+    {
+      "name": "38 cuadros con identidad canonica",
+      "ok": true
+    },
+    {
+      "name": "Agarre Kike ocho poses y recuperacion",
+      "ok": true,
+      "data": [
+        "zip_reach",
+        "gHold",
+        "gThrow",
+        "gTiger",
+        "zip_slam",
+        "zip_breath",
+        "zip_yawn",
+        "zip_idle"
+      ]
+    },
+    {
+      "name": "Agarre mantiene dano 14",
+      "ok": true,
+      "data": 86
+    },
+    {
+      "name": "Se conserva escape de agarre",
+      "ok": true
+    },
+    {
+      "name": "Descendente ocho poses sin rediseño",
+      "ok": true,
+      "data": [
+        "zip_idle",
+        "zip_reach",
+        "zip_windup",
+        "zip_cast2",
+        "zip_palm",
+        "zip_slam",
+        "zip_breath",
+        "zip_recover"
+      ]
+    },
+    {
+      "name": "Descendente dano 15 y recupera",
+      "ok": true,
+      "data": 85
+    },
+    {
+      "name": "Ulti diez tigrillos idle",
+      "ok": true,
+      "data": [
+        "ultimate",
+        "spawn",
+        "spawn",
+        "spawn",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "contact",
+        "contact",
+        "contact"
+      ]
+    },
+    {
+      "name": "Ulti respeta daño/escudo idle",
+      "ok": true,
+      "data": 60
+    },
+    {
+      "name": "Ulti diez tigrillos stand",
+      "ok": true,
+      "data": [
+        "ultimate",
+        "spawn",
+        "spawn",
+        "spawn",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "spawn",
+        "contact",
+        "contact",
+        "contact",
+        "contact"
+      ]
+    },
+    {
+      "name": "Ulti respeta daño/escudo stand",
+      "ok": true,
+      "data": 95.99999999999994
+    },
+    {
+      "name": "Tigrillos ampliados 84 y 116",
+      "ok": true,
+      "data": [
+        84,
+        116
+      ]
+    },
+    {
+      "name": "Teclado W+K usa patada original",
+      "ok": true,
+      "pose": "zip_air0"
+    },
+    {
+      "name": "Teclado I invoca tigrillos",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

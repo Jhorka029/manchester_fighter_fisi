@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "name": "Mando cambia estudiante",
+      "ok": true
+    },
+    {
+      "name": "Mando cambia ciclo",
+      "ok": true
+    },
+    {
+      "name": "A inicia aventura",
+      "ok": true
+    },
+    {
+      "name": "Cruceta mueve personaje",
+      "ok": true
+    },
+    {
+      "name": "A salta",
+      "ok": true
+    },
+    {
+      "name": "B da patada en jefe sin pausar",
+      "ok": true,
+      "data": "mid"
+    },
+    {
+      "name": "Back abre pausa",
+      "ok": true
+    },
+    {
+      "name": "A reanuda",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

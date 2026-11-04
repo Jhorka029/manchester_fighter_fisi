@@ -1,0 +1,28 @@
+{
+  "checks": [
+    "Pool conserva prototipos, reutiliza objetos y respeta límite",
+    "AABB distingue contacto de interseccion",
+    "Gravedad aterriza sin atravesar suelo",
+    "Doble salto y limite de dos impulsos",
+    "Wall jump empuja en direccion opuesta",
+    "Dash consume energia, tiene cooldown e invulnerabilidad breve",
+    "Agacharse cambia hitbox manteniendo pies",
+    "Coleccionables tienen efecto y no se cobran dos veces",
+    "Combo basico tiene tres golpes y cajas ofensivas",
+    "Ataque aereo suspende caida y proyectil gasta energia",
+    "Tanque recibe dano sin interrupcion, bug si se interrumpe",
+    "Enemigo volador dispara hacia abajo",
+    "Plataformas intermitentes alternan colision",
+    "Ciclo 1: mapa coherente, tres creditos, docente y ruta atravesable",
+    "Ciclo 2: mapa coherente, tres creditos, docente y ruta atravesable",
+    "Ciclo 3: mapa coherente, tres creditos, docente y ruta atravesable",
+    "Ciclo 4: mapa coherente, tres creditos, docente y ruta atravesable",
+    "Ciclo 5: mapa coherente, tres creditos, docente y ruta atravesable",
+    "Ciclo 6: mapa coherente, tres creditos, docente y ruta atravesable",
+    "Ciclo 7: mapa coherente, tres creditos, docente y ruta atravesable",
+    "Ciclo 8: mapa coherente, tres creditos, docente y ruta atravesable",
+    "Ciclo 9: mapa coherente, tres creditos, docente y ruta atravesable",
+    "Ciclo 10: mapa coherente, tres creditos, docente y ruta atravesable"
+  ],
+  "passed": 23
+}

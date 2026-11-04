@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "Tres modos con Historia (En desarrollo)",
+    "Cinco estudiantes y diez ciclos seleccionables",
+    "Movimiento con teclado en aventura",
+    "Salto con Espacio",
+    "L dispara código",
+    "Pausa y confirmación de salida",
+    "Tres ambientes renderizan",
+    "Portal, diálogo y combate docente con vida conservada",
+    "Victoria desbloquea y avanza al siguiente ciclo",
+    "Final y regreso a VS intacto",
+    "Selector usable en móvil"
+  ],
+  "errors": []
+}
