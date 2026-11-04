@@ -76,7 +76,7 @@ drawFront=function(dt){
  }else if(t<stageStart){drawOpeningCredits(t)}else if(t<stageEnd){
   const elapsed=t-stageStart,i=Math.floor(elapsed/PRESENTATION.stageBeat),local=elapsed%PRESENTATION.stageBeat;introBackdrop(i,local);
   fc.fillStyle='#0c0923c9';fc.fillRect(0,368,W,126);
-  frontText('SIETE ESCENARIOS · UN MISMO ORGULLO',480,394,14,'#ffd18b');
+  frontText('DIEZ ESCENARIOS · UN MISMO ORGULLO',480,394,14,'#ffd18b');
   frontText(GAME_ASSETS.stages[i].name.toUpperCase(),480,438,i===5?27:35);
   frontText(GAME_ASSETS.stages[i].location,480,473,15,'#d5c9e4');
  }else if(t<fighterEnd){const n=(t-stageEnd)/PRESENTATION.fighterBeat,order=typeof ROSTER_ORDER==='undefined'?NAMES.map((_,i)=>i):ROSTER_ORDER,pos=Math.min(NAMES.length-1,Math.floor(n));drawFighterCard(order[pos],(n%1)*PRESENTATION.fighterBeat,pos)}
@@ -85,5 +85,5 @@ drawFront=function(dt){
 };
 frontUI();
 const combatDebugV05=window.fisiDebug;
-window.fisiDebug=()=>({...combatDebugV05(),version:'0.7'});
-$('.brand small').textContent='TORNEO DEL CAMPUS · EDICIÓN ARCADE 0.7';
+window.fisiDebug=()=>({...combatDebugV05(),version:'0.11'});
+$('.brand small').textContent='TORNEO DEL CAMPUS · EDICIÓN ARCADE 0.11';

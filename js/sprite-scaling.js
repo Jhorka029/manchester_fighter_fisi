@@ -13,12 +13,11 @@ function geometryAtHeight(g,h){const k=h/g.h;return{...g,h,w:g.w*k};}
 const beforeVisibleGeometry=fighterGeometry;
 fighterGeometry=function(id,q){
  const original=beforeVisibleGeometry(id,q);
- if(q.fiel10)return original; // Los PNG nuevos ya están recortados; no leer sus píxeles durante el ataque.
+ if(q.fiel10||q.grab11)return original; // Los PNG nuevos ya están recortados; no leer sus píxeles durante el ataque.
  if(q.lanchaShot)return geometryAtHeight(original,VISIBLE_FIGHTER_HEIGHT*LANCHA_SHOT_ASSETS[q.lanchaShot].height/LANCHA_SHOT_ASSETS.shot0.height);
  let g=trimGeometry(original);
- if(state==='intro')return geometryAtHeight(g,VISIBLE_FIGHTER_HEIGHT);
  const idle=SETS[id]?resolvePose(id,'idle'):null;
- if(q.base===0||q.base===1||q.base===2||q.base===4||q.kent===idle&&idle!==null)g=geometryAtHeight(g,VISIBLE_FIGHTER_HEIGHT);
+ if(q.base===0||q.base===1||q.base===2||(q.kent===idle&&idle!==null))g=geometryAtHeight(g,VISIBLE_FIGHTER_HEIGHT);
  return g;
 };
 frontHero=function(id,x,y,height=320,flip=false,intro=false){

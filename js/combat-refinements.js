@@ -1,17 +1,28 @@
 'use strict';
 // Una referencia corporal por personaje; agacharse o levantar un brazo no cambia la escala.
-function characterHeight(id){return SETS[id]?SETS[id].frames.idle.height/2*SETS[id].scale:258}
+const BASE_BODY_HEIGHT=218;
+function characterHeight(id){return SETS[id]?SETS[id].frames.idle.height/2*SETS[id].scale:BASE_BODY_HEIGHT}
 function fighterGeometry(id,q){
  const target=characterHeight(id);let s,im,h,anchor=.5;
- if(q.kent!==undefined){s=SETS[id].frames[q.kent];im=s.image;h=s.height/2*SETS[id].scale;anchor=s.anchor;if(/^(intro[AB]|win[ABC]?)$/.test(q.kent))h=target}
+ if(q.kent!==undefined){
+  s=SETS[id].frames[q.kent];im=s.image;anchor=s.anchor;
+  const pScale=(SETS[id].poseScale&&SETS[id].poseScale[q.kent])||1;
+  h=s.height/2*SETS[id].scale*pScale;
+  if(/^(intro[AB])$/.test(q.kent)&&!SETS[id]?.poseScale?.[q.kent]&&s.height<500)h=target;
+ }
  else if(q.fsup!==undefined){s=fielSuper[q.fsup];im=s.image;h=s.height*target/fielSuper.backA.height;anchor=s.anchor}
  else if(q.lj!==undefined){s=ljFrames[q.lj];im=s.image;h=s.height*target/ljFrames.up.height;anchor=s.anchor}
- else if(q.lc!==undefined){s=lcFrames[q.lc];im=s.image;h=id===0?s.height*target/lcFrames.flex.height:s.height/2;anchor=s.anchor}
- else if(q.roll!==undefined){s=rollSprites[q.roll];im=s.image;h=s.height*target/400}
+ else if(q.lc!==undefined){s=lcFrames[q.lc];im=s.image;h=id===0?s.height*target/lcFrames.ready.height:s.height*target/430;anchor=s.anchor}
+ else if(q.roll!==undefined){s=rollSprites[q.roll];im=s.image;h=s.height*target/350}
  else if(q.fiel!==undefined){s=fielRoll[q.fiel];im=s.image;h=s.height*target/fielRoll.at(-1).height}
  else if(q.show!==undefined){s=showSprites[id*4+q.show];im=s.image;h=q.show>=2?target:s.height*target/showSprites[id*4+2].height}
- else if(q.extra!==undefined||q.follow!==undefined){s=q.extra!==undefined?extraSprites[id*6+q.extra]:followSprites[id*4+q.follow];im=s.image;h=s.height*target/440;if(q.extra===1)anchor=.4;if([2,3,4].includes(q.extra))anchor=.37}
- else{im=sprites[id*6+(q.base??0)];h=target;anchor=q.base===2?.39:.5}
+ else if(q.extra!==undefined||q.follow!==undefined){
+  s=q.extra!==undefined?extraSprites[id*6+q.extra]:followSprites[id*4+q.follow];im=s.image;
+  const ref=(id===0&&q.extra===3)?347:(id===0?395:405);
+  h=s.height*target/ref;
+  if(q.extra===1)anchor=.4;if([2,3,4].includes(q.extra))anchor=.37;
+ }
+ else{im=sprites[id*6+(q.base??0)];const ref=id===0?395:405;h=im.height*target/ref;anchor=q.base===2?.39:.5}
  return{im,h,w:im.width/im.height*h,anchor:anchor??.5};
 }
 const SUPER_CLASH={window:.25,goal:18,duration:6,tieLimit:10};

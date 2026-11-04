@@ -97,7 +97,7 @@ const priorGrabPose=pose,priorGrabGeometry=fighterGeometry,priorGrabThrower=thro
 THROW_DUR[1]=.72;THROWER_DUR[1]=.98;
 function grabFrame(p){const times=p.id===0?[0,.1,.2,.3,.4,.52,.64,.82]:[0,.1,.2,.3,.4,.5,.64,.82];let n=0;while(n<7&&p.age>=times[n+1])n++;return p.id+'-grab'+n;}
 pose=function(p){if(state==='fight'&&p.id<2){if(p.action==='throwing')return{grab11:grabFrame(p)};if(p.id===0&&p.action==='idle'&&!p.leap&&!p.proneTime){if(p.y>0&&p.vy<=0)return{grab11:'0-landing'};if(p.landTime>0)return{grab11:'0-recover'};}}return priorGrabPose(p);};
-fighterGeometry=function(id,q){if(q.grab11){const f=grabFrames[q.grab11],reference=GRAB_ASSETS[id+'-grab0'].height,h=218*f.height/reference;return{im:f.image,h,w:f.image.width/f.image.height*h,anchor:f.anchor};}return priorGrabGeometry(id,q);};
+fighterGeometry=function(id,q){if(q.grab11){const f=grabFrames[q.grab11];let reference=GRAB_ASSETS[id+'-grab0'].height;if(q.grab11==='0-landing')reference=235;else if(q.grab11==='0-recover')reference=218;const h=218*f.height/reference;return{im:f.image,h,w:f.image.width/f.image.height*h,anchor:f.anchor};}return priorGrabGeometry(id,q);};
 throwerAt=function(p){if(p.id<2&&p.action==='throwing')return{pose:{grab11:grabFrame(p)},dx:0,dy:0,rot:0,sx:1,sy:1};return priorGrabThrower(p);};
 victimAt=function(v,a=v.age){return priorGrabVictim(v,v.throwBy===1&&!v.throwUp?a*.52/.72:a);};
 const priorGrabDraw=drawFighter;

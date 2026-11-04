@@ -11,6 +11,6 @@ const scripts=[...html.matchAll(/<script src="([^"]+)"><\/script>/g)].map(m=>({t
 const styles=[...html.matchAll(/<link rel="stylesheet" href="([^"]+)">/g)].map(m=>({tag:m[0],src:m[1],code:fs.readFileSync(path.join(root,m[1]),'utf8')}));
 const assets=new Set((html+scripts.map(x=>x.code).join('\n')+styles.map(x=>x.code).join('\n')).match(/assets\/[^'"\s)]+\.(?:png|webp|jpe?g|gif|mp3|wav|ogg)/g)||[]);
 for(const src of assets){const ext=path.extname(src).slice(1).toLowerCase(),mime={mp3:'audio/mpeg',wav:'audio/wav',ogg:'audio/ogg'}[ext]||'image/'+(ext==='jpg'?'jpeg':ext),data='data:'+mime+';base64,'+fs.readFileSync(path.join(root,src)).toString('base64');html=html.replaceAll(src,data);for(const s of [...scripts,...styles])s.code=s.code.replaceAll(src,data)}
-for(const s of scripts)html=html.replace(s.tag,'<script>'+s.code.replaceAll('</script','<\\/script')+'</script>');
-for(const s of styles)html=html.replace(s.tag,'<style>'+s.code+'</style>');
+for(const s of scripts)html=html.replace(s.tag,()=>'<script>'+s.code.replaceAll('</script','<\\/script')+'</script>');
+for(const s of styles)html=html.replace(s.tag,()=>'<style>'+s.code+'</style>');
 fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,html);console.log('HTML autónomo: '+out+' ('+(Buffer.byteLength(html)/1048576).toFixed(1)+' MB; '+assets.size+' recursos multimedia)');
