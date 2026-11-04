@@ -8,4 +8,4 @@ La selección contiene doce luchadores. Batalla y el prototipo Historia reconoce
 
 Verificación: 50 comprobaciones de integración y poses, 15 de la integración anterior de Dadick, 51 de proporciones/Kike, recorrido de los diez ciclos y prueba de carga/selección/comienzo del combate sin errores JavaScript ni recursos ausentes. Informes JSON junto a este archivo.
 
-Esta integración es local. No se realizó push ni despliegue a GitHub Pages.
+Esta integración se incluye en la publicación de main junto con los nuevos retratos reales.
