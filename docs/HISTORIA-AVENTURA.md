@@ -1,6 +1,6 @@
 # Historia (En desarrollo)
 
-Prototipo jugable local de scroll lateral con cinco estudiantes, diez ciclos y un examen docente de pelea 1v1 al final de cada recorrido. Se elige en **Seleccionar modo → Historia (En desarrollo)**. Todos los ciclos tienen acceso libre para probar el prototipo; los aprobados quedan marcados en el navegador.
+Prototipo jugable local de scroll lateral con siete estudiantes, diez ciclos y un examen docente de pelea 1v1 al final de cada recorrido. Se elige en **Seleccionar modo → Historia (En desarrollo)**. Todos los ciclos tienen acceso libre para probar el prototipo; los aprobados quedan marcados en el navegador.
 
 La referencia de aventuras de GBA se traduce en exploración, saltos, enemigos menores, mejoras, puntos de control y encuentros finales. Se reutilizan los personajes del juego y se dibujan escenarios, enemigos y efectos propios con Canvas. Los cursos y docentes son una propuesta narrativa a partir de los ejemplos del encargo, no una transcripción de una malla curricular oficial; el archivo `image_5f5ee5.jpg` mencionado dentro del texto no estaba adjunto.
 

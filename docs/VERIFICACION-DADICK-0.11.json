@@ -158,7 +158,7 @@
       "name": "IA especial segun distancia 0",
       "ok": true,
       "data": {
-        "near": 160,
+        "near": 176,
         "far": 0
       }
     },
@@ -166,7 +166,7 @@
       "name": "IA especial segun distancia 5",
       "ok": true,
       "data": {
-        "near": 178,
+        "near": 164,
         "far": 0
       }
     },
@@ -174,8 +174,8 @@
       "name": "IA especial segun distancia 4",
       "ok": true,
       "data": {
-        "near": 163,
-        "far": 156
+        "near": 164,
+        "far": 144
       }
     },
     {
