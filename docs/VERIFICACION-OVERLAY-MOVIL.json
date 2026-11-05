@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "Overlay dentro de la arena sin fila inferior ni reducción anterior",
+    "Selector flechas/joystick",
+    "Joystick: arrastrar, diagonales, salto, escudo simultáneo y cancelación segura",
+    "Pantalla completa contiene la arena 16:9 sin recortes",
+    "Rotación recalcula tamaño y conserva imagen completa",
+    "Intro completa en fullscreen",
+    "Preferencia joystick persiste",
+    "Alternativa inmersiva para navegadores sin Fullscreen API",
+    "Volver a flechas en Historia y fullscreen"
+  ],
+  "errors": []
+}
