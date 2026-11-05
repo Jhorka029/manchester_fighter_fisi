@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "El panel pausa el combate",
+    "Reasignar P1/P2 y rechazar duplicados",
+    "Entrada real de teclado para ambos jugadores",
+    "Asignar mandos invertidos, capturar botón y leer ejes",
+    "Desconexión sin intercambiar jugadores",
+    "Preferencias sobreviven la recarga",
+    "Historia respeta teclado personalizado y doble toque",
+    "Móvil: dos pulsaciones simultáneas y liberación segura",
+    "Activar/desactivar táctil y recordar preferencia",
+    "Diseño vertical/horizontal y acciones de Historia"
+  ],
+  "errors": []
+}

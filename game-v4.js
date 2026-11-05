@@ -119,7 +119,7 @@ function togglePause(){paused=!paused;clearInput()}
 $('#start').onclick=start;$('#sound').onclick=()=>{muted=!muted;$('#sound').textContent='♫ Sonido: '+(muted?'OFF':'ON')};$('#full').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen();else $('.screen').requestFullscreen?.()};
 $('#music').onclick=()=>{musicOn=!musicOn;$('#music').textContent='♪ Música: '+(musicOn?'ON':'OFF')};
 $('#effects').onclick=()=>{reducedFX=!reducedFX;$('#effects').textContent=reducedFX?'FX: suaves':'FX: intensos'};
-addEventListener('keydown',e=>{if(typeof exitPrompt!=='undefined'&&exitPrompt.active||['SELECT','INPUT','TEXTAREA'].includes(e.target.tagName))return;const mapped=Object.values(MAPS[0]).includes(e.code)||Object.values(MAPS[1]).includes(e.code);if(mapped||e.code==='Space')e.preventDefault();if(e.repeat)return;if(!held.has(e.code))pressed.add(e.code);held.add(e.code);if(e.code==='Escape'&&state!=='menu')togglePause();if(e.code==='KeyR')requestExit();if(e.code==='Enter'&&state==='match')menu()});
+addEventListener('keydown',e=>{if(window.fisiControlsOpen||typeof exitPrompt!=='undefined'&&exitPrompt.active||['SELECT','INPUT','TEXTAREA'].includes(e.target.tagName))return;const mapped=Object.values(MAPS[0]).includes(e.code)||Object.values(MAPS[1]).includes(e.code);if(mapped||e.code==='Space')e.preventDefault();if(e.repeat)return;if(!held.has(e.code))pressed.add(e.code);held.add(e.code);if((typeof controlPauseKey==='function'?controlPauseKey(e.code):e.code==='Escape')&&state!=='menu')togglePause();if(typeof controlExitKey==='function'?controlExitKey(e.code):e.code==='KeyR')requestExit();if(e.code==='Enter'&&state==='match')menu()});
 addEventListener('keyup',e=>held.delete(e.code));addEventListener('blur',()=>{clearInput();if(state==='fight')paused=true});canvas.onpointerdown=()=>{canvas.focus();audio?.resume()};
 // A touch button may press several keys at once (AGARRE = J + K).
 document.querySelectorAll('[data-key]').forEach(b=>{const keys=b.dataset.key.split(' ');b.onpointerdown=e=>{e.preventDefault();b.setPointerCapture(e.pointerId);keys.forEach(k=>{held.add(k);pressed.add(k)});audio?.resume()};b.onpointerup=b.onpointercancel=()=>keys.forEach(k=>held.delete(k))});
@@ -134,7 +134,7 @@ function input(i){const out={},pad=pads()[i],b=n=>!!pad?.buttons[n]?.pressed,ax=
  lastPad[i]={...values};return out}
 // Menu, pause and navigation with any connected pad (edge-triggered; Options = start/pause, Share = back to menu).
 function padMenu(){const list=pads(),btn=n=>list.some(g=>g.buttons[n]?.pressed),axis=n=>list.reduce((m,g)=>Math.abs(g.axes[n]??0)>Math.abs(m)?g.axes[n]:m,0),
- now={left:btn(14)||axis(0)<-.5,right:btn(15)||axis(0)>.5,up:btn(12)||axis(1)<-.5,down:btn(13)||axis(1)>.5,prev:btn(4),next:btn(5),l2:btn(6),r2:btn(7),ok:btn(0),start:btn(9),back:btn(8)},hit=k=>now[k]&&!sys[k];
+ now={left:btn(14)||axis(0)<-.5,right:btn(15)||axis(0)>.5,up:btn(12)||axis(1)<-.5,down:btn(13)||axis(1)>.5,prev:btn(4),next:btn(5),l2:btn(6),r2:btn(7),ok:btn(0),start:typeof controlPadValues==='function'?[0,1].some(i=>controlPadValues(i).pause):btn(9),back:typeof controlPadValues==='function'?[0,1].some(i=>controlPadValues(i).exit):btn(8)},hit=k=>now[k]&&!sys[k];
  if(state==='menu'){if(hit('ok')||hit('start'))start()}
  // SHARE works like the R key: back to the character select from anywhere. The menu reads the held button as "back" otherwise.
  else if(hit('back')){if(typeof front!=='undefined')front.lastPad={...front.lastPad,back:true};requestExit()}

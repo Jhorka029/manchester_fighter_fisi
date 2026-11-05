@@ -18,7 +18,7 @@ function closeExit(leave=false){
  audioDirector.sync();
 }
 exitDialog.addEventListener('click',e=>{const action=e.target.closest('[data-exit]')?.dataset.exit;if(action)closeExit(action==='leave');});
-addEventListener('keydown',e=>{if(!exitPrompt.active)return;e.preventDefault();e.stopImmediatePropagation();if(e.repeat)return;
+addEventListener('keydown',e=>{if(window.fisiControlsOpen)return;if(!exitPrompt.active)return;e.preventDefault();e.stopImmediatePropagation();if(e.repeat)return;
  if(['Escape','Backspace','KeyR'].includes(e.code))closeExit(false);
  else if(['ArrowLeft','ArrowRight','KeyA','KeyD','Tab'].includes(e.code)){exitPrompt.choice=1-exitPrompt.choice;paintExitChoice();}
  else if(['Enter','Space'].includes(e.code))closeExit(exitPrompt.choice===1);
