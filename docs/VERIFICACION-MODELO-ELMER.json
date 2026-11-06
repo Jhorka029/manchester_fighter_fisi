@@ -1,0 +1,409 @@
+{
+  "canonicalImages": 57,
+  "animationPhases": 104,
+  "powerCodeUnchanged": true,
+  "powerCodeSHA": "5b147b9d76d55011f2607d9a19353ccc30e4e125cfa7f2d08dbda2fc294cd4a8",
+  "metrics": [
+    {
+      "action": "walk",
+      "referenceHeight": 654,
+      "referenceHead": 32.666666666666664,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 32.333333333333336,
+          "height": 217.33333333333334
+        },
+        {
+          "frame": 2,
+          "head": 32.333333333333336,
+          "height": 215
+        },
+        {
+          "frame": 3,
+          "head": 32.333333333333336,
+          "height": 215
+        }
+      ]
+    },
+    {
+      "action": "punch",
+      "referenceHeight": 666,
+      "referenceHead": 31.75075075075075,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 32.07807807807808,
+          "height": 218
+        },
+        {
+          "frame": 2,
+          "head": 33.06006006006006,
+          "height": 218
+        },
+        {
+          "frame": 3,
+          "head": 31.75075075075075,
+          "height": 218
+        }
+      ]
+    },
+    {
+      "action": "crouch",
+      "referenceHeight": 649,
+      "referenceHead": 31.238828967642526,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 31.57473035439137,
+          "height": 166.27118644067798
+        },
+        {
+          "frame": 2,
+          "head": 32.5824345146379,
+          "height": 160.22496147919875
+        },
+        {
+          "frame": 3,
+          "head": 31.57473035439137,
+          "height": 218
+        }
+      ]
+    },
+    {
+      "action": "jump",
+      "referenceHeight": 580,
+      "referenceHead": 31.948275862068964,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 29.693103448275863,
+          "height": 228.9
+        },
+        {
+          "frame": 2,
+          "head": 30.444827586206898,
+          "height": 159.74137931034483
+        },
+        {
+          "frame": 3,
+          "head": 29.693103448275863,
+          "height": 221.38275862068966
+        },
+        {
+          "frame": 4,
+          "head": 31.572413793103447,
+          "height": 214.99310344827586
+        }
+      ]
+    },
+    {
+      "action": "kick",
+      "referenceHeight": 633,
+      "referenceHead": 31.684044233807267,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 31.684044233807267,
+          "height": 218.68878357030016
+        },
+        {
+          "frame": 2,
+          "head": 31.684044233807267,
+          "height": 218
+        },
+        {
+          "frame": 3,
+          "head": 31.339652448657187,
+          "height": 218
+        }
+      ]
+    },
+    {
+      "action": "lowPunch",
+      "referenceHeight": 640,
+      "referenceHead": 33.38125,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 35.425,
+          "height": 174.740625
+        },
+        {
+          "frame": 2,
+          "head": 36.10625,
+          "height": 174.740625
+        },
+        {
+          "frame": 3,
+          "head": 35.425,
+          "height": 174.740625
+        }
+      ]
+    },
+    {
+      "action": "sweep",
+      "referenceHeight": 608,
+      "referenceHead": 34.421052631578945,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 38.36513157894737,
+          "height": 169.5953947368421
+        },
+        {
+          "frame": 2,
+          "head": 36.57236842105263,
+          "height": 152.38486842105263
+        },
+        {
+          "frame": 3,
+          "head": 36.213815789473685,
+          "height": 169.5953947368421
+        }
+      ]
+    },
+    {
+      "action": "airPunch",
+      "referenceHeight": 644,
+      "referenceHead": 32.49689440993789,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 33.850931677018636,
+          "height": 174.67080745341616
+        },
+        {
+          "frame": 2,
+          "head": 31.819875776397517,
+          "height": 205.8136645962733
+        },
+        {
+          "frame": 3,
+          "head": 32.83540372670807,
+          "height": 189.90372670807454
+        }
+      ]
+    },
+    {
+      "action": "airKick",
+      "referenceHeight": 637,
+      "referenceHead": 32.51177394034537,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 30.800627943485086,
+          "height": 215.26216640502355
+        },
+        {
+          "frame": 2,
+          "head": 31.4850863422292,
+          "height": 159.8210361067504
+        },
+        {
+          "frame": 3,
+          "head": 31.4850863422292,
+          "height": 205.67974882260597
+        }
+      ]
+    },
+    {
+      "action": "phone",
+      "referenceHeight": 665,
+      "referenceHead": 31.470676691729324,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 31.470676691729324,
+          "height": 218
+        },
+        {
+          "frame": 2,
+          "head": 31.470676691729324,
+          "height": 218
+        },
+        {
+          "frame": 3,
+          "head": 31.470676691729324,
+          "height": 218
+        }
+      ]
+    },
+    {
+      "action": "cast",
+      "referenceHeight": 648,
+      "referenceHead": 32.2962962962963,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 32.632716049382715,
+          "height": 218
+        },
+        {
+          "frame": 2,
+          "head": 32.632716049382715,
+          "height": 218
+        },
+        {
+          "frame": 3,
+          "head": 32.632716049382715,
+          "height": 218
+        }
+      ]
+    },
+    {
+      "action": "cross",
+      "referenceHeight": 691,
+      "referenceHead": 30.602026049204053,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 30.917510853835022,
+          "height": 218
+        },
+        {
+          "frame": 2,
+          "head": 31.54848046309696,
+          "height": 218
+        },
+        {
+          "frame": 3,
+          "head": 32.1794500723589,
+          "height": 218
+        },
+        {
+          "frame": 4,
+          "head": 34.70332850940666,
+          "height": 220.2083936324168
+        }
+      ]
+    },
+    {
+      "action": "charge",
+      "referenceHeight": 680,
+      "referenceHead": 31.738235294117647,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 32.379411764705885,
+          "height": 202.61176470588236
+        },
+        {
+          "frame": 2,
+          "head": 35.90588235294118,
+          "height": 210.9470588235294
+        }
+      ]
+    },
+    {
+      "action": "grab",
+      "referenceHeight": 624,
+      "referenceHead": 32.14102564102564,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 31.791666666666668,
+          "height": 218
+        },
+        {
+          "frame": 2,
+          "head": 34.23717948717949,
+          "height": 204.72435897435898
+        },
+        {
+          "frame": 3,
+          "head": 104.45833333333333,
+          "height": 239.31089743589743
+        },
+        {
+          "frame": 4,
+          "head": 32.14102564102564,
+          "height": 217.65064102564102
+        }
+      ]
+    },
+    {
+      "action": "dash",
+      "referenceHeight": 647,
+      "referenceHead": 32.683153013910356,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 34.7047913446677,
+          "height": 206.54404945904173
+        },
+        {
+          "frame": 2,
+          "head": 35.71561051004637,
+          "height": 210.2503863987635
+        },
+        {
+          "frame": 3,
+          "head": 32.683153013910356,
+          "height": 218
+        }
+      ]
+    },
+    {
+      "action": "teleport",
+      "referenceHeight": 664,
+      "referenceHead": 31.518072289156628,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 31.18975903614458,
+          "height": 218
+        },
+        {
+          "frame": 2,
+          "head": 29.876506024096386,
+          "height": 220.95481927710844
+        },
+        {
+          "frame": 3,
+          "head": 31.18975903614458,
+          "height": 218
+        }
+      ]
+    },
+    {
+      "action": "reactions",
+      "referenceHeight": 616,
+      "referenceHead": 32.91233766233766,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 38.92857142857143,
+          "height": 214.81493506493507
+        },
+        {
+          "frame": 2,
+          "head": 49.89935064935065,
+          "height": 191.4577922077922
+        },
+        {
+          "frame": 3,
+          "head": 223.30844155844156,
+          "height": 48.48376623376623
+        }
+      ]
+    },
+    {
+      "action": "victory",
+      "referenceHeight": 662,
+      "referenceHead": 32.27190332326284,
+      "poses": [
+        {
+          "frame": 1,
+          "head": 32.601208459214504,
+          "height": 223.2688821752266
+        },
+        {
+          "frame": 2,
+          "head": 74.42296072507553,
+          "height": 225.90332326283988
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,650 @@
+{
+  "checks": [
+    {
+      "name": "13 luchadores y retratos, Elmer docente",
+      "ok": true
+    },
+    {
+      "name": "Modelo canónico: 104 fases y 57 dibujos, sin rutas antiguas",
+      "ok": true
+    },
+    {
+      "name": "Pepe Lucho último",
+      "ok": true
+    },
+    {
+      "name": "Doce rivales y jefe cinco barras",
+      "ok": true
+    },
+    {
+      "name": "Geometría guard0",
+      "ok": true
+    },
+    {
+      "name": "Geometría guard1",
+      "ok": true
+    },
+    {
+      "name": "Geometría guardRef",
+      "ok": true
+    },
+    {
+      "name": "Geometría walk0",
+      "ok": true
+    },
+    {
+      "name": "Geometría walk1",
+      "ok": true
+    },
+    {
+      "name": "Geometría walk2",
+      "ok": true
+    },
+    {
+      "name": "Geometría walk3",
+      "ok": true
+    },
+    {
+      "name": "Geometría walk4",
+      "ok": true
+    },
+    {
+      "name": "Geometría walk5",
+      "ok": true
+    },
+    {
+      "name": "Geometría walk6",
+      "ok": true
+    },
+    {
+      "name": "Geometría walk7",
+      "ok": true
+    },
+    {
+      "name": "Geometría back0",
+      "ok": true
+    },
+    {
+      "name": "Geometría back1",
+      "ok": true
+    },
+    {
+      "name": "Geometría back2",
+      "ok": true
+    },
+    {
+      "name": "Geometría back3",
+      "ok": true
+    },
+    {
+      "name": "Geometría back4",
+      "ok": true
+    },
+    {
+      "name": "Geometría back5",
+      "ok": true
+    },
+    {
+      "name": "Geometría back6",
+      "ok": true
+    },
+    {
+      "name": "Geometría back7",
+      "ok": true
+    },
+    {
+      "name": "Geometría crouch0",
+      "ok": true
+    },
+    {
+      "name": "Geometría guardLow",
+      "ok": true
+    },
+    {
+      "name": "Geometría guardHigh",
+      "ok": true
+    },
+    {
+      "name": "Geometría hurt",
+      "ok": true
+    },
+    {
+      "name": "Geometría fall",
+      "ok": true
+    },
+    {
+      "name": "Geometría down",
+      "ok": true
+    },
+    {
+      "name": "Geometría jump0",
+      "ok": true
+    },
+    {
+      "name": "Geometría jump1",
+      "ok": true
+    },
+    {
+      "name": "Geometría jump2",
+      "ok": true
+    },
+    {
+      "name": "Geometría jump3",
+      "ok": true
+    },
+    {
+      "name": "Geometría jump4",
+      "ok": true
+    },
+    {
+      "name": "Geometría jump5",
+      "ok": true
+    },
+    {
+      "name": "Geometría intro",
+      "ok": true
+    },
+    {
+      "name": "Geometría victory",
+      "ok": true
+    },
+    {
+      "name": "Geometría punch0",
+      "ok": true
+    },
+    {
+      "name": "Geometría punch1",
+      "ok": true
+    },
+    {
+      "name": "Geometría punch2",
+      "ok": true
+    },
+    {
+      "name": "Geometría punch3",
+      "ok": true
+    },
+    {
+      "name": "Geometría punch4",
+      "ok": true
+    },
+    {
+      "name": "Geometría punch5",
+      "ok": true
+    },
+    {
+      "name": "Geometría punch6",
+      "ok": true
+    },
+    {
+      "name": "Geometría kick0",
+      "ok": true
+    },
+    {
+      "name": "Geometría kick1",
+      "ok": true
+    },
+    {
+      "name": "Geometría kick2",
+      "ok": true
+    },
+    {
+      "name": "Geometría kick3",
+      "ok": true
+    },
+    {
+      "name": "Geometría kick4",
+      "ok": true
+    },
+    {
+      "name": "Geometría kick5",
+      "ok": true
+    },
+    {
+      "name": "Geometría kick6",
+      "ok": true
+    },
+    {
+      "name": "Geometría kick7",
+      "ok": true
+    },
+    {
+      "name": "Geometría low0",
+      "ok": true
+    },
+    {
+      "name": "Geometría low1",
+      "ok": true
+    },
+    {
+      "name": "Geometría low2",
+      "ok": true
+    },
+    {
+      "name": "Geometría low3",
+      "ok": true
+    },
+    {
+      "name": "Geometría sweep0",
+      "ok": true
+    },
+    {
+      "name": "Geometría sweep1",
+      "ok": true
+    },
+    {
+      "name": "Geometría sweep2",
+      "ok": true
+    },
+    {
+      "name": "Geometría sweep3",
+      "ok": true
+    },
+    {
+      "name": "Geometría airPunch0",
+      "ok": true
+    },
+    {
+      "name": "Geometría airPunch1",
+      "ok": true
+    },
+    {
+      "name": "Geometría airPunch2",
+      "ok": true
+    },
+    {
+      "name": "Geometría airPunch3",
+      "ok": true
+    },
+    {
+      "name": "Geometría airKick0",
+      "ok": true
+    },
+    {
+      "name": "Geometría airKick1",
+      "ok": true
+    },
+    {
+      "name": "Geometría airKick2",
+      "ok": true
+    },
+    {
+      "name": "Geometría airKick3",
+      "ok": true
+    },
+    {
+      "name": "Geometría phone0",
+      "ok": true
+    },
+    {
+      "name": "Geometría phone1",
+      "ok": true
+    },
+    {
+      "name": "Geometría phone2",
+      "ok": true
+    },
+    {
+      "name": "Geometría phone3",
+      "ok": true
+    },
+    {
+      "name": "Geometría phone4",
+      "ok": true
+    },
+    {
+      "name": "Geometría phone5",
+      "ok": true
+    },
+    {
+      "name": "Geometría phone6",
+      "ok": true
+    },
+    {
+      "name": "Geometría phone7",
+      "ok": true
+    },
+    {
+      "name": "Geometría cast0",
+      "ok": true
+    },
+    {
+      "name": "Geometría cast1",
+      "ok": true
+    },
+    {
+      "name": "Geometría cast2",
+      "ok": true
+    },
+    {
+      "name": "Geometría cast3",
+      "ok": true
+    },
+    {
+      "name": "Geometría cast4",
+      "ok": true
+    },
+    {
+      "name": "Geometría cast5",
+      "ok": true
+    },
+    {
+      "name": "Geometría cast6",
+      "ok": true
+    },
+    {
+      "name": "Geometría cast7",
+      "ok": true
+    },
+    {
+      "name": "Geometría cross0",
+      "ok": true
+    },
+    {
+      "name": "Geometría cross1",
+      "ok": true
+    },
+    {
+      "name": "Geometría cross2",
+      "ok": true
+    },
+    {
+      "name": "Geometría cross3",
+      "ok": true
+    },
+    {
+      "name": "Geometría cross4",
+      "ok": true
+    },
+    {
+      "name": "Geometría cross5",
+      "ok": true
+    },
+    {
+      "name": "Geometría cross6",
+      "ok": true
+    },
+    {
+      "name": "Geometría cross7",
+      "ok": true
+    },
+    {
+      "name": "Geometría grab0",
+      "ok": true
+    },
+    {
+      "name": "Geometría grab1",
+      "ok": true
+    },
+    {
+      "name": "Geometría grab2",
+      "ok": true
+    },
+    {
+      "name": "Geometría grab3",
+      "ok": true
+    },
+    {
+      "name": "Geometría grab4",
+      "ok": true
+    },
+    {
+      "name": "Geometría grab5",
+      "ok": true
+    },
+    {
+      "name": "Geometría grab6",
+      "ok": true
+    },
+    {
+      "name": "Geometría grab7",
+      "ok": true
+    },
+    {
+      "name": "Geometría dash0",
+      "ok": true
+    },
+    {
+      "name": "Geometría dash1",
+      "ok": true
+    },
+    {
+      "name": "Geometría dash2",
+      "ok": true
+    },
+    {
+      "name": "Geometría teleport0",
+      "ok": true
+    },
+    {
+      "name": "Geometría teleport1",
+      "ok": true
+    },
+    {
+      "name": "Geometría teleport2",
+      "ok": true
+    },
+    {
+      "name": "Geometría charge0",
+      "ok": true
+    },
+    {
+      "name": "Geometría charge1",
+      "ok": true
+    },
+    {
+      "name": "Altura de pie 218",
+      "ok": true,
+      "data": 218
+    },
+    {
+      "name": "Animación high",
+      "ok": true,
+      "data": [
+        "punch0",
+        "punch1",
+        "punch2",
+        "punch3",
+        "punch4",
+        "punch5",
+        "punch6"
+      ]
+    },
+    {
+      "name": "Animación mid",
+      "ok": true,
+      "data": [
+        "kick0",
+        "kick1",
+        "kick2",
+        "kick3",
+        "kick4",
+        "kick5",
+        "kick6",
+        "kick7"
+      ]
+    },
+    {
+      "name": "Animación low",
+      "ok": true,
+      "data": [
+        "low0",
+        "low1",
+        "low2",
+        "low3"
+      ]
+    },
+    {
+      "name": "Animación sweep",
+      "ok": true,
+      "data": [
+        "sweep0",
+        "sweep1",
+        "sweep2",
+        "sweep3"
+      ]
+    },
+    {
+      "name": "Animación airPunch",
+      "ok": true,
+      "data": [
+        "airPunch0",
+        "airPunch1",
+        "airPunch2",
+        "airPunch3"
+      ]
+    },
+    {
+      "name": "Animación airKick",
+      "ok": true,
+      "data": [
+        "airKick0",
+        "airKick1",
+        "airKick2",
+        "airKick3"
+      ]
+    },
+    {
+      "name": "Animación overhead",
+      "ok": true,
+      "data": [
+        "phone0",
+        "phone1",
+        "phone2",
+        "phone3",
+        "phone4",
+        "phone5",
+        "phone6",
+        "phone7"
+      ]
+    },
+    {
+      "name": "Animación wave",
+      "ok": true,
+      "data": [
+        "cast0",
+        "cast1",
+        "cast2",
+        "cast3",
+        "cast4",
+        "cast5",
+        "cast6",
+        "cast7"
+      ]
+    },
+    {
+      "name": "Animación super",
+      "ok": true,
+      "data": [
+        "guard0",
+        "cross0",
+        "cross1",
+        "cross2",
+        "cross3",
+        "cross4",
+        "intro",
+        "cross5",
+        "cross6",
+        "cross7"
+      ]
+    },
+    {
+      "name": "APK alcanza distancia media y daño 15",
+      "ok": true,
+      "data": 85
+    },
+    {
+      "name": "APK se genera",
+      "ok": true
+    },
+    {
+      "name": "APK no alcanza larga distancia",
+      "ok": true
+    },
+    {
+      "name": "Bloque L alcanza larga distancia",
+      "ok": true,
+      "data": 89
+    },
+    {
+      "name": "Ulti diez impactos idle",
+      "ok": true,
+      "data": 10
+    },
+    {
+      "name": "Daño ulti idle",
+      "ok": true,
+      "data": 60
+    },
+    {
+      "name": "Ulti diez impactos stand",
+      "ok": true,
+      "data": 10
+    },
+    {
+      "name": "Daño ulti stand",
+      "ok": true,
+      "data": 95.99999999999994
+    },
+    {
+      "name": "Ulti atraviesa evasión y persigue salto",
+      "ok": true,
+      "data": 60
+    },
+    {
+      "name": "Agarre ocho poses y daño 14",
+      "ok": true,
+      "data": {
+        "points": [
+          "grab0",
+          "grab1",
+          "grab2",
+          "grab3",
+          "grab4",
+          "grab5",
+          "grab6",
+          "grab7"
+        ],
+        "hp": 86
+      }
+    },
+    {
+      "name": "Recarga con pose propia",
+      "ok": true
+    },
+    {
+      "name": "Dash con pose propia",
+      "ok": true
+    },
+    {
+      "name": "S+D activa teletransporte",
+      "ok": true
+    },
+    {
+      "name": "Teletransporte con pose propia",
+      "ok": true
+    },
+    {
+      "name": "Teletransporte termina sin cambio corporal",
+      "ok": true
+    },
+    {
+      "name": "Ulti tras ganar choque",
+      "ok": true,
+      "data": 60
+    },
+    {
+      "name": "Jefe oculto en selector",
+      "ok": true
+    },
+    {
+      "name": "Elmer bloqueado en Batalla",
+      "ok": true
+    },
+    {
+      "name": "Elmer elegible en VS y Pepe último",
+      "ok": true
+    }
+  ],
+  "errors": []
+}
