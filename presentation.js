@@ -36,10 +36,12 @@ function drawOpeningCredits(t){
  fc.fillStyle='#ee9a3444';fc.fillRect(132,106,696,2);fc.fillRect(132,454,696,2);
  if(t<PRESENTATION.creditsBeat){
   frontText('MANCHESTER FISI FIGHTER',480,82,20,'#ffce88');
-  frontText('Creador del Proyecto:',480,152,18,'#e9b56e');
-  frontText('Jordy Jhorkaet Curay Acosta',480,187,25,'#fff5dc');
-  frontText('Desarrolladores:',480,246,18,'#e9b56e');
-  ['Gabriel Alessandro Flores Ramírez','Darick Gerald Herrera Castillo','Ronald Lancha Chuquilin','Jordy Jhorkaet Curay Acosta'].forEach((name,i)=>frontText(name,480,282+i*37,22,'#f1e7fa'));
+  frontText('Creador del Proyecto:',480,142,18,'#e9b56e');
+  frontText('Jordy Jhorkaet Curay Acosta',480,174,25,'#fff5dc');
+  frontText('Asesor:',480,222,18,'#e9b56e');
+  frontText('ELMER RUÍZ TRIGOZO',480,254,25,'#fff5dc');
+  frontText('Desarrolladores:',480,302,18,'#e9b56e');
+  ['Gabriel Alessandro Flores Ramírez','Darick Gerald Herrera Castillo','Ronald Lancha Chuquilin','Jordy Jhorkaet Curay Acosta'].forEach((name,i)=>frontText(name,480,334+i*30,22,'#f1e7fa'));
  }else{
   frontText('Auspiciadores:',480,147,25,'#ffd08a');
   if(sponsorImage.complete&&sponsorImage.naturalWidth){const h=250,w=sponsorImage.width/sponsorImage.height*h;fc.fillStyle='#fff3dd';fc.fillRect(480-w/2-18,163,w+36,h+14);fc.drawImage(sponsorImage,480-w/2,170,w,h)}
